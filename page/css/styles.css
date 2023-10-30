@@ -1,0 +1,8 @@
+body {
+    max-width: 900px;
+    margin: auto
+}
+
+.bg-green {
+    background-color: #189437;
+}
