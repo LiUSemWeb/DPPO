@@ -1,0 +1,195 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://w3id.org/DDPO/ontology/dpp", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "prefixList" : {
+      "owl" : "http://www.w3.org/2002/07/owl#",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "vann" : "http://purl.org/vocab/vann/",
+      "dcterms" : "http://purl.org/dc/terms/",
+      "xsd" : "http://www.w3.org/2001/XMLSchema#",
+      "" : "http://w3id.org/DDPO/ontology/dpp/",
+      "dc" : "http://purl.org/dc/elements/1.1/",
+      "xml" : "http://www.w3.org/XML/1998/namespace",
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "title" : {
+      "undefined" : "Digital Product Passport Ontology"
+    },
+    "iri" : "http://w3id.org/DDPO/ontology/dpp/",
+    "version" : "0.1",
+    "author" : [ "Maike Jansen" ],
+    "description" : {
+      "undefined" : "This is the Digital Product Passport Ontology"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Maike Jansen",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Robin Keskisärkkä",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Huanyu Li",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Eva Blomqvist",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2023-10-30",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "dpp",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.1",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://w3id.org/DPPO/ontology/dpp/",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Digital Product Passport Ontology",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://github.com/LiUSemWeb/DPPO",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://w3id.org/DDPO/ontology/dpp/ComponentDPP",
+    "baseIri" : "http://w3id.org/DDPO/ontology/dpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ComponentDPP",
+      "undefined" : "Component DPP"
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://w3id.org/DDPO/ontology/dpp/SubstanceDPP",
+    "baseIri" : "http://w3id.org/DDPO/ontology/dpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SubstanceDPP",
+      "undefined" : "Substance DPP"
+    },
+    "id" : "2",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://w3id.org/DDPO/ontology/dpp/MaterialDPP",
+    "baseIri" : "http://w3id.org/DDPO/ontology/dpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialDPP",
+      "undefined" : "Material DPP"
+    },
+    "id" : "3",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://w3id.org/DDPO/ontology/dpp/DPP",
+    "baseIri" : "http://w3id.org/DDPO/ontology/dpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DPP",
+      "undefined" : "Digital Product Passport"
+    },
+    "subClasses" : [ "0", "2", "3", "4" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://w3id.org/DDPO/ontology/dpp/ConsumerProductDPP",
+    "baseIri" : "http://w3id.org/DDPO/ontology/dpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConsumerProductDPP",
+      "undefined" : "Consumer Product DPP"
+    },
+    "id" : "4",
+    "superClasses" : [ "1" ]
+  } ],
+  "property" : [ {
+    "id" : "5",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "5"
+  }, {
+    "range" : "1",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "6"
+  }, {
+    "range" : "1",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "7"
+  }, {
+    "range" : "1",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "8"
+  } ]
+}

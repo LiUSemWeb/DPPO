@@ -1,0 +1,57 @@
+@prefix : <http://w3id.org/DDPO/ontology/dpp/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dcterms:contributor a owl:AnnotationProperty .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+: a owl:Ontology ;
+    dcterms:contributor "Eva Blomqvist",
+        "Huanyu Li",
+        "Robin Keskisärkkä" ;
+    dcterms:created "2023-10-30"^^xsd:string ;
+    dcterms:creator "Maike Jansen" ;
+    dcterms:description "This is the Digital Product Passport Ontology" ;
+    dcterms:license "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE"^^xsd:string ;
+    dcterms:title "Digital Product Passport Ontology"^^xsd:string ;
+    vann:preferredNamespacePrefix "dpp"^^xsd:string ;
+    vann:preferredNamespaceUri "http://w3id.org/DPPO/ontology/dpp/"^^xsd:string ;
+    rdfs:seeAlso <https://github.com/LiUSemWeb/DPPO> ;
+    owl:versionIRI <http://w3id.org/DPPO/ontology/dpp/0.1/> ;
+    owl:versionInfo "0.1" .
+
+:ComponentDPP a owl:Class ;
+    rdfs:label "Component DPP" ;
+    rdfs:subClassOf :DPP .
+
+:ConsumerProductDPP a owl:Class ;
+    rdfs:label "Consumer Product DPP" ;
+    rdfs:subClassOf :DPP .
+
+:MaterialDPP a owl:Class ;
+    rdfs:label "Material DPP" ;
+    rdfs:subClassOf :DPP .
+
+:SubstanceDPP a owl:Class ;
+    rdfs:label "Substance DPP" ;
+    rdfs:subClassOf :DPP .
+
+:DPP a owl:Class ;
+    rdfs:label "Digital Product Passport" .
+

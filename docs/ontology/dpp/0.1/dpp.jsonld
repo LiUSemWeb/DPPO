@@ -1,0 +1,192 @@
+[
+  {
+    "@id": "http://w3id.org/DDPO/ontology/dpp/ComponentDPP",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Component DPP"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/DDPO/ontology/dpp/DPP"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/DDPO/ontology/dpp/MaterialDPP",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Material DPP"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/DDPO/ontology/dpp/DPP"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/description",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/vocab/vann/preferredNamespaceUri",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/DDPO/ontology/dpp/",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/contributor": [
+      {
+        "@value": "Eva Blomqvist"
+      },
+      {
+        "@value": "Huanyu Li"
+      },
+      {
+        "@value": "Robin Keskisärkkä"
+      }
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@value": "2023-10-30"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Maike Jansen"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "This is the Digital Product Passport Ontology"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@value": "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Digital Product Passport Ontology"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+      {
+        "@value": "dpp"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespaceUri": [
+      {
+        "@value": "http://w3id.org/DPPO/ontology/dpp/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://github.com/LiUSemWeb/DPPO"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionIRI": [
+      {
+        "@id": "http://w3id.org/DPPO/ontology/dpp/0.1/"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "0.1"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/creator",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/created",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/contributor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/title",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/DDPO/ontology/dpp/SubstanceDPP",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Substance DPP"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/DDPO/ontology/dpp/DPP"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/DDPO/ontology/dpp/ConsumerProductDPP",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Consumer Product DPP"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/DDPO/ontology/dpp/DPP"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/DDPO/ontology/dpp/DPP",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Digital Product Passport"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/license",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  }
+]
