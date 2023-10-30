@@ -42,6 +42,11 @@ def copy_ontologies():
         os.system(f"cp docs/ontology/{name}/{version}/* docs/ontology/{name}/latest/")
 
 
+def copy_website():
+    """Copy website to web path."""
+    os.system(f"cp -r page/* docs/")
+
+
 def download_owl2vowl():
     """Download and extract OWL2VOWL."""
     os.system("mkdir -p temp")
@@ -189,6 +194,7 @@ def main():
     create_documentation()
     build_pdf()
     copy_ontologies()
+    copy_website()
 
 if __name__ == "__main__":
     main()
