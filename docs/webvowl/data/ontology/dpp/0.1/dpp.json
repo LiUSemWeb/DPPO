@@ -17,7 +17,7 @@
     "title" : {
       "undefined" : "Digital Product Passport Ontology"
     },
-    "iri" : "http://w3id.org/DDPO/ontology/dpp/",
+    "iri" : "http://w3id.org/DPPO/ontology/dpp/",
     "version" : "0.1",
     "author" : [ "Maike Jansen" ],
     "description" : {
@@ -115,6 +115,7 @@
       "IRI-based" : "ComponentDPP",
       "undefined" : "Component DPP"
     },
+    "attributes" : [ "external" ],
     "id" : "0",
     "superClasses" : [ "1" ]
   }, {
@@ -125,6 +126,7 @@
       "IRI-based" : "SubstanceDPP",
       "undefined" : "Substance DPP"
     },
+    "attributes" : [ "external" ],
     "id" : "2",
     "superClasses" : [ "1" ]
   }, {
@@ -135,6 +137,7 @@
       "IRI-based" : "MaterialDPP",
       "undefined" : "Material DPP"
     },
+    "attributes" : [ "external" ],
     "id" : "3",
     "superClasses" : [ "1" ]
   }, {
@@ -146,6 +149,7 @@
       "undefined" : "Digital Product Passport"
     },
     "subClasses" : [ "0", "2", "3", "4" ],
+    "attributes" : [ "external" ],
     "id" : "1"
   }, {
     "iri" : "http://w3id.org/DDPO/ontology/dpp/ConsumerProductDPP",
@@ -155,6 +159,7 @@
       "IRI-based" : "ConsumerProductDPP",
       "undefined" : "Consumer Product DPP"
     },
+    "attributes" : [ "external" ],
     "id" : "4",
     "superClasses" : [ "1" ]
   } ],

@@ -21,21 +21,6 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
 
 vann:preferredNamespaceUri a owl:AnnotationProperty .
 
-: a owl:Ontology ;
-    dcterms:contributor "Eva Blomqvist",
-        "Huanyu Li",
-        "Robin Keskisärkkä" ;
-    dcterms:created "2023-10-30"^^xsd:string ;
-    dcterms:creator "Maike Jansen" ;
-    dcterms:description "This is the Digital Product Passport Ontology" ;
-    dcterms:license "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE"^^xsd:string ;
-    dcterms:title "Digital Product Passport Ontology"^^xsd:string ;
-    vann:preferredNamespacePrefix "dpp"^^xsd:string ;
-    vann:preferredNamespaceUri "http://w3id.org/DPPO/ontology/dpp/"^^xsd:string ;
-    rdfs:seeAlso <https://github.com/LiUSemWeb/DPPO> ;
-    owl:versionIRI <http://w3id.org/DPPO/ontology/dpp/0.1/> ;
-    owl:versionInfo "0.1" .
-
 :ComponentDPP a owl:Class ;
     rdfs:label "Component DPP" ;
     rdfs:subClassOf :DPP .
@@ -51,6 +36,21 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
 :SubstanceDPP a owl:Class ;
     rdfs:label "Substance DPP" ;
     rdfs:subClassOf :DPP .
+
+<http://w3id.org/DPPO/ontology/dpp/> a owl:Ontology ;
+    dcterms:contributor "Eva Blomqvist",
+        "Huanyu Li",
+        "Robin Keskisärkkä" ;
+    dcterms:created "2023-10-30"^^xsd:string ;
+    dcterms:creator "Maike Jansen" ;
+    dcterms:description "This is the Digital Product Passport Ontology" ;
+    dcterms:license "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE"^^xsd:string ;
+    dcterms:title "Digital Product Passport Ontology"^^xsd:string ;
+    vann:preferredNamespacePrefix "dpp"^^xsd:string ;
+    vann:preferredNamespaceUri "http://w3id.org/DPPO/ontology/dpp/"^^xsd:string ;
+    rdfs:seeAlso <https://github.com/LiUSemWeb/DPPO> ;
+    owl:versionIRI <http://w3id.org/DPPO/ontology/dpp/0.1/> ;
+    owl:versionInfo "0.1" .
 
 :DPP a owl:Class ;
     rdfs:label "Digital Product Passport" .
