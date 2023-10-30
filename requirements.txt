@@ -1,0 +1,5 @@
+git+https://github.com/LiUSemWeb/pyLODE.git
+pyyaml
+beautifulsoup4
+requests
+pdfkit
