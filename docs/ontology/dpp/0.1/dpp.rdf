@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+>
+  <rdf:Description rdf:about="http://w3id.org/DDPO/ontology/dpp/SubstanceDPP">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/DDPO/ontology/dpp/DPP"/>
+    <rdfs:label>Substance DPP</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/DPPO/ontology/dpp/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:versionIRI rdf:resource="http://w3id.org/DPPO/ontology/dpp/0.1/"/>
+    <dcterms:contributor>Eva Blomqvist</dcterms:contributor>
+    <dcterms:contributor>Huanyu Li</dcterms:contributor>
+    <dcterms:contributor>Robin Keskisärkkä</dcterms:contributor>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-10-30</dcterms:created>
+    <dcterms:creator>Maike Jansen</dcterms:creator>
+    <dcterms:description>This is the Digital Product Passport Ontology</dcterms:description>
+    <dcterms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/LiUSemWeb/DPP/blob/master/LICENSE</dcterms:license>
+    <dcterms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Product Passport Ontology</dcterms:title>
+    <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dpp</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://w3id.org/DPPO/ontology/dpp/</vann:preferredNamespaceUri>
+    <rdfs:seeAlso rdf:resource="https://github.com/LiUSemWeb/DPPO"/>
+    <owl:versionInfo>0.1</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/DDPO/ontology/dpp/ComponentDPP">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/DDPO/ontology/dpp/DPP"/>
+    <rdfs:label>Component DPP</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/DDPO/ontology/dpp/MaterialDPP">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/DDPO/ontology/dpp/DPP"/>
+    <rdfs:label>Material DPP</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/DDPO/ontology/dpp/ConsumerProductDPP">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/DDPO/ontology/dpp/DPP"/>
+    <rdfs:label>Consumer Product DPP</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/DDPO/ontology/dpp/DPP">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Digital Product Passport</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+</rdf:RDF>
