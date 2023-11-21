@@ -1,5 +1,24 @@
 [
   {
+    "@id": "http://w3id.org/dppo/ontology/dpp-odp/describes",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/info-odp/isAbout"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/info-odp/Information"
+      }
+    ]
+  },
+  {
     "@id": "http://w3id.org/dppo/ontology/dpp-info/",
     "@type": [
       "http://www.w3.org/2002/07/owl#Ontology"
@@ -57,7 +76,10 @@
     ],
     "http://www.w3.org/2002/07/owl#imports": [
       {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/0.1/"
+        "@id": "http://w3id.org/dppo/ontology/dpp-core/0.1/"
+      },
+      {
+        "@id": "http://w3id.org/dppo/ontology/info-odp/0.1/"
       }
     ],
     "http://www.w3.org/2002/07/owl#versionIRI": [
@@ -68,6 +90,14 @@
     "http://www.w3.org/2002/07/owl#versionInfo": [
       {
         "@value": "0.1"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/info-odp/Information"
       }
     ]
   }

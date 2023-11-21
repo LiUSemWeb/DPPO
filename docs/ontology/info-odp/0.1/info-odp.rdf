@@ -6,36 +6,64 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/info-odp/timestamp">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/info-odp/Information"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/info-odp/isAbout">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/info-odp/Information"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/info-odp/">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <owl:versionIRI rdf:resource="http://w3id.org/dppo/ontology/info-odp/0.1/"/>
     <dcterms:contributor>Eva Blomqvist</dcterms:contributor>
     <dcterms:contributor>Huanyu Li</dcterms:contributor>
     <dcterms:contributor>Robin Keskisärkkä</dcterms:contributor>
-    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-10-30</dcterms:created>
+    <dcterms:created>2023-10-30</dcterms:created>
     <dcterms:creator>Maike Jansen</dcterms:creator>
     <dcterms:description>This is a minimal Ontology Design Pattern for modelling information in a DPP.</dcterms:description>
-    <dcterms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/LiUSemWeb/DPP/blob/master/LICENSE</dcterms:license>
-    <dcterms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Product Passport Information ODP</dcterms:title>
-    <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">info-odp</vann:preferredNamespacePrefix>
-    <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://w3id.org/dppo/ontology/info-odp/</vann:preferredNamespaceUri>
+    <dcterms:license>https://github.com/LiUSemWeb/DPP/blob/master/LICENSE</dcterms:license>
+    <dcterms:title>Digital Product Passport Information ODP</dcterms:title>
+    <vann:preferredNamespacePrefix>info-odp</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>http://w3id.org/dppo/ontology/info-odp/</vann:preferredNamespaceUri>
     <rdfs:seeAlso rdf:resource="https://github.com/LiUSemWeb/DPPO"/>
     <owl:versionInfo>0.1</owl:versionInfo>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/info-odp/responsibleActor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/info-odp/Information"/>
+    <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/info-odp/Actor"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/info-odp/Information">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/info-odp/isAbout">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/info-odp/Information"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/info-odp/Actor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/info-odp/timestamp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/info-odp/Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
 </rdf:RDF>

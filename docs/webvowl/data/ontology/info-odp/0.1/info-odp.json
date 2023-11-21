@@ -39,7 +39,7 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Eva Blomqvist",
+        "value" : "Huanyu Li",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -49,7 +49,7 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Huanyu Li",
+        "value" : "Eva Blomqvist",
         "type" : "label"
       } ],
       "created" : [ {
@@ -64,16 +64,16 @@
         "value" : "info-odp",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "http://w3id.org/dppo/ontology/info-odp/",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "0.1",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://w3id.org/dppo/ontology/info-odp/",
         "type" : "label"
       } ],
       "title" : [ {
@@ -95,8 +95,11 @@
     "id" : "2",
     "type" : "owl:Thing"
   }, {
-    "id" : "4",
+    "id" : "5",
     "type" : "rdfs:Literal"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
   }, {
     "id" : "1",
     "type" : "owl:Class"
@@ -110,11 +113,19 @@
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "4",
+    "id" : "5",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
     }
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/info-odp/Actor",
+    "baseIri" : "http://w3id.org/dppo/ontology/info-odp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Actor"
+    },
+    "id" : "4"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/info-odp/Information",
     "baseIri" : "http://w3id.org/dppo/ontology/info-odp",
@@ -131,7 +142,7 @@
     "id" : "3",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "5",
+    "id" : "6",
     "type" : "owl:datatypeProperty"
   } ],
   "propertyAttribute" : [ {
@@ -147,7 +158,7 @@
   }, {
     "iri" : "http://w3id.org/dppo/ontology/info-odp/responsibleActor",
     "baseIri" : "http://w3id.org/dppo/ontology/info-odp",
-    "range" : "2",
+    "range" : "4",
     "label" : {
       "IRI-based" : "responsibleActor"
     },
@@ -157,12 +168,12 @@
   }, {
     "iri" : "http://w3id.org/dppo/ontology/info-odp/timestamp",
     "baseIri" : "http://w3id.org/dppo/ontology/info-odp",
-    "range" : "4",
+    "range" : "5",
     "label" : {
       "IRI-based" : "timestamp"
     },
     "domain" : "1",
     "attributes" : [ "datatype" ],
-    "id" : "5"
+    "id" : "6"
   } ]
 }

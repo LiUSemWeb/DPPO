@@ -39,12 +39,12 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Huanyu Li",
+        "value" : "Robin Keskisärkkä",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Robin Keskisärkkä",
+        "value" : "Huanyu Li",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -64,16 +64,16 @@
         "value" : "dpp-odp",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "http://w3id.org/dppo/ontology/dpp-odp/",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "0.1",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://w3id.org/dppo/ontology/dpp-odp/",
         "type" : "label"
       } ],
       "title" : [ {
@@ -118,6 +118,12 @@
   "property" : [ {
     "id" : "1",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "4",
+    "type" : "owl:allValuesFrom"
   } ],
   "propertyAttribute" : [ {
     "iri" : "http://w3id.org/dppo/ontology/dpp-odp/describes",
@@ -129,5 +135,25 @@
     "domain" : "0",
     "attributes" : [ "object" ],
     "id" : "1"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-odp/hasPart",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-odp",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "hasPart"
+    },
+    "domain" : "0",
+    "attributes" : [ "object", "allValues" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-odp/hasPart",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-odp",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasPart"
+    },
+    "domain" : "2",
+    "attributes" : [ "object", "allValues" ],
+    "id" : "4"
   } ]
 }

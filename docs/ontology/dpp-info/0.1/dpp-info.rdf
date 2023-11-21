@@ -9,18 +9,29 @@
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <owl:versionIRI rdf:resource="http://w3id.org/dppo/ontology/dpp-info/0.1/"/>
-    <owl:imports rdf:resource="http://w3id.org/dppo/ontology/dpp-info/0.1/"/>
+    <owl:imports rdf:resource="http://w3id.org/dppo/ontology/dpp-core/0.1/"/>
+    <owl:imports rdf:resource="http://w3id.org/dppo/ontology/info-odp/0.1/"/>
     <dcterms:contributor>Eva Blomqvist</dcterms:contributor>
     <dcterms:contributor>Huanyu Li</dcterms:contributor>
     <dcterms:contributor>Robin Keskisärkkä</dcterms:contributor>
-    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-10-30</dcterms:created>
+    <dcterms:created>2023-10-30</dcterms:created>
     <dcterms:creator>Maike Jansen</dcterms:creator>
     <dcterms:description>This is a minimal core ontology describing DPP information types.</dcterms:description>
-    <dcterms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/LiUSemWeb/DPP/blob/master/LICENSE</dcterms:license>
-    <dcterms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Product Passport Information Ontology</dcterms:title>
-    <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dpp-info</vann:preferredNamespacePrefix>
-    <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://w3id.org/dppo/ontology/dpp-info/</vann:preferredNamespaceUri>
+    <dcterms:license>https://github.com/LiUSemWeb/DPP/blob/master/LICENSE</dcterms:license>
+    <dcterms:title>Digital Product Passport Information Ontology</dcterms:title>
+    <vann:preferredNamespacePrefix>dpp-info</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>http://w3id.org/dppo/ontology/dpp-info/</vann:preferredNamespaceUri>
     <rdfs:seeAlso rdf:resource="https://github.com/LiUSemWeb/DPPO"/>
     <owl:versionInfo>0.1</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/describes">
+    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/info-odp/isAbout"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/DPP">
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/info-odp/Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/info-odp/Information"/>
   </rdf:Description>
 </rdf:RDF>
