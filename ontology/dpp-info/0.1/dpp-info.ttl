@@ -30,17 +30,113 @@
 #    Object Properties
 #################################################################
 
+###  http://w3id.org/dppo/ontology/dpp-info/aboutPart
+:aboutPart rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf <http://w3id.org/dppo/ontology/info-odp/isAbout> ;
+           rdfs:range <http://w3id.org/dppo/ontology/dpp-odp/Product> .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/aboutWhole
+:aboutWhole rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf <http://w3id.org/dppo/ontology/info-odp/isAbout> ;
+            owl:inverseOf :hasCompositionInformation ;
+            rdfs:range <http://w3id.org/dppo/ontology/dpp-odp/Product> .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/containsInformation
+:containsInformation rdf:type owl:ObjectProperty ;
+                     rdfs:domain <http://w3id.org/dppo/ontology/info-odp/Information> ;
+                     rdfs:range :PieceOfInformation .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/hasCompositionInformation
+:hasCompositionInformation rdf:type owl:ObjectProperty .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/superceededBy
+:superceededBy rdf:type owl:ObjectProperty ;
+               rdfs:domain <http://w3id.org/dppo/ontology/info-odp/Information> ;
+               rdfs:range <http://w3id.org/dppo/ontology/info-odp/Information> .
+
+
 ###  http://w3id.org/dppo/ontology/dpp-odp/describes
-<http://w3id.org/dppo/ontology/dpp-odp/describes> rdfs:subPropertyOf <http://w3id.org/dppo/ontology/info-odp/isAbout> .
+<http://w3id.org/dppo/ontology/dpp-odp/describes> rdfs:subPropertyOf <http://w3id.org/dppo/ontology/info-odp/isAbout> ;
+                                                  owl:propertyChainAxiom ( :containsInformation
+                                                                           <http://w3id.org/dppo/ontology/info-odp/isAbout>
+                                                                         ) .
+
+
+###  http://w3id.org/dppo/ontology/dpp-odp/hasPart
+<http://w3id.org/dppo/ontology/dpp-odp/hasPart> owl:propertyChainAxiom ( :hasCompositionInformation
+                                                                         :aboutPart
+                                                                       ) .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://w3id.org/dppo/ontology/dpp-info/creationTimeStamp
+:creationTimeStamp rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf <http://w3id.org/dppo/ontology/info-odp/timestamp> .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/invalidAtTimeStamp
+:invalidAtTimeStamp rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf <http://w3id.org/dppo/ontology/info-odp/timestamp> .
 
 
 #################################################################
 #    Classes
 #################################################################
 
+###  http://w3id.org/dppo/ontology/dpp-info/Certificate
+:Certificate rdf:type owl:Class ;
+             rdfs:subClassOf :PieceOfInformation .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/CompositionInformation
+:CompositionInformation rdf:type owl:Class ;
+                        rdfs:subClassOf :PieceOfInformation .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation
+:DisassemblyInformation rdf:type owl:Class ;
+                        rdfs:subClassOf :PieceOfInformation .
+
+
 ###  http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation
 :PieceOfInformation rdf:type owl:Class ;
-                    rdfs:subClassOf <http://w3id.org/dppo/ontology/info-odp/Information> .
+                    rdfs:subClassOf <http://w3id.org/dppo/ontology/info-odp/Information> ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://w3id.org/dppo/ontology/info-odp/isAbout> ;
+                                      owl:someValuesFrom <http://w3id.org/dppo/ontology/dpp-odp/Product>
+                                    ] .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/RemainingProductQuality
+:RemainingProductQuality rdf:type owl:Class ;
+                         rdfs:subClassOf :PieceOfInformation .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/RepairInstruction
+:RepairInstruction rdf:type owl:Class ;
+                   rdfs:subClassOf :PieceOfInformation .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/SubstanceHinderingRecycling
+:SubstanceHinderingRecycling rdf:type owl:Class ;
+                             rdfs:subClassOf :SubstanceOfConcern .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/SubstanceOfConcern
+:SubstanceOfConcern rdf:type owl:Class ;
+                    rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-core/Substance> .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/ToxicSubstance
+:ToxicSubstance rdf:type owl:Class ;
+                rdfs:subClassOf :SubstanceOfConcern .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-odp/DPP
