@@ -1,0 +1,318 @@
+[
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/Substance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/Product"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/Product"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/MaterialDPP",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/DPP"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n86001b50a74d47a1afcfbc62218b7311b9"
+      }
+    ]
+  },
+  {
+    "@id": "_:n86001b50a74d47a1afcfbc62218b7311b9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/DPP"
+          },
+          {
+            "@id": "_:n86001b50a74d47a1afcfbc62218b7311b10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n86001b50a74d47a1afcfbc62218b7311b10",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/describes"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-core/Material"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/ConsumerProductDPP",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/DPP"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n86001b50a74d47a1afcfbc62218b7311b5"
+      }
+    ]
+  },
+  {
+    "@id": "_:n86001b50a74d47a1afcfbc62218b7311b5",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/DPP"
+          },
+          {
+            "@id": "_:n86001b50a74d47a1afcfbc62218b7311b6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n86001b50a74d47a1afcfbc62218b7311b6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/describes"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/ComponentDPP",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/DPP"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n86001b50a74d47a1afcfbc62218b7311b1"
+      }
+    ]
+  },
+  {
+    "@id": "_:n86001b50a74d47a1afcfbc62218b7311b1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/DPP"
+          },
+          {
+            "@id": "_:n86001b50a74d47a1afcfbc62218b7311b2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n86001b50a74d47a1afcfbc62218b7311b2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/describes"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-core/Component"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/SubstanceDPP",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/DPP"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n86001b50a74d47a1afcfbc62218b7311b13"
+      }
+    ]
+  },
+  {
+    "@id": "_:n86001b50a74d47a1afcfbc62218b7311b13",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/DPP"
+          },
+          {
+            "@id": "_:n86001b50a74d47a1afcfbc62218b7311b14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n86001b50a74d47a1afcfbc62218b7311b14",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/describes"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-core/Substance"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/contributor": [
+      {
+        "@value": "Eva Blomqvist"
+      },
+      {
+        "@value": "Huanyu Li"
+      },
+      {
+        "@value": "Robin Keskisärkkä"
+      }
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@value": "2023-10-30"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Maike Jansen"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "This is a minimal core ontology for DPPs, specialising the DPP ODP."
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@value": "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Core Digital Product Passport Ontology"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+      {
+        "@value": "dpp-core"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespaceUri": [
+      {
+        "@value": "http://w3id.org/dppo/ontology/dpp-core/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://github.com/LiUSemWeb/DPPO"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/0.1/"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionIRI": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-core/0.1/"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "0.1"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/Component",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/Product"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/Material",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/Product"
+      }
+    ]
+  }
+]

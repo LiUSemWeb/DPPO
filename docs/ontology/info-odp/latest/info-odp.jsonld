@@ -1,0 +1,113 @@
+[
+  {
+    "@id": "http://w3id.org/dppo/ontology/info-odp/Information",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/info-odp/responsibleActor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/info-odp/Information"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/info-odp/timestamp",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/info-odp/Information"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/info-odp/isAbout",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/info-odp/Information"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/info-odp/",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/contributor": [
+      {
+        "@value": "Eva Blomqvist"
+      },
+      {
+        "@value": "Huanyu Li"
+      },
+      {
+        "@value": "Robin Keskisärkkä"
+      }
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@value": "2023-10-30"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Maike Jansen"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "This is a minimal Ontology Design Pattern for modelling information in a DPP."
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@value": "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Digital Product Passport Information ODP"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+      {
+        "@value": "info-odp"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespaceUri": [
+      {
+        "@value": "http://w3id.org/dppo/ontology/info-odp/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://github.com/LiUSemWeb/DPPO"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionIRI": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/info-odp/0.1/"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "0.1"
+      }
+    ]
+  }
+]

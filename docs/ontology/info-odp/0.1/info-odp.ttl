@@ -1,0 +1,34 @@
+@prefix : <http://w3id.org/dppo/ontology/info-odp/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology ;
+    dcterms:contributor "Eva Blomqvist",
+        "Huanyu Li",
+        "Robin Keskisärkkä" ;
+    dcterms:created "2023-10-30"^^xsd:string ;
+    dcterms:creator "Maike Jansen" ;
+    dcterms:description "This is a minimal Ontology Design Pattern for modelling information in a DPP." ;
+    dcterms:license "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE"^^xsd:string ;
+    dcterms:title "Digital Product Passport Information ODP"^^xsd:string ;
+    vann:preferredNamespacePrefix "info-odp"^^xsd:string ;
+    vann:preferredNamespaceUri "http://w3id.org/dppo/ontology/info-odp/"^^xsd:string ;
+    rdfs:seeAlso <https://github.com/LiUSemWeb/DPPO> ;
+    owl:versionIRI <http://w3id.org/dppo/ontology/info-odp/0.1/> ;
+    owl:versionInfo "0.1" .
+
+:isAbout a owl:ObjectProperty ;
+    rdfs:domain :Information ;
+    rdfs:range owl:Thing .
+
+:responsibleActor a owl:ObjectProperty ;
+    rdfs:domain :Information .
+
+:timestamp a owl:DatatypeProperty ;
+    rdfs:domain :Information .
+
+:Information a owl:Class .
+
