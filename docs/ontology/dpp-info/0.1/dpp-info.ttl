@@ -17,15 +17,11 @@
     vann:preferredNamespacePrefix "dpp-info" ;
     vann:preferredNamespaceUri "http://w3id.org/dppo/ontology/dpp-info/" ;
     rdfs:seeAlso <https://github.com/LiUSemWeb/DPPO> ;
-    owl:imports <http://w3id.org/dppo/ontology/dpp-core/0.1/>,
-        <http://w3id.org/dppo/ontology/info-odp/0.1/> ;
+    owl:imports <http://w3id.org/dppo/ontology/dpp-core/0.1/> ;
     owl:versionIRI <http://w3id.org/dppo/ontology/dpp-info/0.1/> ;
     owl:versionInfo "0.1" .
 
 :Certificate a owl:Class ;
-    rdfs:subClassOf :PieceOfInformation .
-
-:CompositionInformation a owl:Class ;
     rdfs:subClassOf :PieceOfInformation .
 
 :DisassemblyInformation a owl:Class ;
@@ -44,43 +40,57 @@
     rdfs:subClassOf :SubstanceOfConcern .
 
 :aboutWhole a owl:ObjectProperty ;
+    rdfs:domain :CompositionInformation ;
     rdfs:range <http://w3id.org/dppo/ontology/dpp-odp/Product> ;
-    rdfs:subPropertyOf <http://w3id.org/dppo/ontology/info-odp/isAbout> ;
+    rdfs:subPropertyOf :isAbout ;
     owl:inverseOf :hasCompositionInformation .
 
 :creationTimeStamp a owl:DatatypeProperty ;
-    rdfs:subPropertyOf <http://w3id.org/dppo/ontology/info-odp/timestamp> .
+    rdfs:subPropertyOf :timestamp .
 
 :invalidAtTimeStamp a owl:DatatypeProperty ;
-    rdfs:subPropertyOf <http://w3id.org/dppo/ontology/info-odp/timestamp> .
+    rdfs:subPropertyOf :timestamp .
+
+:responsibleActor a owl:ObjectProperty ;
+    rdfs:domain :PieceOfInformation ;
+    rdfs:range :Actor .
 
 :superceededBy a owl:ObjectProperty ;
-    rdfs:domain <http://w3id.org/dppo/ontology/info-odp/Information> ;
-    rdfs:range <http://w3id.org/dppo/ontology/info-odp/Information> .
+    rdfs:domain :PieceOfInformation ;
+    rdfs:range :PieceOfInformation .
 
-<http://w3id.org/dppo/ontology/dpp-odp/DPP> rdfs:subClassOf <http://w3id.org/dppo/ontology/info-odp/Information> .
-
-<http://w3id.org/dppo/ontology/dpp-odp/describes> rdfs:subPropertyOf <http://w3id.org/dppo/ontology/info-odp/isAbout> ;
-    owl:propertyChainAxiom ( :containsInformation <http://w3id.org/dppo/ontology/info-odp/isAbout> ) .
+<http://w3id.org/dppo/ontology/dpp-odp/describes> rdfs:subPropertyOf :isAbout ;
+    owl:propertyChainAxiom ( :containsInformation :isAbout ) .
 
 <http://w3id.org/dppo/ontology/dpp-odp/hasPart> owl:propertyChainAxiom ( :hasCompositionInformation :aboutPart ) .
 
+:Actor a owl:Class .
+
 :aboutPart a owl:ObjectProperty ;
+    rdfs:domain :CompositionInformation ;
     rdfs:range <http://w3id.org/dppo/ontology/dpp-odp/Product> ;
-    rdfs:subPropertyOf <http://w3id.org/dppo/ontology/info-odp/isAbout> .
+    rdfs:subPropertyOf :isAbout .
 
 :containsInformation a owl:ObjectProperty ;
-    rdfs:domain <http://w3id.org/dppo/ontology/info-odp/Information> ;
+    rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
     rdfs:range :PieceOfInformation .
+
+:CompositionInformation a owl:Class ;
+    rdfs:subClassOf :PieceOfInformation .
 
 :SubstanceOfConcern a owl:Class ;
     rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-core/Substance> .
 
-:hasCompositionInformation a owl:ObjectProperty .
+:hasCompositionInformation a owl:ObjectProperty ;
+    rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/Product> .
+
+:timestamp a owl:DatatypeProperty ;
+    rdfs:domain :PieceOfInformation .
+
+:isAbout a owl:ObjectProperty .
 
 :PieceOfInformation a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty <http://w3id.org/dppo/ontology/info-odp/isAbout> ;
-            owl:someValuesFrom <http://w3id.org/dppo/ontology/dpp-odp/Product> ],
-        <http://w3id.org/dppo/ontology/info-odp/Information> .
+            owl:onProperty :isAbout ;
+            owl:someValuesFrom owl:Thing ] .
 

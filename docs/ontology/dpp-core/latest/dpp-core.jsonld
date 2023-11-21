@@ -1,12 +1,51 @@
 [
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-core/Material",
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/ConsumerProductDPP",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product"
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n598a3750dbd04051be2232d7b5ac294bb5"
+      }
+    ]
+  },
+  {
+    "@id": "_:n598a3750dbd04051be2232d7b5ac294bb5",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
+          },
+          {
+            "@id": "_:n598a3750dbd04051be2232d7b5ac294bb6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n598a3750dbd04051be2232d7b5ac294bb6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/describes"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct"
       }
     ]
   },
@@ -22,7 +61,18 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-core/ComponentDPP",
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/SubstanceDPP",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -33,12 +83,12 @@
     ],
     "http://www.w3.org/2002/07/owl#equivalentClass": [
       {
-        "@id": "_:ne249da1999cf4158b88820d14921bac8b1"
+        "@id": "_:n598a3750dbd04051be2232d7b5ac294bb13"
       }
     ]
   },
   {
-    "@id": "_:ne249da1999cf4158b88820d14921bac8b1",
+    "@id": "_:n598a3750dbd04051be2232d7b5ac294bb13",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -49,14 +99,14 @@
             "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
           },
           {
-            "@id": "_:ne249da1999cf4158b88820d14921bac8b2"
+            "@id": "_:n598a3750dbd04051be2232d7b5ac294bb14"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:ne249da1999cf4158b88820d14921bac8b2",
+    "@id": "_:n598a3750dbd04051be2232d7b5ac294bb14",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -67,18 +117,7 @@
     ],
     "http://www.w3.org/2002/07/owl#someValuesFrom": [
       {
-        "@id": "http://w3id.org/dppo/ontology/dpp-core/Component"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product"
+        "@id": "http://w3id.org/dppo/ontology/dpp-core/Substance"
       }
     ]
   },
@@ -155,52 +194,13 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-core/SubstanceDPP",
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/Substance",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#equivalentClass": [
-      {
-        "@id": "_:ne249da1999cf4158b88820d14921bac8b13"
-      }
-    ]
-  },
-  {
-    "@id": "_:ne249da1999cf4158b88820d14921bac8b13",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
-          },
-          {
-            "@id": "_:ne249da1999cf4158b88820d14921bac8b14"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:ne249da1999cf4158b88820d14921bac8b14",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-odp/describes"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-core/Substance"
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product"
       }
     ]
   },
@@ -216,12 +216,12 @@
     ],
     "http://www.w3.org/2002/07/owl#equivalentClass": [
       {
-        "@id": "_:ne249da1999cf4158b88820d14921bac8b9"
+        "@id": "_:n598a3750dbd04051be2232d7b5ac294bb9"
       }
     ]
   },
   {
-    "@id": "_:ne249da1999cf4158b88820d14921bac8b9",
+    "@id": "_:n598a3750dbd04051be2232d7b5ac294bb9",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -232,14 +232,14 @@
             "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
           },
           {
-            "@id": "_:ne249da1999cf4158b88820d14921bac8b10"
+            "@id": "_:n598a3750dbd04051be2232d7b5ac294bb10"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:ne249da1999cf4158b88820d14921bac8b10",
+    "@id": "_:n598a3750dbd04051be2232d7b5ac294bb10",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -255,7 +255,7 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-core/Substance",
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/Material",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -266,7 +266,7 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-core/ConsumerProductDPP",
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/ComponentDPP",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -277,12 +277,12 @@
     ],
     "http://www.w3.org/2002/07/owl#equivalentClass": [
       {
-        "@id": "_:ne249da1999cf4158b88820d14921bac8b5"
+        "@id": "_:n598a3750dbd04051be2232d7b5ac294bb1"
       }
     ]
   },
   {
-    "@id": "_:ne249da1999cf4158b88820d14921bac8b5",
+    "@id": "_:n598a3750dbd04051be2232d7b5ac294bb1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -293,14 +293,14 @@
             "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
           },
           {
-            "@id": "_:ne249da1999cf4158b88820d14921bac8b6"
+            "@id": "_:n598a3750dbd04051be2232d7b5ac294bb2"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:ne249da1999cf4158b88820d14921bac8b6",
+    "@id": "_:n598a3750dbd04051be2232d7b5ac294bb2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -311,7 +311,7 @@
     ],
     "http://www.w3.org/2002/07/owl#someValuesFrom": [
       {
-        "@id": "http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct"
+        "@id": "http://w3id.org/dppo/ontology/dpp-core/Component"
       }
     ]
   }
