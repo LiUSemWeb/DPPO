@@ -31,74 +31,74 @@
 
 ###  http://w3id.org/dppo/ontology/dpp-core/Component
 :Component rdf:type owl:Class ;
-           rdfs:subClassOf <http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/Product> .
+           rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/Product> .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-core/ComponentDPP
 :ComponentDPP rdf:type owl:Class ;
-              owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/DPP>
+              owl:equivalentClass [ owl:intersectionOf (  <http://w3id.org/dppo/ontology/dpp-odp/DPP>
                                                          [ rdf:type owl:Restriction ;
-                                                           owl:onProperty <http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/describes> ;
+                                                           owl:onProperty  <http://w3id.org/dppo/ontology/dpp-odp/describes> ;
                                                            owl:someValuesFrom :Component
                                                          ]
                                                        ) ;
                                     rdf:type owl:Class
                                   ] ;
-              rdfs:subClassOf <http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/DPP> .
+              rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/DPP>.
 
 
 ###  http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct
 :ConsumerProduct rdf:type owl:Class ;
-                 rdfs:subClassOf <http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/Product> .
+                 rdfs:subClassOf  <http://w3id.org/dppo/ontology/dpp-odp/Product>  .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-core/ConsumerProductDPP
 :ConsumerProductDPP rdf:type owl:Class ;
-                    owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/DPP>
+                    owl:equivalentClass [ owl:intersectionOf ( <http://w3id.org/dppo/ontology/dpp-odp/DPP>
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/describes> ;
+                                                                 owl:onProperty  <http://w3id.org/dppo/ontology/dpp-odp/describes> ;
                                                                  owl:someValuesFrom :ConsumerProduct
                                                                ]
                                                              ) ;
                                           rdf:type owl:Class
                                         ] ;
-                    rdfs:subClassOf <http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/DPP> .
+                    rdfs:subClassOf  <http://w3id.org/dppo/ontology/dpp-odp/DPP>.
 
 
 ###  http://w3id.org/dppo/ontology/dpp-core/Material
 :Material rdf:type owl:Class ;
-          rdfs:subClassOf <http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/Product> .
+          rdfs:subClassOf  <http://w3id.org/dppo/ontology/dpp-odp/Product> .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-core/MaterialDPP
 :MaterialDPP rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/DPP>
+             owl:equivalentClass [ owl:intersectionOf ( <http://w3id.org/dppo/ontology/dpp-odp/DPP>
                                                         [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/describes> ;
+                                                          owl:onProperty  <http://w3id.org/dppo/ontology/dpp-odp/describes> ;
                                                           owl:someValuesFrom :Material
                                                         ]
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
-             rdfs:subClassOf <http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/DPP> .
+             rdfs:subClassOf  <http://w3id.org/dppo/ontology/dpp-odp/DPP> .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-core/Substance
 :Substance rdf:type owl:Class ;
-           rdfs:subClassOf <http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/Product> .
+           rdfs:subClassOf  <http://w3id.org/dppo/ontology/dpp-odp/Product>  .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-core/SubstanceDPP
 :SubstanceDPP rdf:type owl:Class ;
-              owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/DPP>
+              owl:equivalentClass [ owl:intersectionOf (  <http://w3id.org/dppo/ontology/dpp-odp/DPP>
                                                          [ rdf:type owl:Restriction ;
-                                                           owl:onProperty <http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/describes> ;
+                                                           owl:onProperty  <http://w3id.org/dppo/ontology/dpp-odp/describes> ;
                                                            owl:someValuesFrom :Substance
                                                          ]
                                                        ) ;
                                     rdf:type owl:Class
                                   ] ;
-              rdfs:subClassOf <http://www.semanticweb.org/evabl45/ontologies/2023/10/untitled-ontology-107/DPP> .
+              rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/DPP>.
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
