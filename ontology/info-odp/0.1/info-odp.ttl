@@ -1,5 +1,4 @@
-
-@prefix : <http://w3id.org/dppo/ontology/info-odp/>.
+@prefix : <http://w3id.org/dppo/ontology/info-odp/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,22 +7,58 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <http://w3id.org/dppo/ontology/info-odp/>.
+@base <http://w3id.org/dppo/ontology/info-odp/> .
 
 <http://w3id.org/dppo/ontology/info-odp/> rdf:type owl:Ontology ;
                                            owl:versionIRI <http://w3id.org/dppo/ontology/info-odp/0.1/> ;
-					   dcterms:contributor "Eva Blomqvist" ,
-                                                          "Huanyu Li" ,
-                                                          "Robin Keskisärkkä" ;
-                                      dcterms:created "2023-10-30"^^xsd:string ;
-                                      dcterms:creator "Maike Jansen" ;
-                                      dcterms:description "This is a minimal Ontology Design Pattern for modelling information in a DPP." ;
-                                      dcterms:license "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE"^^xsd:string ;
-                                      dcterms:title "Digital Product Passport Information ODP"^^xsd:string ;
-                                      vann:preferredNamespacePrefix "info-odp"^^xsd:string ;
-                                      vann:preferredNamespaceUri "http://w3id.org/dppo/ontology/info-odp/"^^xsd:string ;
-                                      rdfs:seeAlso <https://github.com/LiUSemWeb/DPPO> ;
-                                      owl:versionInfo "0.1" .
+                                           dcterms:contributor "Eva Blomqvist" ,
+                                                               "Huanyu Li" ,
+                                                               "Robin Keskisärkkä" ;
+                                           dcterms:created "2023-10-30" ;
+                                           dcterms:creator "Maike Jansen" ;
+                                           dcterms:description "This is a minimal Ontology Design Pattern for modelling information in a DPP." ;
+                                           dcterms:license "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE" ;
+                                           dcterms:title "Digital Product Passport Information ODP" ;
+                                           vann:preferredNamespacePrefix "info-odp" ;
+                                           vann:preferredNamespaceUri "http://w3id.org/dppo/ontology/info-odp/" ;
+                                           rdfs:seeAlso <https://github.com/LiUSemWeb/DPPO> ;
+                                           owl:versionInfo "0.1" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Object Properties
@@ -37,7 +72,8 @@
 
 ###  http://w3id.org/dppo/ontology/info-odp/responsibleActor
 :responsibleActor rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Information .
+                  rdfs:domain :Information ;
+                  rdfs:range :Actor .
 
 
 #################################################################
@@ -52,6 +88,10 @@
 #################################################################
 #    Classes
 #################################################################
+
+###  http://w3id.org/dppo/ontology/info-odp/Actor
+:Actor rdf:type owl:Class .
+
 
 ###  http://w3id.org/dppo/ontology/info-odp/Information
 :Information rdf:type owl:Class .
