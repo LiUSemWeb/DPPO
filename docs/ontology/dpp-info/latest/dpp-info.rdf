@@ -6,14 +6,23 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/invalidAtTimeStamp">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/timestamp"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/containsInformation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
     <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n4c161546a9cb48a1916e8bccd6834791b5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-info/isAbout"/>
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/timestamp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/RemainingProductQuality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
@@ -32,45 +41,66 @@
     <rdfs:seeAlso rdf:resource="https://github.com/LiUSemWeb/DPPO"/>
     <owl:versionInfo>0.1</owl:versionInfo>
   </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/hasPart">
+    <owl:propertyChainAxiom rdf:nodeID="n4c161546a9cb48a1916e8bccd6834791b3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/ValueChainActor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/SubstanceHinderingRecycling">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/SubstanceOfConcern"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/RepairInstruction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/CompositionInformation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/timestamp">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation"/>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n4c161546a9cb48a1916e8bccd6834791b4">
+    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/aboutPart"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/Consumer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/aboutPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/isAbout"/>
+    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/CompositionInformation"/>
+    <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/responsibleActor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation"/>
     <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-info/Actor"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/ValueChainActor">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/Actor"/>
+    <rdfs:subClassOf rdf:nodeID="n4c161546a9cb48a1916e8bccd6834791b5"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/SubstanceOfConcern">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-core/Substance"/>
+  <rdf:Description rdf:nodeID="n4c161546a9cb48a1916e8bccd6834791b1">
+    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/containsInformation"/>
+    <rdf:rest rdf:nodeID="n4c161546a9cb48a1916e8bccd6834791b2"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nb35208f92b3b411bb08c20261fa86051b3">
-    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/hasCompositionInformation"/>
-    <rdf:rest rdf:nodeID="nb35208f92b3b411bb08c20261fa86051b4"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/hasCompositionInformation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/hasPart">
-    <owl:propertyChainAxiom rdf:nodeID="nb35208f92b3b411bb08c20261fa86051b3"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/Certificate">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/creationTimeStamp">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/timestamp"/>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/aboutWhole">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/isAbout"/>
+    <owl:inverseOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/hasCompositionInformation"/>
+    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/CompositionInformation"/>
+    <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/isAbout">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -80,73 +110,43 @@
     <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation"/>
     <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/aboutWhole">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/hasCompositionInformation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/invalidAtTimeStamp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/timestamp"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/describes">
     <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/isAbout"/>
-    <owl:inverseOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/hasCompositionInformation"/>
-    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/CompositionInformation"/>
-    <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
+    <owl:propertyChainAxiom rdf:nodeID="n4c161546a9cb48a1916e8bccd6834791b1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/Actor">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/aboutPart">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/isAbout"/>
-    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/CompositionInformation"/>
-    <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="nb35208f92b3b411bb08c20261fa86051b5">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-info/isAbout"/>
-    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="nb35208f92b3b411bb08c20261fa86051b5"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="nb35208f92b3b411bb08c20261fa86051b4">
-    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/aboutPart"/>
+  <rdf:Description rdf:nodeID="n4c161546a9cb48a1916e8bccd6834791b2">
+    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/isAbout"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/Certificate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation"/>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/creationTimeStamp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/timestamp"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/Authority">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/Actor"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/describes">
-    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/isAbout"/>
-    <owl:propertyChainAxiom rdf:nodeID="nb35208f92b3b411bb08c20261fa86051b1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/RemainingProductQuality">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="nb35208f92b3b411bb08c20261fa86051b2">
-    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/isAbout"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/SubstanceHinderingRecycling">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/SubstanceOfConcern"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/ToxicSubstance">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/SubstanceOfConcern"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nb35208f92b3b411bb08c20261fa86051b1">
-    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/containsInformation"/>
-    <rdf:rest rdf:nodeID="nb35208f92b3b411bb08c20261fa86051b2"/>
+  <rdf:Description rdf:nodeID="n4c161546a9cb48a1916e8bccd6834791b3">
+    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/hasCompositionInformation"/>
+    <rdf:rest rdf:nodeID="n4c161546a9cb48a1916e8bccd6834791b4"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/RepairInstruction">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/SubstanceOfConcern">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-core/Substance"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/Consumer">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/Actor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/Actor"/>
   </rdf:Description>
 </rdf:RDF>
