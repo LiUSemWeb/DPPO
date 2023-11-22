@@ -21,8 +21,14 @@
     owl:versionIRI <http://w3id.org/dppo/ontology/dpp-info/0.1/> ;
     owl:versionInfo "0.1" .
 
+:Authority a owl:Class ;
+    rdfs:subClassOf :Actor .
+
 :Certificate a owl:Class ;
     rdfs:subClassOf :PieceOfInformation .
+
+:Consumer a owl:Class ;
+    rdfs:subClassOf :Actor .
 
 :DisassemblyInformation a owl:Class ;
     rdfs:subClassOf :PieceOfInformation .
@@ -38,6 +44,9 @@
 
 :ToxicSubstance a owl:Class ;
     rdfs:subClassOf :SubstanceOfConcern .
+
+:ValueChainActor a owl:Class ;
+    rdfs:subClassOf :Actor .
 
 :aboutWhole a owl:ObjectProperty ;
     rdfs:domain :CompositionInformation ;
@@ -64,8 +73,6 @@
 
 <http://w3id.org/dppo/ontology/dpp-odp/hasPart> owl:propertyChainAxiom ( :hasCompositionInformation :aboutPart ) .
 
-:Actor a owl:Class .
-
 :aboutPart a owl:ObjectProperty ;
     rdfs:domain :CompositionInformation ;
     rdfs:range <http://w3id.org/dppo/ontology/dpp-odp/Product> ;
@@ -86,6 +93,8 @@
 
 :timestamp a owl:DatatypeProperty ;
     rdfs:domain :PieceOfInformation .
+
+:Actor a owl:Class .
 
 :isAbout a owl:ObjectProperty .
 
