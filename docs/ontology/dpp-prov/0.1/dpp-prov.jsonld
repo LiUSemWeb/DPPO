@@ -1,19 +1,13 @@
 [
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-prov/Consumer",
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/timestamp",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor"
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
       }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
     ]
   },
   {
@@ -24,6 +18,17 @@
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/creationTimeStamp",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-prov/timestamp"
       }
     ]
   },
@@ -100,44 +105,6 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-prov/responsibleActor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-prov/timestamp",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-prov/creationTimeStamp",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-prov/timestamp"
-      }
-    ]
-  },
-  {
     "@id": "http://w3id.org/dppo/ontology/dpp-prov/invalidAtTimeStamp",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -149,11 +116,44 @@
     ]
   },
   {
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
     "@id": "http://w3id.org/dppo/ontology/dpp-prov/ValueChainActor",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/Consumer",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/responsibleActor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor"
       }

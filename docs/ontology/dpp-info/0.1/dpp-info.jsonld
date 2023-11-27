@@ -1,6 +1,26 @@
 [
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/CompositionInformation",
+    "@id": "http://w3id.org/dppo/ontology/dpp-odp/describes",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-info/containsInformation"
+          },
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/RemainingProductQuality",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -27,7 +47,7 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/Certificate",
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/RepairInstruction",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -38,36 +58,9 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/RemainingProductQuality",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/hasCompositionInformation",
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product"
-      }
     ]
   },
   {
@@ -77,12 +70,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:n1ea93840b79c4922b7a0e63f6888c749b3"
+        "@id": "_:nae0da18d4cd44eefa0f60a20815f5409b3"
       }
     ]
   },
   {
-    "@id": "_:n1ea93840b79c4922b7a0e63f6888c749b3",
+    "@id": "_:nae0da18d4cd44eefa0f60a20815f5409b3",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -94,6 +87,17 @@
     "http://www.w3.org/2002/07/owl#someValuesFrom": [
       {
         "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/hasCompositionInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product"
       }
     ]
   },
@@ -186,13 +190,7 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/RepairInstruction",
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/CompositionInformation",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -203,22 +201,24 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-odp/describes",
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout"
-      }
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@list": [
-          {
-            "@id": "http://w3id.org/dppo/ontology/dpp-info/containsInformation"
-          },
-          {
-            "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout"
-          }
-        ]
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/Certificate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
       }
     ]
   }

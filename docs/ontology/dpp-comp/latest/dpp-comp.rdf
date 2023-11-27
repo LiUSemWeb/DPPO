@@ -37,7 +37,7 @@
     <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/0.1/CompositionInformation"/>
     <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/ToxicSubstance">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/SubstanceHinderingRecycling">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern"/>
   </rdf:Description>
@@ -45,7 +45,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-core/Substance"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/SubstanceHinderingRecycling">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/ToxicSubstance">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern"/>
   </rdf:Description>
