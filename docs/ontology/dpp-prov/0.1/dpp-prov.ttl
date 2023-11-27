@@ -1,0 +1,47 @@
+@prefix : <http://w3id.org/dppo/ontology/dpp-prov/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dpp-info: <http://w3id.org/dppo/ontology/dpp-info/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+: a owl:Ontology ;
+    dcterms:contributor "Eva Blomqvist",
+        "Huanyu Li",
+        "Robin Keskisärkkä" ;
+    dcterms:created "2023-11-27" ;
+    dcterms:creator "Maike Jansen" ;
+    dcterms:description "Provenance information for DPP information." ;
+    dcterms:license "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE" ;
+    dcterms:title "Digital Product Passport Information Provenance" ;
+    vann:preferredNamespacePrefix "dpp-prov" ;
+    vann:preferredNamespaceUri "http://w3id.org/dppo/ontology/dpp-prov" ;
+    rdfs:seeAlso <https://github.com/LiUSemWeb/DPPO> ;
+    owl:imports <http://w3id.org/dppo/ontology/dpp-info/0.1/> ;
+    owl:versionIRI <http://w3id.org/dppo/ontology/dpp-prov/0.1/> ;
+    owl:versionInfo "0.1" .
+
+:Authority a owl:Class ;
+    rdfs:subClassOf :Actor .
+
+:Consumer a owl:Class ;
+    rdfs:subClassOf :Actor .
+
+:ValueChainActor a owl:Class ;
+    rdfs:subClassOf :Actor .
+
+:creationTimeStamp a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :timestamp .
+
+:invalidAtTimeStamp a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :timestamp .
+
+:responsibleActor a owl:ObjectProperty ;
+    rdfs:domain dpp-info:DPPInformation ;
+    rdfs:range :Actor .
+
+:timestamp a owl:DatatypeProperty ;
+    rdfs:domain dpp-info:DPPInformation .
+
+:Actor a owl:Class .
+

@@ -21,17 +21,11 @@
     owl:versionIRI <http://w3id.org/dppo/ontology/dpp-info/0.1/> ;
     owl:versionInfo "0.1" .
 
-:Authority a owl:Class ;
-    rdfs:subClassOf :Actor .
-
 :Certificate a owl:Class ;
     rdfs:subClassOf :DPPInformation .
 
 :CompositionInformation a owl:Class ;
     rdfs:subClassOf :DPPInformation .
-
-:Consumer a owl:Class ;
-    rdfs:subClassOf :Actor .
 
 :DisassemblyInformation a owl:Class ;
     rdfs:subClassOf :DPPInformation .
@@ -42,21 +36,8 @@
 :RepairInstruction a owl:Class ;
     rdfs:subClassOf :DPPInformation .
 
-:ValueChainActor a owl:Class ;
-    rdfs:subClassOf :Actor .
-
-:creationTimeStamp a owl:DatatypeProperty ;
-    rdfs:subPropertyOf :timestamp .
-
 :hasCompositionInformation a owl:ObjectProperty ;
     rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/Product> .
-
-:invalidAtTimeStamp a owl:DatatypeProperty ;
-    rdfs:subPropertyOf :timestamp .
-
-:responsibleActor a owl:ObjectProperty ;
-    rdfs:domain :DPPInformation ;
-    rdfs:range :Actor .
 
 :superceededBy a owl:ObjectProperty ;
     rdfs:domain :DPPInformation ;
@@ -69,12 +50,7 @@
     rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
     rdfs:range :DPPInformation .
 
-:timestamp a owl:DatatypeProperty ;
-    rdfs:domain :DPPInformation .
-
 :isAbout a owl:ObjectProperty .
-
-:Actor a owl:Class .
 
 :DPPInformation a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
