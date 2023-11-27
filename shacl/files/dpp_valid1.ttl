@@ -1,0 +1,10 @@
+@base <https://w3id.org/dppo/ontology/base/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dpp-info:  <http://w3id.org/dppo/ontology/dpp-info/>.
+@prefix dpp-odp: <http://w3id.org/dppo/ontology/dpp-odp/> .
+
+_:b a dpp-odp:DPP ;
+	dpp-info:containsInformation [ a dpp-info:DPPInformation ] ;
+	dpp-odp:describes [ a dpp-odp:Product ] .

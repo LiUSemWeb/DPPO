@@ -1,0 +1,29 @@
+shapes:
+  DPP:
+    shape: shapes/dpp.ttl
+    valid:
+      - files/dpp_valid1.ttl
+      - files/dpp_valid2.ttl
+    invalid: []
+  
+  DPPInformation:
+    shape: shapes/dpp-information.ttl
+    valid:
+      - files/dpp-information_valid1.ttl
+      - files/dpp-information_valid2.ttl
+      - files/dpp-information_valid3.ttl
+    invalid: []
+  
+  Product:
+    shape: shapes/product.ttl
+    valid:
+      - files/product_valid1.ttl
+      - files/product_valid2.ttl
+    invalid: []
+  
+  CompositionInformation:
+     shape: shapes/composition-information.ttl
+     valid:
+       - files/composition-information_valid1.ttl
+       - files/composition-information_valid2.ttl
+     invalid: []
