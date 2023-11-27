@@ -17,7 +17,7 @@
     vann:preferredNamespacePrefix "dpp-info" ;
     vann:preferredNamespaceUri "http://w3id.org/dppo/ontology/dpp-info/" ;
     rdfs:seeAlso <https://github.com/LiUSemWeb/DPPO> ;
-    owl:imports <http://w3id.org/dppo/ontology/dpp-core/0.1/> ;
+    owl:imports <http://w3id.org/dppo/ontology/dpp-odp/0.1/> ;
     owl:versionIRI <http://w3id.org/dppo/ontology/dpp-info/0.1/> ;
     owl:versionInfo "0.1" .
 
@@ -25,80 +25,58 @@
     rdfs:subClassOf :Actor .
 
 :Certificate a owl:Class ;
-    rdfs:subClassOf :PieceOfInformation .
+    rdfs:subClassOf :DPPInformation .
+
+:CompositionInformation a owl:Class ;
+    rdfs:subClassOf :DPPInformation .
 
 :Consumer a owl:Class ;
     rdfs:subClassOf :Actor .
 
 :DisassemblyInformation a owl:Class ;
-    rdfs:subClassOf :PieceOfInformation .
+    rdfs:subClassOf :DPPInformation .
 
 :RemainingProductQuality a owl:Class ;
-    rdfs:subClassOf :PieceOfInformation .
+    rdfs:subClassOf :DPPInformation .
 
 :RepairInstruction a owl:Class ;
-    rdfs:subClassOf :PieceOfInformation .
-
-:SubstanceHinderingRecycling a owl:Class ;
-    rdfs:subClassOf :SubstanceOfConcern .
-
-:ToxicSubstance a owl:Class ;
-    rdfs:subClassOf :SubstanceOfConcern .
+    rdfs:subClassOf :DPPInformation .
 
 :ValueChainActor a owl:Class ;
     rdfs:subClassOf :Actor .
 
-:aboutWhole a owl:ObjectProperty ;
-    rdfs:domain :CompositionInformation ;
-    rdfs:range <http://w3id.org/dppo/ontology/dpp-odp/Product> ;
-    rdfs:subPropertyOf :isAbout ;
-    owl:inverseOf :hasCompositionInformation .
-
 :creationTimeStamp a owl:DatatypeProperty ;
     rdfs:subPropertyOf :timestamp .
+
+:hasCompositionInformation a owl:ObjectProperty ;
+    rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/Product> .
 
 :invalidAtTimeStamp a owl:DatatypeProperty ;
     rdfs:subPropertyOf :timestamp .
 
 :responsibleActor a owl:ObjectProperty ;
-    rdfs:domain :PieceOfInformation ;
+    rdfs:domain :DPPInformation ;
     rdfs:range :Actor .
 
 :superceededBy a owl:ObjectProperty ;
-    rdfs:domain :PieceOfInformation ;
-    rdfs:range :PieceOfInformation .
+    rdfs:domain :DPPInformation ;
+    rdfs:range :DPPInformation .
 
 <http://w3id.org/dppo/ontology/dpp-odp/describes> rdfs:subPropertyOf :isAbout ;
     owl:propertyChainAxiom ( :containsInformation :isAbout ) .
 
-<http://w3id.org/dppo/ontology/dpp-odp/hasPart> owl:propertyChainAxiom ( :hasCompositionInformation :aboutPart ) .
-
-:aboutPart a owl:ObjectProperty ;
-    rdfs:domain :CompositionInformation ;
-    rdfs:range <http://w3id.org/dppo/ontology/dpp-odp/Product> ;
-    rdfs:subPropertyOf :isAbout .
-
 :containsInformation a owl:ObjectProperty ;
     rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
-    rdfs:range :PieceOfInformation .
-
-:CompositionInformation a owl:Class ;
-    rdfs:subClassOf :PieceOfInformation .
-
-:SubstanceOfConcern a owl:Class ;
-    rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-core/Substance> .
-
-:hasCompositionInformation a owl:ObjectProperty ;
-    rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/Product> .
+    rdfs:range :DPPInformation .
 
 :timestamp a owl:DatatypeProperty ;
-    rdfs:domain :PieceOfInformation .
-
-:Actor a owl:Class .
+    rdfs:domain :DPPInformation .
 
 :isAbout a owl:ObjectProperty .
 
-:PieceOfInformation a owl:Class ;
+:Actor a owl:Class .
+
+:DPPInformation a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty :isAbout ;
             owl:someValuesFrom owl:Thing ] .
