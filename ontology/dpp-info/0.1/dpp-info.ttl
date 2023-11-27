@@ -11,7 +11,7 @@
 
 <http://w3id.org/dppo/ontology/dpp-info/> rdf:type owl:Ontology ;
                                            owl:versionIRI <http://w3id.org/dppo/ontology/dpp-info/0.1/> ;
-                                           owl:imports <http://w3id.org/dppo/ontology/dpp-core/0.1/> ;
+                                           owl:imports <http://w3id.org/dppo/ontology/dpp-odp/0.1/> ;
                                            dcterms:contributor "Eva Blomqvist" ,
                                                                "Huanyu Li" ,
                                                                "Robin Keskisärkkä" ;
@@ -29,25 +29,10 @@
 #    Object Properties
 #################################################################
 
-###  http://w3id.org/dppo/ontology/dpp-info/aboutPart
-:aboutPart rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf :isAbout ;
-           rdfs:domain :CompositionInformation ;
-           rdfs:range <http://w3id.org/dppo/ontology/dpp-odp/Product> .
-
-
-###  http://w3id.org/dppo/ontology/dpp-info/aboutWhole
-:aboutWhole rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :isAbout ;
-            owl:inverseOf :hasCompositionInformation ;
-            rdfs:domain :CompositionInformation ;
-            rdfs:range <http://w3id.org/dppo/ontology/dpp-odp/Product> .
-
-
 ###  http://w3id.org/dppo/ontology/dpp-info/containsInformation
 :containsInformation rdf:type owl:ObjectProperty ;
                      rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
-                     rdfs:range :PieceOfInformation .
+                     rdfs:range :DPPInformation .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/hasCompositionInformation
@@ -61,14 +46,14 @@
 
 ###  http://w3id.org/dppo/ontology/dpp-info/responsibleActor
 :responsibleActor rdf:type owl:ObjectProperty ;
-                  rdfs:domain :PieceOfInformation ;
+                  rdfs:domain :DPPInformation ;
                   rdfs:range :Actor .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/superceededBy
 :superceededBy rdf:type owl:ObjectProperty ;
-               rdfs:domain :PieceOfInformation ;
-               rdfs:range :PieceOfInformation .
+               rdfs:domain :DPPInformation ;
+               rdfs:range :DPPInformation .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-odp/describes
@@ -76,12 +61,6 @@
                                                   owl:propertyChainAxiom ( :containsInformation
                                                                            :isAbout
                                                                          ) .
-
-
-###  http://w3id.org/dppo/ontology/dpp-odp/hasPart
-<http://w3id.org/dppo/ontology/dpp-odp/hasPart> owl:propertyChainAxiom ( :hasCompositionInformation
-                                                                         :aboutPart
-                                                                       ) .
 
 
 #################################################################
@@ -100,7 +79,7 @@
 
 ###  http://w3id.org/dppo/ontology/dpp-info/timestamp
 :timestamp rdf:type owl:DatatypeProperty ;
-           rdfs:domain :PieceOfInformation .
+           rdfs:domain :DPPInformation .
 
 
 #################################################################
@@ -118,12 +97,12 @@
 
 ###  http://w3id.org/dppo/ontology/dpp-info/Certificate
 :Certificate rdf:type owl:Class ;
-             rdfs:subClassOf :PieceOfInformation .
+             rdfs:subClassOf :DPPInformation .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/CompositionInformation
 :CompositionInformation rdf:type owl:Class ;
-                        rdfs:subClassOf :PieceOfInformation .
+                        rdfs:subClassOf :DPPInformation .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/Consumer
@@ -131,42 +110,27 @@
           rdfs:subClassOf :Actor .
 
 
+###  http://w3id.org/dppo/ontology/dpp-info/DPPInformation
+:DPPInformation rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :isAbout ;
+                                  owl:someValuesFrom owl:Thing
+                                ] .
+
+
 ###  http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation
 :DisassemblyInformation rdf:type owl:Class ;
-                        rdfs:subClassOf :PieceOfInformation .
-
-
-###  http://w3id.org/dppo/ontology/dpp-info/PieceOfInformation
-:PieceOfInformation rdf:type owl:Class ;
-                    rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                      owl:onProperty :isAbout ;
-                                      owl:someValuesFrom owl:Thing
-                                    ] .
+                        rdfs:subClassOf :DPPInformation .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/RemainingProductQuality
 :RemainingProductQuality rdf:type owl:Class ;
-                         rdfs:subClassOf :PieceOfInformation .
+                         rdfs:subClassOf :DPPInformation .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/RepairInstruction
 :RepairInstruction rdf:type owl:Class ;
-                   rdfs:subClassOf :PieceOfInformation .
-
-
-###  http://w3id.org/dppo/ontology/dpp-info/SubstanceHinderingRecycling
-:SubstanceHinderingRecycling rdf:type owl:Class ;
-                             rdfs:subClassOf :SubstanceOfConcern .
-
-
-###  http://w3id.org/dppo/ontology/dpp-info/SubstanceOfConcern
-:SubstanceOfConcern rdf:type owl:Class ;
-                    rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-core/Substance> .
-
-
-###  http://w3id.org/dppo/ontology/dpp-info/ToxicSubstance
-:ToxicSubstance rdf:type owl:Class ;
-                rdfs:subClassOf :SubstanceOfConcern .
+                   rdfs:subClassOf :DPPInformation .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/ValueChainActor
