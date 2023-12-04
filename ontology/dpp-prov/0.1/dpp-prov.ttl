@@ -30,14 +30,21 @@
 #    Object Properties
 #################################################################
 
+###  http://w3id.org/dppo/ontology/dpp-prov/actor
+:actor rdf:type owl:ObjectProperty ;
+       rdfs:range :Actor .
+
+
+###  http://w3id.org/dppo/ontology/dpp-prov/dppOwner
+:dppOwner rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :actor ;
+          rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/DPP> .
+
+
 ###  http://w3id.org/dppo/ontology/dpp-prov/responsibleActor
 :responsibleActor rdf:type owl:ObjectProperty ;
-                  rdfs:domain [ rdf:type owl:Class ;
-                                owl:unionOf ( dpp-info:DPPInformation
-                                              <http://w3id.org/dppo/ontology/dpp-odp/DPP>
-                                            )
-                              ] ;
-                  rdfs:range :Actor .
+                  rdfs:subPropertyOf :actor ;
+                  rdfs:domain dpp-info:DPPInformation .
 
 
 #################################################################
@@ -46,7 +53,7 @@
 
 ###  http://w3id.org/dppo/ontology/dpp-prov/creationTimeStamp
 :creationTimeStamp rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf :timestamp ;
+                   rdfs:subPropertyOf :timeStamp ;
                    rdfs:domain [ rdf:type owl:Class ;
                                  owl:unionOf ( dpp-info:DPPInformation
                                                <http://w3id.org/dppo/ontology/dpp-odp/DPP>
@@ -56,13 +63,16 @@
 
 ###  http://w3id.org/dppo/ontology/dpp-prov/invalidAtTimeStamp
 :invalidAtTimeStamp rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf :timestamp ;
-                    rdfs:domain dpp-info:DPPInformation .
+                    rdfs:subPropertyOf :timeStamp ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( dpp-info:DPPInformation
+                                                <http://w3id.org/dppo/ontology/dpp-odp/DPP>
+                                              )
+                                ] .
 
 
-###  http://w3id.org/dppo/ontology/dpp-prov/timestamp
-:timestamp rdf:type owl:DatatypeProperty ;
-           rdfs:domain dpp-info:DPPInformation .
+###  http://w3id.org/dppo/ontology/dpp-prov/timeStamp
+:timeStamp rdf:type owl:DatatypeProperty .
 
 
 #################################################################
