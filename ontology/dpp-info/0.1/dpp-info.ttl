@@ -11,7 +11,7 @@
 
 <http://w3id.org/dppo/ontology/dpp-info/> rdf:type owl:Ontology ;
                                            owl:versionIRI <http://w3id.org/dppo/ontology/dpp-info/0.1/> ;
-                                           owl:imports <http://w3id.org/dppo/ontology/dpp-odp/0.1/> ;
+                                           owl:imports <http://w3id.org/dppo/ontology/dpp-odp/> ;
                                            dcterms:contributor "Eva Blomqvist" ,
                                                                "Huanyu Li" ,
                                                                "Robin Keskisärkkä" ;
