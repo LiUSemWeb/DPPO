@@ -1,12 +1,46 @@
 [
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-prov/timestamp",
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/invalidAtTimeStamp",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+        "@id": "_:neebb2e51f55e4b949ffcd4377168e8f3b4"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-prov/timeStamp"
+      }
+    ]
+  },
+  {
+    "@id": "_:neebb2e51f55e4b949ffcd4377168e8f3b4",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+          },
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/ValueChainActor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor"
       }
     ]
   },
@@ -26,9 +60,43 @@
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:neebb2e51f55e4b949ffcd4377168e8f3b1"
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
       {
-        "@id": "http://w3id.org/dppo/ontology/dpp-prov/timestamp"
+        "@id": "http://w3id.org/dppo/ontology/dpp-prov/timeStamp"
+      }
+    ]
+  },
+  {
+    "@id": "_:neebb2e51f55e4b949ffcd4377168e8f3b1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+          },
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/Consumer",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor"
       }
     ]
   },
@@ -105,41 +173,24 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-prov/invalidAtTimeStamp",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-prov/timestamp"
-      }
-    ]
-  },
-  {
     "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-prov/ValueChainActor",
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/dppOwner",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor"
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
       }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-prov/Consumer",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
       {
-        "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor"
+        "@id": "http://w3id.org/dppo/ontology/dpp-prov/actor"
       }
     ]
   },
@@ -153,10 +204,27 @@
         "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
       }
     ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-prov/actor"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/actor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor"
       }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/timeStamp",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ]
   }
 ]

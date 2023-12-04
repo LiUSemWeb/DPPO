@@ -515,9 +515,9 @@ ul, p {
                 <h2>
                     Classes
                 </h2>
-                <div class="property entity" id="Certificate">
+                <div class="property entity" id="CertificateInformation">
                     <h3>
-                        Certificate
+                        Certificate Information
                         <sup class="sup-c" title="OWL/RDFS Class">
                             c
                         </sup>
@@ -529,7 +529,7 @@ ul, p {
                             </th>
                             <td>
                                 <code>
-                                    http://w3id.org/dppo/ontology/dpp-info/Certificate
+                                    http://w3id.org/dppo/ontology/dpp-info/CertificateInformation
                                 </code>
                             </td>
                         </tr>
@@ -546,6 +546,23 @@ ul, p {
                                     </a>
                                     <sup class="sup-c" title="OWL/RDFS Class">
                                         c
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">
+                                    In Domain Of
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#certificateDocument">
+                                        certificateDocument
+                                    </a>
+                                    <sup class="sup-op" title="OWL Object Property">
+                                        op
                                     </sup>
                                 </span>
                             </td>
@@ -615,8 +632,8 @@ ul, p {
                             </th>
                             <td>
                                 <span>
-                                    <a href="#superceededBy">
-                                        superceededBy
+                                    <a href="#supersededBy">
+                                        supersededBy
                                     </a>
                                     <sup class="sup-op" title="OWL Object Property">
                                         op
@@ -644,8 +661,8 @@ ul, p {
                                     </li>
                                     <li>
                                         <span>
-                                            <a href="#superceededBy">
-                                                superceededBy
+                                            <a href="#supersededBy">
+                                                supersededBy
                                             </a>
                                             <sup class="sup-op" title="OWL Object Property">
                                                 op
@@ -697,8 +714,8 @@ ul, p {
                                 <ul>
                                     <li>
                                         <span>
-                                            <a href="#Certificate">
-                                                Certificate
+                                            <a href="#CertificateInformation">
+                                                CertificateInformation
                                             </a>
                                             <sup class="sup-c" title="OWL/RDFS Class">
                                                 c
@@ -727,8 +744,28 @@ ul, p {
                                     </li>
                                     <li>
                                         <span>
-                                            <a href="#RemainingProductQuality">
-                                                RemainingProductQuality
+                                            <a href="#LegalGuarantee">
+                                                LegalGuarantee
+                                            </a>
+                                            <sup class="sup-c" title="OWL/RDFS Class">
+                                                c
+                                            </sup>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <a href="#ProductCharacteristic">
+                                                ProductCharacteristic
+                                            </a>
+                                            <sup class="sup-c" title="OWL/RDFS Class">
+                                                c
+                                            </sup>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <a href="#ProductQuality">
+                                                ProductQuality
                                             </a>
                                             <sup class="sup-c" title="OWL/RDFS Class">
                                                 c
@@ -785,11 +822,28 @@ ul, p {
                                 </span>
                             </td>
                         </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">
+                                    In Domain Of
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#dissasemblyInstructionsDocument">
+                                        dissasemblyInstructionsDocument
+                                    </a>
+                                    <sup class="sup-op" title="OWL Object Property">
+                                        op
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
                     </table>
                 </div>
-                <div class="property entity" id="RemainingProductQuality">
+                <div class="property entity" id="LegalGuarantee">
                     <h3>
-                        Remaining Product Quality
+                        Legal Guarantee
                         <sup class="sup-c" title="OWL/RDFS Class">
                             c
                         </sup>
@@ -801,7 +855,7 @@ ul, p {
                             </th>
                             <td>
                                 <code>
-                                    http://w3id.org/dppo/ontology/dpp-info/RemainingProductQuality
+                                    http://w3id.org/dppo/ontology/dpp-info/LegalGuarantee
                                 </code>
                             </td>
                         </tr>
@@ -812,12 +866,299 @@ ul, p {
                                 </a>
                             </th>
                             <td>
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <a href="#DPPInformation">
+                                                DPPInformation
+                                            </a>
+                                            <sup class="sup-c" title="OWL/RDFS Class">
+                                                c
+                                            </sup>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <span>
+                                                <span>
+                                                    <a href="#endTime">
+                                                        endTime
+                                                    </a>
+                                                    <sup class="sup-dp" title="OWL Datatype Property">
+                                                        dp
+                                                    </sup>
+                                                </span>
+                                                <span>
+                                                    <span class="cardinality">
+                                                        exactly
+                                                    </span>
+                                                    <span>
+                                                        1
+                                                    </span>
+                                                </span>
+                                                <span>
+                                                    <span>
+                                                        <a href="1">
+                                                            1
+                                                        </a>
+                                                        <sup class="sup-c" title="OWL/RDFS Class">
+                                                            c
+                                                        </sup>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="cardinality">
+                                            and
+                                        </span>
+                                        <span>
+                                            <span>
+                                                <span>
+                                                    <a href="#startTime">
+                                                        startTime
+                                                    </a>
+                                                    <sup class="sup-dp" title="OWL Datatype Property">
+                                                        dp
+                                                    </sup>
+                                                </span>
+                                                <span>
+                                                    <span class="cardinality">
+                                                        exactly
+                                                    </span>
+                                                    <span>
+                                                        1
+                                                    </span>
+                                                </span>
+                                                <span>
+                                                    <span>
+                                                        <a href="1">
+                                                            1
+                                                        </a>
+                                                        <sup class="sup-c" title="OWL/RDFS Class">
+                                                            c
+                                                        </sup>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="ProductCharacteristic">
+                    <h3>
+                        Product Characteristic
+                        <sup class="sup-c" title="OWL/RDFS Class">
+                            c
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/ProductCharacteristic
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Sub Class Of
+                                </a>
+                            </th>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <a href="#DPPInformation">
+                                                DPPInformation
+                                            </a>
+                                            <sup class="sup-c" title="OWL/RDFS Class">
+                                                c
+                                            </sup>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <span>
+                                                <span>
+                                                    <a href="#characteristic">
+                                                        characteristic
+                                                    </a>
+                                                    <sup class="sup-op" title="OWL Object Property">
+                                                        op
+                                                    </sup>
+                                                </span>
+                                                some
+                                                <span>
+                                                    <span>
+                                                        <a href="http://www.w3.org/2002/07/owl#Thing">
+                                                            Thing
+                                                        </a>
+                                                        <sup class="sup-c" title="OWL/RDFS Class">
+                                                            c
+                                                        </sup>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="cardinality">
+                                            and
+                                        </span>
+                                        <span>
+                                            <span>
+                                                <span>
+                                                    <a href="#value">
+                                                        value
+                                                    </a>
+                                                    <sup class="sup-dp" title="OWL Datatype Property">
+                                                        dp
+                                                    </sup>
+                                                </span>
+                                                some
+                                                <span>
+                                                    <span>
+                                                        <a href="http://www.w3.org/2000/01/rdf-schema#Literal">
+                                                            Literal
+                                                        </a>
+                                                        <sup class="sup-c" title="OWL/RDFS Class">
+                                                            c
+                                                        </sup>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">
+                                    In Domain Of
+                                </a>
+                            </th>
+                            <td>
                                 <span>
-                                    <a href="#DPPInformation">
-                                        DPPInformation
+                                    <a href="#characteristic">
+                                        characteristic
                                     </a>
-                                    <sup class="sup-c" title="OWL/RDFS Class">
-                                        c
+                                    <sup class="sup-op" title="OWL Object Property">
+                                        op
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="ProductQuality">
+                    <h3>
+                        Product Quality
+                        <sup class="sup-c" title="OWL/RDFS Class">
+                            c
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/ProductQuality
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Sub Class Of
+                                </a>
+                            </th>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <a href="#DPPInformation">
+                                                DPPInformation
+                                            </a>
+                                            <sup class="sup-c" title="OWL/RDFS Class">
+                                                c
+                                            </sup>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <span>
+                                                <span>
+                                                    <a href="#quality">
+                                                        quality
+                                                    </a>
+                                                    <sup class="sup-op" title="OWL Object Property">
+                                                        op
+                                                    </sup>
+                                                </span>
+                                                some
+                                                <span>
+                                                    <span>
+                                                        <a href="http://www.w3.org/2002/07/owl#Thing">
+                                                            Thing
+                                                        </a>
+                                                        <sup class="sup-c" title="OWL/RDFS Class">
+                                                            c
+                                                        </sup>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="cardinality">
+                                            and
+                                        </span>
+                                        <span>
+                                            <span>
+                                                <span>
+                                                    <a href="#value">
+                                                        value
+                                                    </a>
+                                                    <sup class="sup-dp" title="OWL Datatype Property">
+                                                        dp
+                                                    </sup>
+                                                </span>
+                                                some
+                                                <span>
+                                                    <span>
+                                                        <a href="http://www.w3.org/2000/01/rdf-schema#Literal">
+                                                            Literal
+                                                        </a>
+                                                        <sup class="sup-c" title="OWL/RDFS Class">
+                                                            c
+                                                        </sup>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">
+                                    In Domain Of
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#quality">
+                                        quality
+                                    </a>
+                                    <sup class="sup-op" title="OWL Object Property">
+                                        op
                                     </sup>
                                 </span>
                             </td>
@@ -859,13 +1200,293 @@ ul, p {
                                 </span>
                             </td>
                         </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">
+                                    In Domain Of
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#repairInstructionsDocument">
+                                        repairInstructionsDocument
+                                    </a>
+                                    <sup class="sup-op" title="OWL Object Property">
+                                        op
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="Unit">
+                    <h3>
+                        Unit
+                        <sup class="sup-c" title="OWL/RDFS Class">
+                            c
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/Unit
+                                </code>
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </div>
+            <span>
+                <span>
+                    <span>
+                        <a href="#endTime">
+                            endTime
+                        </a>
+                        <sup class="sup-dp" title="OWL Datatype Property">
+                            dp
+                        </sup>
+                    </span>
+                    <span>
+                        <span class="cardinality">
+                            exactly
+                        </span>
+                        <span>
+                            1
+                        </span>
+                    </span>
+                    <span>
+                        <span>
+                            <a href="1">
+                                1
+                            </a>
+                            <sup class="sup-c" title="OWL/RDFS Class">
+                                c
+                            </sup>
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span>
+                <span>
+                    <span>
+                        <a href="#startTime">
+                            startTime
+                        </a>
+                        <sup class="sup-dp" title="OWL Datatype Property">
+                            dp
+                        </sup>
+                    </span>
+                    <span>
+                        <span class="cardinality">
+                            exactly
+                        </span>
+                        <span>
+                            1
+                        </span>
+                    </span>
+                    <span>
+                        <span>
+                            <a href="1">
+                                1
+                            </a>
+                            <sup class="sup-c" title="OWL/RDFS Class">
+                                c
+                            </sup>
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span>
+                <span>
+                    <span>
+                        <a href="#characteristic">
+                            characteristic
+                        </a>
+                        <sup class="sup-op" title="OWL Object Property">
+                            op
+                        </sup>
+                    </span>
+                    some
+                    <span>
+                        <span>
+                            <a href="http://www.w3.org/2002/07/owl#Thing">
+                                Thing
+                            </a>
+                            <sup class="sup-c" title="OWL/RDFS Class">
+                                c
+                            </sup>
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span>
+                <span>
+                    <span>
+                        <a href="#value">
+                            value
+                        </a>
+                        <sup class="sup-dp" title="OWL Datatype Property">
+                            dp
+                        </sup>
+                    </span>
+                    some
+                    <span>
+                        <span>
+                            <a href="http://www.w3.org/2000/01/rdf-schema#Literal">
+                                Literal
+                            </a>
+                            <sup class="sup-c" title="OWL/RDFS Class">
+                                c
+                            </sup>
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span>
+                <span>
+                    <span>
+                        <a href="#quality">
+                            quality
+                        </a>
+                        <sup class="sup-op" title="OWL Object Property">
+                            op
+                        </sup>
+                    </span>
+                    some
+                    <span>
+                        <span>
+                            <a href="http://www.w3.org/2002/07/owl#Thing">
+                                Thing
+                            </a>
+                            <sup class="sup-c" title="OWL/RDFS Class">
+                                c
+                            </sup>
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span>
+                <span>
+                    <span>
+                        <a href="#value">
+                            value
+                        </a>
+                        <sup class="sup-dp" title="OWL Datatype Property">
+                            dp
+                        </sup>
+                    </span>
+                    some
+                    <span>
+                        <span>
+                            <a href="http://www.w3.org/2000/01/rdf-schema#Literal">
+                                Literal
+                            </a>
+                            <sup class="sup-c" title="OWL/RDFS Class">
+                                c
+                            </sup>
+                        </span>
+                    </span>
+                </span>
+            </span>
             <div class="section" id="objectproperties">
                 <h2>
                     Object Properties
                 </h2>
+                <div class="property entity" id="certificateDocument">
+                    <h3>
+                        certificate document
+                        <sup class="sup-op" title="OWL Object Property">
+                            op
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/certificateDocument
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Sub Property Of
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#externalDocument">
+                                        externalDocument
+                                    </a>
+                                    <sup class="sup-op" title="OWL Object Property">
+                                        op
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Domain
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#CertificateInformation">
+                                        CertificateInformation
+                                    </a>
+                                    <sup class="sup-c" title="OWL/RDFS Class">
+                                        c
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="characteristic">
+                    <h3>
+                        characteristic
+                        <sup class="sup-op" title="OWL Object Property">
+                            op
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/characteristic
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Domain
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#ProductCharacteristic">
+                                        ProductCharacteristic
+                                    </a>
+                                    <sup class="sup-c" title="OWL/RDFS Class">
+                                        c
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
                 <div class="property entity" id="containsInformation">
                     <h3>
                         contains information
@@ -911,6 +1532,178 @@ ul, p {
                                         c
                                     </sup>
                                 </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="directlySupersededBy">
+                    <h3>
+                        directly superseded by
+                        <sup class="sup-op" title="OWL Object Property">
+                            op
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/directlySupersededBy
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Sub Property Of
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#supersededBy">
+                                        supersededBy
+                                    </a>
+                                    <sup class="sup-op" title="OWL Object Property">
+                                        op
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="directlySupersedes">
+                    <h3>
+                        directly supersedes
+                        <sup class="sup-op" title="OWL Object Property">
+                            op
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/directlySupersedes
+                                </code>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="dissasemblyInstructionsDocument">
+                    <h3>
+                        dissasembly instructions document
+                        <sup class="sup-op" title="OWL Object Property">
+                            op
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/dissasemblyInstructionsDocument
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Sub Property Of
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#externalDocument">
+                                        externalDocument
+                                    </a>
+                                    <sup class="sup-op" title="OWL Object Property">
+                                        op
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Domain
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#DisassemblyInformation">
+                                        DisassemblyInformation
+                                    </a>
+                                    <sup class="sup-c" title="OWL/RDFS Class">
+                                        c
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="externalDocument">
+                    <h3>
+                        external document
+                        <sup class="sup-op" title="OWL Object Property">
+                            op
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/externalDocument
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superPropertyOf" title="Inverse of RDFS' subPropertyOf. Defined in Ontology Documentation Profile">
+                                    Super Property Of
+                                </a>
+                            </th>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <a href="#certificateDocument">
+                                                certificateDocument
+                                            </a>
+                                            <sup class="sup-op" title="OWL Object Property">
+                                                op
+                                            </sup>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <a href="#dissasemblyInstructionsDocument">
+                                                dissasemblyInstructionsDocument
+                                            </a>
+                                            <sup class="sup-op" title="OWL Object Property">
+                                                op
+                                            </sup>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <a href="#repairInstructionsDocument">
+                                                repairInstructionsDocument
+                                            </a>
+                                            <sup class="sup-op" title="OWL Object Property">
+                                                op
+                                            </sup>
+                                        </span>
+                                    </li>
+                                </ul>
                             </td>
                         </tr>
                     </table>
@@ -979,9 +1772,9 @@ ul, p {
                         </tr>
                     </table>
                 </div>
-                <div class="property entity" id="superceededBy">
+                <div class="property entity" id="quality">
                     <h3>
-                        superceeded by
+                        quality
                         <sup class="sup-op" title="OWL Object Property">
                             op
                         </sup>
@@ -993,8 +1786,116 @@ ul, p {
                             </th>
                             <td>
                                 <code>
-                                    http://w3id.org/dppo/ontology/dpp-info/superceededBy
+                                    http://w3id.org/dppo/ontology/dpp-info/quality
                                 </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Domain
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#ProductQuality">
+                                        ProductQuality
+                                    </a>
+                                    <sup class="sup-c" title="OWL/RDFS Class">
+                                        c
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="repairInstructionsDocument">
+                    <h3>
+                        repair instructions document
+                        <sup class="sup-op" title="OWL Object Property">
+                            op
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/repairInstructionsDocument
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Sub Property Of
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#externalDocument">
+                                        externalDocument
+                                    </a>
+                                    <sup class="sup-op" title="OWL Object Property">
+                                        op
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Domain
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#RepairInstruction">
+                                        RepairInstruction
+                                    </a>
+                                    <sup class="sup-c" title="OWL/RDFS Class">
+                                        c
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="supersededBy">
+                    <h3>
+                        superseded by
+                        <sup class="sup-op" title="OWL Object Property">
+                            op
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/supersededBy
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superPropertyOf" title="Inverse of RDFS' subPropertyOf. Defined in Ontology Documentation Profile">
+                                    Super Property Of
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#directlySupersededBy">
+                                        directlySupersededBy
+                                    </a>
+                                    <sup class="sup-op" title="OWL Object Property">
+                                        op
+                                    </sup>
+                                </span>
                             </td>
                         </tr>
                         <tr>
@@ -1029,6 +1930,154 @@ ul, p {
                                         c
                                     </sup>
                                 </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="unit">
+                    <h3>
+                        unit
+                        <sup class="sup-op" title="OWL Object Property">
+                            op
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/unit
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Domain
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#CompositionInformation">
+                                        CompositionInformation
+                                    </a>
+                                    <sup class="sup-c" title="OWL/RDFS Class">
+                                        c
+                                    </sup>
+                                </span>
+                                <span class="cardinality">
+                                    or
+                                </span>
+                                <span>
+                                    <a href="#ProductQuality">
+                                        ProductQuality
+                                    </a>
+                                    <sup class="sup-c" title="OWL/RDFS Class">
+                                        c
+                                    </sup>
+                                </span>
+                                <span class="cardinality">
+                                    or
+                                </span>
+                                <span>
+                                    <a href="#ProductCharacteristic">
+                                        ProductCharacteristic
+                                    </a>
+                                    <sup class="sup-c" title="OWL/RDFS Class">
+                                        c
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <span>
+                <a href="#CompositionInformation">
+                    CompositionInformation
+                </a>
+                <sup class="sup-c" title="OWL/RDFS Class">
+                    c
+                </sup>
+            </span>
+            <span>
+                <a href="#ProductCharacteristic">
+                    ProductCharacteristic
+                </a>
+                <sup class="sup-c" title="OWL/RDFS Class">
+                    c
+                </sup>
+            </span>
+            <span>
+                <a href="#ProductQuality">
+                    ProductQuality
+                </a>
+                <sup class="sup-c" title="OWL/RDFS Class">
+                    c
+                </sup>
+            </span>
+            <div class="section" id="datatypeproperties">
+                <h2>
+                    Datatype Properties
+                </h2>
+                <div class="property entity" id="endTime">
+                    <h3>
+                        end time
+                        <sup class="sup-dp" title="OWL Datatype Property">
+                            dp
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/endTime
+                                </code>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="startTime">
+                    <h3>
+                        start time
+                        <sup class="sup-dp" title="OWL Datatype Property">
+                            dp
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/startTime
+                                </code>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="value">
+                    <h3>
+                        value
+                        <sup class="sup-dp" title="OWL Datatype Property">
+                            dp
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/value
+                                </code>
                             </td>
                         </tr>
                     </table>
@@ -1122,6 +2171,16 @@ ul, p {
                             Object Properties
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <sup class="sup-dp" title="OWL Datatype Property">
+                                dp
+                            </sup>
+                        </td>
+                        <td>
+                            Datatype Properties
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>
@@ -1173,8 +2232,8 @@ ul, p {
                     </h4>
                     <ul class="second">
                         <li>
-                            <a href="#Certificate">
-                                Certificate
+                            <a href="#CertificateInformation">
+                                Certificate Information
                             </a>
                         </li>
                         <li>
@@ -1193,13 +2252,28 @@ ul, p {
                             </a>
                         </li>
                         <li>
-                            <a href="#RemainingProductQuality">
-                                Remaining Product Quality
+                            <a href="#LegalGuarantee">
+                                Legal Guarantee
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#ProductCharacteristic">
+                                Product Characteristic
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#ProductQuality">
+                                Product Quality
                             </a>
                         </li>
                         <li>
                             <a href="#RepairInstruction">
                                 Repair Instruction
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#Unit">
+                                Unit
                             </a>
                         </li>
                     </ul>
@@ -1212,8 +2286,38 @@ ul, p {
                     </h4>
                     <ul class="second">
                         <li>
+                            <a href="#certificateDocument">
+                                certificate document
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#characteristic">
+                                characteristic
+                            </a>
+                        </li>
+                        <li>
                             <a href="#containsInformation">
                                 contains information
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#directlySupersededBy">
+                                directly superseded by
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#directlySupersedes">
+                                directly supersedes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#dissasemblyInstructionsDocument">
+                                dissasembly instructions document
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#externalDocument">
+                                external document
                             </a>
                         </li>
                         <li>
@@ -1227,8 +2331,47 @@ ul, p {
                             </a>
                         </li>
                         <li>
-                            <a href="#superceededBy">
-                                superceeded by
+                            <a href="#quality">
+                                quality
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#repairInstructionsDocument">
+                                repair instructions document
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#supersededBy">
+                                superseded by
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#unit">
+                                unit
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>
+                        <a href="#datatypeproperties">
+                            Datatype Properties
+                        </a>
+                    </h4>
+                    <ul class="second">
+                        <li>
+                            <a href="#endTime">
+                                end time
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#startTime">
+                                start time
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#value">
+                                value
                             </a>
                         </li>
                     </ul>

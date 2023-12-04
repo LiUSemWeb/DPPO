@@ -2,6 +2,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dpp-info: <http://w3id.org/dppo/ontology/dpp-info/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 
@@ -31,17 +32,27 @@
     rdfs:subClassOf :Actor .
 
 :creationTimeStamp a owl:DatatypeProperty ;
-    rdfs:subPropertyOf :timestamp .
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( dpp-info:DPPInformation <http://w3id.org/dppo/ontology/dpp-odp/DPP> ) ] ;
+    rdfs:subPropertyOf :timeStamp .
+
+:dppOwner a owl:ObjectProperty ;
+    rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
+    rdfs:subPropertyOf :actor .
 
 :invalidAtTimeStamp a owl:DatatypeProperty ;
-    rdfs:subPropertyOf :timestamp .
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( dpp-info:DPPInformation <http://w3id.org/dppo/ontology/dpp-odp/DPP> ) ] ;
+    rdfs:subPropertyOf :timeStamp .
 
 :responsibleActor a owl:ObjectProperty ;
     rdfs:domain dpp-info:DPPInformation ;
+    rdfs:subPropertyOf :actor .
+
+:actor a owl:ObjectProperty ;
     rdfs:range :Actor .
 
-:timestamp a owl:DatatypeProperty ;
-    rdfs:domain dpp-info:DPPInformation .
+:timeStamp a owl:DatatypeProperty .
 
 :Actor a owl:Class .
 

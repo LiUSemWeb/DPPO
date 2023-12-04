@@ -541,8 +541,8 @@ ul, p {
                             </th>
                             <td>
                                 <span>
-                                    <a href="#responsibleActor">
-                                        responsibleActor
+                                    <a href="#actor">
+                                        actor
                                     </a>
                                     <sup class="sup-op" title="OWL Object Property">
                                         op
@@ -709,6 +709,123 @@ ul, p {
                 <h2>
                     Object Properties
                 </h2>
+                <div class="property entity" id="actor">
+                    <h3>
+                        actor
+                        <sup class="sup-op" title="OWL Object Property">
+                            op
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-prov/actor
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superPropertyOf" title="Inverse of RDFS' subPropertyOf. Defined in Ontology Documentation Profile">
+                                    Super Property Of
+                                </a>
+                            </th>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <a href="#dppOwner">
+                                                dppOwner
+                                            </a>
+                                            <sup class="sup-op" title="OWL Object Property">
+                                                op
+                                            </sup>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <a href="#responsibleActor">
+                                                responsibleActor
+                                            </a>
+                                            <sup class="sup-op" title="OWL Object Property">
+                                                op
+                                            </sup>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Range
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#Actor">
+                                        Actor
+                                    </a>
+                                    <sup class="sup-c" title="OWL/RDFS Class">
+                                        c
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="dppOwner">
+                    <h3>
+                        dpp owner
+                        <sup class="sup-op" title="OWL Object Property">
+                            op
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-prov/dppOwner
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Sub Property Of
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#actor">
+                                        actor
+                                    </a>
+                                    <sup class="sup-op" title="OWL Object Property">
+                                        op
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Domain
+                                </a>
+                            </th>
+                            <td>
+                                <a href="http://w3id.org/dppo/ontology/dpp-odp/DPP">
+                                    http://w3id.org/dppo/ontology/dpp-odp/DPP
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
                 <div class="property entity" id="responsibleActor">
                     <h3>
                         responsible actor
@@ -729,6 +846,23 @@ ul, p {
                         </tr>
                         <tr>
                             <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Sub Property Of
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#actor">
+                                        actor
+                                    </a>
+                                    <sup class="sup-op" title="OWL Object Property">
+                                        op
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
                                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">
                                     Domain
                                 </a>
@@ -737,23 +871,6 @@ ul, p {
                                 <a href="http://w3id.org/dppo/ontology/dpp-info/DPPInformation">
                                     dpp-info:DPPInformation
                                 </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">
-                                    Range
-                                </a>
-                            </th>
-                            <td>
-                                <span>
-                                    <a href="#Actor">
-                                        Actor
-                                    </a>
-                                    <sup class="sup-c" title="OWL/RDFS Class">
-                                        c
-                                    </sup>
-                                </span>
                             </td>
                         </tr>
                     </table>
@@ -789,11 +906,39 @@ ul, p {
                             </th>
                             <td>
                                 <span>
-                                    <a href="#timestamp">
-                                        timestamp
+                                    <a href="#timeStamp">
+                                        timeStamp
                                     </a>
                                     <sup class="sup-dp" title="OWL Datatype Property">
                                         dp
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Domain
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="http://w3id.org/dppo/ontology/dpp-info/DPPInformation">
+                                        dpp-info:DPPInformation
+                                    </a>
+                                    <sup class="sup-c" title="OWL/RDFS Class">
+                                        c
+                                    </sup>
+                                </span>
+                                <span class="cardinality">
+                                    or
+                                </span>
+                                <span>
+                                    <a href="http://w3id.org/dppo/ontology/dpp-odp/DPP">
+                                        http://w3id.org/dppo/ontology/dpp-odp/DPP
+                                    </a>
+                                    <sup class="sup-c" title="OWL/RDFS Class">
+                                        c
                                     </sup>
                                 </span>
                             </td>
@@ -826,8 +971,8 @@ ul, p {
                             </th>
                             <td>
                                 <span>
-                                    <a href="#timestamp">
-                                        timestamp
+                                    <a href="#timeStamp">
+                                        timeStamp
                                     </a>
                                     <sup class="sup-dp" title="OWL Datatype Property">
                                         dp
@@ -835,11 +980,39 @@ ul, p {
                                 </span>
                             </td>
                         </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">
+                                    Domain
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="http://w3id.org/dppo/ontology/dpp-info/DPPInformation">
+                                        dpp-info:DPPInformation
+                                    </a>
+                                    <sup class="sup-c" title="OWL/RDFS Class">
+                                        c
+                                    </sup>
+                                </span>
+                                <span class="cardinality">
+                                    or
+                                </span>
+                                <span>
+                                    <a href="http://w3id.org/dppo/ontology/dpp-odp/DPP">
+                                        http://w3id.org/dppo/ontology/dpp-odp/DPP
+                                    </a>
+                                    <sup class="sup-c" title="OWL/RDFS Class">
+                                        c
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
                     </table>
                 </div>
-                <div class="property entity" id="timestamp">
+                <div class="property entity" id="timeStamp">
                     <h3>
-                        timestamp
+                        time stamp
                         <sup class="sup-dp" title="OWL Datatype Property">
                             dp
                         </sup>
@@ -851,7 +1024,7 @@ ul, p {
                             </th>
                             <td>
                                 <code>
-                                    http://w3id.org/dppo/ontology/dpp-prov/timestamp
+                                    http://w3id.org/dppo/ontology/dpp-prov/timeStamp
                                 </code>
                             </td>
                         </tr>
@@ -886,21 +1059,41 @@ ul, p {
                                 </ul>
                             </td>
                         </tr>
-                        <tr>
-                            <th>
-                                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">
-                                    Domain
-                                </a>
-                            </th>
-                            <td>
-                                <a href="http://w3id.org/dppo/ontology/dpp-info/DPPInformation">
-                                    dpp-info:DPPInformation
-                                </a>
-                            </td>
-                        </tr>
                     </table>
                 </div>
             </div>
+            <span>
+                <a href="http://w3id.org/dppo/ontology/dpp-info/DPPInformation">
+                    dpp-info:DPPInformation
+                </a>
+                <sup class="sup-c" title="OWL/RDFS Class">
+                    c
+                </sup>
+            </span>
+            <span>
+                <a href="http://w3id.org/dppo/ontology/dpp-odp/DPP">
+                    http://w3id.org/dppo/ontology/dpp-odp/DPP
+                </a>
+                <sup class="sup-c" title="OWL/RDFS Class">
+                    c
+                </sup>
+            </span>
+            <span>
+                <a href="http://w3id.org/dppo/ontology/dpp-info/DPPInformation">
+                    dpp-info:DPPInformation
+                </a>
+                <sup class="sup-c" title="OWL/RDFS Class">
+                    c
+                </sup>
+            </span>
+            <span>
+                <a href="http://w3id.org/dppo/ontology/dpp-odp/DPP">
+                    http://w3id.org/dppo/ontology/dpp-odp/DPP
+                </a>
+                <sup class="sup-c" title="OWL/RDFS Class">
+                    c
+                </sup>
+            </span>
             <div id="namespaces">
                 <h2>
                     Namespaces
@@ -1087,6 +1280,16 @@ ul, p {
                     </h4>
                     <ul class="second">
                         <li>
+                            <a href="#actor">
+                                actor
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#dppOwner">
+                                dpp owner
+                            </a>
+                        </li>
+                        <li>
                             <a href="#responsibleActor">
                                 responsible actor
                             </a>
@@ -1111,8 +1314,8 @@ ul, p {
                             </a>
                         </li>
                         <li>
-                            <a href="#timestamp">
-                                timestamp
+                            <a href="#timeStamp">
+                                time stamp
                             </a>
                         </li>
                     </ul>

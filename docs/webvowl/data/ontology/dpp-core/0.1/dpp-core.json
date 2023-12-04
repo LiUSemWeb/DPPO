@@ -39,12 +39,12 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Eva Blomqvist",
+        "value" : "Robin Keskisärkkä",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Robin Keskisärkkä",
+        "value" : "Eva Blomqvist",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -64,16 +64,16 @@
         "value" : "dpp-core",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "0.1",
-        "type" : "label"
-      } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "http://w3id.org/dppo/ontology/dpp-core/",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.1",
         "type" : "label"
       } ],
       "title" : [ {

@@ -4,6 +4,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 : a owl:Ontology ;
     dcterms:contributor "Eva Blomqvist",
@@ -21,7 +22,44 @@
     owl:versionIRI <http://w3id.org/dppo/ontology/dpp-info/0.1/> ;
     owl:versionInfo "0.1" .
 
-:Certificate a owl:Class ;
+:LegalGuarantee a owl:Class ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty :endTime ] [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty :startTime ] ) ],
+        :DPPInformation .
+
+:Unit a owl:Class .
+
+:certificateDocument a owl:ObjectProperty ;
+    rdfs:domain :CertificateInformation ;
+    rdfs:subPropertyOf :externalDocument .
+
+:directlySupersededBy a owl:ObjectProperty ;
+    rdfs:subPropertyOf :supersededBy ;
+    owl:inverseOf :directlySupersedes .
+
+:dissasemblyInstructionsDocument a owl:ObjectProperty ;
+    rdfs:domain :DisassemblyInformation ;
+    rdfs:subPropertyOf :externalDocument .
+
+:hasCompositionInformation a owl:ObjectProperty ;
+    rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/Product> .
+
+:repairInstructionsDocument a owl:ObjectProperty ;
+    rdfs:domain :RepairInstruction ;
+    rdfs:subPropertyOf :externalDocument .
+
+:unit a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :CompositionInformation :ProductCharacteristic :ProductQuality ) ] .
+
+<http://w3id.org/dppo/ontology/dpp-odp/describes> rdfs:subPropertyOf :isAbout ;
+    owl:propertyChainAxiom ( :containsInformation :isAbout ) .
+
+:CertificateInformation a owl:Class ;
     rdfs:subClassOf :DPPInformation .
 
 :CompositionInformation a owl:Class ;
@@ -30,25 +68,51 @@
 :DisassemblyInformation a owl:Class ;
     rdfs:subClassOf :DPPInformation .
 
-:RemainingProductQuality a owl:Class ;
-    rdfs:subClassOf :DPPInformation .
-
 :RepairInstruction a owl:Class ;
     rdfs:subClassOf :DPPInformation .
 
-:hasCompositionInformation a owl:ObjectProperty ;
-    rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/Product> .
-
-:superceededBy a owl:ObjectProperty ;
-    rdfs:domain :DPPInformation ;
-    rdfs:range :DPPInformation .
-
-<http://w3id.org/dppo/ontology/dpp-odp/describes> rdfs:subPropertyOf :isAbout ;
-    owl:propertyChainAxiom ( :containsInformation :isAbout ) .
+:characteristic a owl:ObjectProperty ;
+    rdfs:domain :ProductCharacteristic .
 
 :containsInformation a owl:ObjectProperty ;
     rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
     rdfs:range :DPPInformation .
+
+:directlySupersedes a owl:ObjectProperty .
+
+:endTime a owl:DatatypeProperty .
+
+:quality a owl:ObjectProperty ;
+    rdfs:domain :ProductQuality .
+
+:startTime a owl:DatatypeProperty .
+
+:supersededBy a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:domain :DPPInformation ;
+    rdfs:range :DPPInformation .
+
+:ProductCharacteristic a owl:Class ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty :characteristic ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty :value ;
+                        owl:someValuesFrom rdfs:Literal ] ) ],
+        :DPPInformation .
+
+:ProductQuality a owl:Class ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty :quality ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty :value ;
+                        owl:someValuesFrom rdfs:Literal ] ) ],
+        :DPPInformation .
+
+:value a owl:DatatypeProperty .
+
+:externalDocument a owl:ObjectProperty .
 
 :isAbout a owl:ObjectProperty .
 
