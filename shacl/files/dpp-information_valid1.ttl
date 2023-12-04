@@ -1,0 +1,25 @@
+@base <https://w3id.org/dppo/ontology/base/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dpp-info:  <http://w3id.org/dppo/ontology/dpp-info/> .
+@prefix dpp-odp: <http://w3id.org/dppo/ontology/dpp-odp/> .
+@prefix dpp-prov: <http://w3id.org/dppo/ontology/dpp-prov/> .
+
+_:b a dpp-info:DPPInformation ;
+	dpp-info:hasTime "2023-11-24T11:34:00"^^xsd:dateTime ;
+	dpp-info:responsibleActor [ a dpp-prov:Actor ] .
+
+
+
+
+
+
+
+
+
+
+
+
+
+

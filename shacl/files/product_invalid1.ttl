@@ -1,0 +1,11 @@
+@base <https://w3id.org/dppo/ontology/base/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dpp: <https://w3id.org/dppo/ontology/dpp/> .
+@prefix dpp-odp: <https://w3id.org/dppo/ontology/dpp-odp/> .
+@prefix info: <https://w3id.org/dppo/ontology/dpp-info/> .
+
+# Missing type for dpp-odp:hasPart
+_:b1 a dpp-odp:Product ;
+    dpp-odp:hasPart _:b2 .
