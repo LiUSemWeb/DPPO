@@ -7,7 +7,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix dpp-info: <http://w3id.org/dppo/ontology/dpp-info/>.
+@prefix dpp-info: <http://w3id.org/dppo/ontology/dpp-info/> .
 @base <http://w3id.org/dppo/ontology/dpp-prov/> .
 
 <http://w3id.org/dppo/ontology/dpp-prov/> rdf:type owl:Ontology ;
@@ -32,10 +32,12 @@
 
 ###  http://w3id.org/dppo/ontology/dpp-prov/responsibleActor
 :responsibleActor rdf:type owl:ObjectProperty ;
-                  rdfs:domain dpp-info:DPPInformation ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( dpp-info:DPPInformation
+                                              <http://w3id.org/dppo/ontology/dpp-odp/DPP>
+                                            )
+                              ] ;
                   rdfs:range :Actor .
-
-
 
 
 #################################################################
@@ -44,12 +46,18 @@
 
 ###  http://w3id.org/dppo/ontology/dpp-prov/creationTimeStamp
 :creationTimeStamp rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf :timestamp .
+                   rdfs:subPropertyOf :timestamp ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( dpp-info:DPPInformation
+                                               <http://w3id.org/dppo/ontology/dpp-odp/DPP>
+                                             )
+                               ] .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-prov/invalidAtTimeStamp
 :invalidAtTimeStamp rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf :timestamp .
+                    rdfs:subPropertyOf :timestamp ;
+                    rdfs:domain dpp-info:DPPInformation .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-prov/timestamp
@@ -61,21 +69,21 @@
 #    Classes
 #################################################################
 
-###  http://w3id.org/dppo/ontology/dpp-info/Actor
+###  http://w3id.org/dppo/ontology/dpp-prov/Actor
 :Actor rdf:type owl:Class .
 
 
-###  http://w3id.org/dppo/ontology/dpp-info/Authority
+###  http://w3id.org/dppo/ontology/dpp-prov/Authority
 :Authority rdf:type owl:Class ;
            rdfs:subClassOf :Actor .
 
 
-###  http://w3id.org/dppo/ontology/dpp-info/Consumer
+###  http://w3id.org/dppo/ontology/dpp-prov/Consumer
 :Consumer rdf:type owl:Class ;
           rdfs:subClassOf :Actor .
 
 
-###  http://w3id.org/dppo/ontology/dpp-info/ValueChainActor
+###  http://w3id.org/dppo/ontology/dpp-prov/ValueChainActor
 :ValueChainActor rdf:type owl:Class ;
                  rdfs:subClassOf :Actor .
 

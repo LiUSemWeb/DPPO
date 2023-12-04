@@ -29,10 +29,41 @@
 #    Object Properties
 #################################################################
 
+###  http://w3id.org/dppo/ontology/dpp-info/certificateDocument
+:certificateDocument rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :externalDocument ;
+                     rdfs:domain :CertificateInformation .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/characteristic
+:characteristic rdf:type owl:ObjectProperty ;
+                rdfs:domain :ProductCharacteristic .
+
+
 ###  http://w3id.org/dppo/ontology/dpp-info/containsInformation
 :containsInformation rdf:type owl:ObjectProperty ;
                      rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
                      rdfs:range :DPPInformation .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/directlySupersededBy
+:directlySupersededBy rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :supersededBy ;
+                      owl:inverseOf :directlySupersedes .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/directlySupersedes
+:directlySupersedes rdf:type owl:ObjectProperty .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/dissasemblyInstructionsDocument
+:dissasemblyInstructionsDocument rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :externalDocument ;
+                                 rdfs:domain :DisassemblyInformation .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/externalDocument
+:externalDocument rdf:type owl:ObjectProperty .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/hasCompositionInformation
@@ -44,10 +75,32 @@
 :isAbout rdf:type owl:ObjectProperty .
 
 
-###  http://w3id.org/dppo/ontology/dpp-info/superceededBy
-:superceededBy rdf:type owl:ObjectProperty ;
-               rdfs:domain :DPPInformation ;
-               rdfs:range :DPPInformation .
+###  http://w3id.org/dppo/ontology/dpp-info/quality
+:quality rdf:type owl:ObjectProperty ;
+         rdfs:domain :ProductQuality .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/repairInstructionsDocument
+:repairInstructionsDocument rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :externalDocument ;
+                            rdfs:domain :RepairInstruction .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/supersededBy
+:supersededBy rdf:type owl:ObjectProperty ,
+                       owl:TransitiveProperty ;
+              rdfs:domain :DPPInformation ;
+              rdfs:range :DPPInformation .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/unit
+:unit rdf:type owl:ObjectProperty ;
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :CompositionInformation
+                                  :ProductCharacteristic
+                                  :ProductQuality
+                                )
+                  ] .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-odp/describes
@@ -58,12 +111,28 @@
 
 
 #################################################################
+#    Data properties
+#################################################################
+
+###  http://w3id.org/dppo/ontology/dpp-info/endTime
+:endTime rdf:type owl:DatatypeProperty .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/startTime
+:startTime rdf:type owl:DatatypeProperty .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/value
+:value rdf:type owl:DatatypeProperty .
+
+
+#################################################################
 #    Classes
 #################################################################
 
-###  http://w3id.org/dppo/ontology/dpp-info/Certificate
-:Certificate rdf:type owl:Class ;
-             rdfs:subClassOf :DPPInformation .
+###  http://w3id.org/dppo/ontology/dpp-info/CertificateInformation
+:CertificateInformation rdf:type owl:Class ;
+                        rdfs:subClassOf :DPPInformation .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/CompositionInformation
@@ -84,14 +153,61 @@
                         rdfs:subClassOf :DPPInformation .
 
 
-###  http://w3id.org/dppo/ontology/dpp-info/RemainingProductQuality
-:RemainingProductQuality rdf:type owl:Class ;
-                         rdfs:subClassOf :DPPInformation .
+###  http://w3id.org/dppo/ontology/dpp-info/LegalGuarantee
+:LegalGuarantee rdf:type owl:Class ;
+                rdfs:subClassOf :DPPInformation ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :endTime ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :startTime ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/ProductCharacteristic
+:ProductCharacteristic rdf:type owl:Class ;
+                       rdfs:subClassOf :DPPInformation ,
+                                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :characteristic ;
+                                                                owl:someValuesFrom owl:Thing
+                                                              ]
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :value ;
+                                                                owl:someValuesFrom rdfs:Literal
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/ProductQuality
+:ProductQuality rdf:type owl:Class ;
+                rdfs:subClassOf :DPPInformation ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :quality ;
+                                                         owl:someValuesFrom owl:Thing
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :value ;
+                                                         owl:someValuesFrom rdfs:Literal
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/RepairInstruction
 :RepairInstruction rdf:type owl:Class ;
                    rdfs:subClassOf :DPPInformation .
+
+
+###  http://w3id.org/dppo/ontology/dpp-info/Unit
+:Unit rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
