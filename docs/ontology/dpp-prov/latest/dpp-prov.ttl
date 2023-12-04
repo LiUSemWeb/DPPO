@@ -16,9 +16,9 @@
     dcterms:license "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE" ;
     dcterms:title "Digital Product Passport Information Provenance" ;
     vann:preferredNamespacePrefix "dpp-prov" ;
-    vann:preferredNamespaceUri "http://w3id.org/dppo/ontology/dpp-prov" ;
+    vann:preferredNamespaceUri "http://w3id.org/dppo/ontology/dpp-prov/" ;
     rdfs:seeAlso <https://github.com/LiUSemWeb/DPPO> ;
-    owl:imports <http://w3id.org/dppo/ontology/dpp-info/0.1/> ;
+    owl:imports dpp-info: ;
     owl:versionIRI <http://w3id.org/dppo/ontology/dpp-prov/0.1/> ;
     owl:versionInfo "0.1" .
 

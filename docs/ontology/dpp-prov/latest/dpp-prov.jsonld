@@ -1,103 +1,8 @@
 [
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-prov/invalidAtTimeStamp",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:neebb2e51f55e4b949ffcd4377168e8f3b4"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-prov/timeStamp"
-      }
-    ]
-  },
-  {
-    "@id": "_:neebb2e51f55e4b949ffcd4377168e8f3b4",
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-          },
-          {
-            "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-prov/ValueChainActor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-prov/Authority",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-prov/creationTimeStamp",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:neebb2e51f55e4b949ffcd4377168e8f3b1"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-prov/timeStamp"
-      }
-    ]
-  },
-  {
-    "@id": "_:neebb2e51f55e4b949ffcd4377168e8f3b1",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-          },
-          {
-            "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-prov/Consumer",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor"
-      }
     ]
   },
   {
@@ -148,7 +53,7 @@
     ],
     "http://purl.org/vocab/vann/preferredNamespaceUri": [
       {
-        "@value": "http://w3id.org/dppo/ontology/dpp-prov"
+        "@value": "http://w3id.org/dppo/ontology/dpp-prov/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
@@ -158,7 +63,7 @@
     ],
     "http://www.w3.org/2002/07/owl#imports": [
       {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/0.1/"
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/"
       }
     ],
     "http://www.w3.org/2002/07/owl#versionIRI": [
@@ -169,28 +74,6 @@
     "http://www.w3.org/2002/07/owl#versionInfo": [
       {
         "@value": "0.1"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-prov/dppOwner",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-prov/actor"
       }
     ]
   },
@@ -222,9 +105,126 @@
     ]
   },
   {
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/Consumer",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/Authority",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/ValueChainActor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-prov/Actor"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/creationTimeStamp",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n0f78551a9f8c4155bf161e822f66a73db1"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-prov/timeStamp"
+      }
+    ]
+  },
+  {
+    "@id": "_:n0f78551a9f8c4155bf161e822f66a73db1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+          },
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "http://w3id.org/dppo/ontology/dpp-prov/timeStamp",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/dppOwner",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-prov/actor"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-prov/invalidAtTimeStamp",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n0f78551a9f8c4155bf161e822f66a73db4"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-prov/timeStamp"
+      }
+    ]
+  },
+  {
+    "@id": "_:n0f78551a9f8c4155bf161e822f66a73db4",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+          },
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
+          }
+        ]
+      }
     ]
   }
 ]

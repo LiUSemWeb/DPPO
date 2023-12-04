@@ -18,7 +18,7 @@
     vann:preferredNamespacePrefix "dpp-info" ;
     vann:preferredNamespaceUri "http://w3id.org/dppo/ontology/dpp-info/" ;
     rdfs:seeAlso <https://github.com/LiUSemWeb/DPPO> ;
-    owl:imports <http://w3id.org/dppo/ontology/dpp-odp/0.1/> ;
+    owl:imports <http://w3id.org/dppo/ontology/dpp-odp/> ;
     owl:versionIRI <http://w3id.org/dppo/ontology/dpp-info/0.1/> ;
     owl:versionInfo "0.1" .
 

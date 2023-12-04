@@ -18,7 +18,7 @@
     vann:preferredNamespacePrefix "dpp-core"^^xsd:string ;
     vann:preferredNamespaceUri "http://w3id.org/dppo/ontology/dpp-core/"^^xsd:string ;
     rdfs:seeAlso <https://github.com/LiUSemWeb/DPPO> ;
-    owl:imports <http://w3id.org/dppo/ontology/dpp-odp/0.1/> ;
+    owl:imports <http://w3id.org/dppo/ontology/dpp-odp/> ;
     owl:versionIRI <http://w3id.org/dppo/ontology/dpp-core/0.1/> ;
     owl:versionInfo "0.1" .
 

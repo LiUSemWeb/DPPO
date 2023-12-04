@@ -6,12 +6,6 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/aboutPart">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/0.1/isAbout"/>
-    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/0.1/CompositionInformation"/>
-    <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <owl:versionIRI rdf:resource="http://w3id.org/dppo/ontology/dpp-comp/0.1/"/>
@@ -30,7 +24,7 @@
     <rdfs:seeAlso rdf:resource="https://github.com/LiUSemWeb/DPPO"/>
     <owl:versionInfo>0.1</owl:versionInfo>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/SubstanceHinderingRecycling">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/ToxicSubstance">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern"/>
   </rdf:Description>
@@ -41,12 +35,18 @@
     <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/0.1/CompositionInformation"/>
     <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/SubstanceHinderingRecycling">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-core/Substance"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/ToxicSubstance">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern"/>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/aboutPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/0.1/isAbout"/>
+    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/0.1/CompositionInformation"/>
+    <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
   </rdf:Description>
 </rdf:RDF>
