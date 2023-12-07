@@ -1,0 +1,7 @@
+# CQ: Does the product contain substances of concern?
+# Products that contain substances of concern
+SELECT DISTINCT ?product
+WHERE {
+    ?product a dpp-odp:Product ;
+        dpp-odp:hasPart/a/rdfs:subclassOf* dpp-comp:SubstanceOfConcern . 
+}

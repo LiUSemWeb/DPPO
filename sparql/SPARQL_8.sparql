@@ -1,0 +1,8 @@
+# CQ: When was the information added/changed?
+SELECT ?dpp ?info ?time
+WHERE {
+    ?dpp a/rdfs:subClassOf* dpp-odp:DPP ;
+        dpp-odp:contains ?info .
+    ?info a/rdfs:subClassOf* dpp-info:DPPInformation ;
+        dpp-info:startTime ?time .
+}

@@ -1,0 +1,10 @@
+# CQ: What kind of additional information is provided (in terms of data source type)?
+# RK: A bit uncertain about how to interpret this one.
+SELECT ?product ?informationType
+WHERE {
+    ?dpp a/rdfs:subClassOf* dpp-odp:DPP ;
+        dpp-odp:describes ?product ;
+        dpp-odp:contains ?info .
+    ?info a/rdfs:subClassOf* dpp-info:DPPInformation ;
+        a ?informationType .
+}

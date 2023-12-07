@@ -1,0 +1,11 @@
+# CQ: What kind of additional information is provided (in terms of data source type)?
+#     Where to find this additional information?
+SELECT ?product ?document ?actor
+WHERE {
+    ?dpp a/rdfs:subClassOf* dpp-odp:DPP ;
+        dpp-odp:describes ?product ;
+        dpp-odp:contains ?info .
+    ?info a/rdfs:subClassOf* dpp-info:DPPInformation ;
+        dpp-prov:responsibleActor ?actor ;
+        dpp-info:externalDocument  ?document .
+}
