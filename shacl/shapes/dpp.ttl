@@ -4,10 +4,12 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix dpp-info:  <http://w3id.org/dppo/ontology/dpp-info/>.
 @prefix dpp-odp: <http://w3id.org/dppo/ontology/dpp-odp/> .
+@prefix dpp-prov: <http://w3id.org/dppo/ontology/dpp-prov/> .
+@prefix dpp-comp: <http://w3id.org/dppo/ontology/dpp-comp/> .
 
 # DPP
 # - exactly 1 dpp-odp:describes of type dpp-odp:Product
-# - min 1 info:containsInformation of type info:DPPInformation 
+# - min 1 dpp-info:containsInformation of type info:DPPInformation 
 # - (optional) dpp-odp:hasPart of type dpp:DPP
 
 <DPP-Shape>
@@ -17,7 +19,8 @@
                   sh:minCount 1;
                   sh:class dpp-info:DPPInformation ] ;
     sh:property [ sh:path dpp-odp:describes ;
-                  sh:minCount 1; sh:maxCount 1;
+                  sh:minCount 1;
+                  sh:maxCount 1;
                   sh:class dpp-odp:Product ] ;
     sh:property [ sh:path dpp-odp:hasPart ;
                   sh:class dpp-odp:DPP ] .

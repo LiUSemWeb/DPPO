@@ -5,6 +5,6 @@
 @prefix dpp-info:  <http://w3id.org/dppo/ontology/dpp-info/>.
 @prefix dpp-odp: <http://w3id.org/dppo/ontology/dpp-odp/> .
 
-_:b a dpp-odp:DPP ;
+_:dpp a dpp-odp:DPP ;
 	dpp-info:containsInformation [ a dpp-info:DPPInformation ] ;
 	dpp-odp:describes [ a dpp-odp:Product ] .

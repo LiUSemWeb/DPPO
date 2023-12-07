@@ -2,40 +2,42 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix dpp-info:  <http://w3id.org/dppo/ontology/dpp-info/> .
+@prefix dpp-info:  <http://w3id.org/dppo/ontology/dpp-info/>.
 @prefix dpp-odp: <http://w3id.org/dppo/ontology/dpp-odp/> .
 @prefix dpp-prov: <http://w3id.org/dppo/ontology/dpp-prov/> .
+@prefix dpp-comp: <http://w3id.org/dppo/ontology/dpp-comp/> .
 
 # DPP Information
-# - exactly 1 dpp-info:hasTime of type xsd:dateTime
-# - (optional) exactly 1 dpp-info:hasInvalidTime of type xsd:dateTime
-# - exactly 1 info:responsibleActor of type info:Actor
+# - exactly 1 dpp-info:startTime of type xsd:dateTime
+# - (optional) exactly 1 dpp-info:endTime of type xsd:dateTime
+# - exactly 1 dpp-info:responsibleActor of type dpp-info:Actor
 # - (optional) exactly 1 dpp-info:responsibleActor of type info:Actor 
 # - (optional) exactly 1 dpp-info:isAbout of type dpp-odp:Product 
 
 <DPPInformation-Shape>
     a sh:NodeShape ;
     sh:targetClass dpp-info:DPPInformation ;
-    sh:property [ sh:path dpp-info:hasTime ;
+    sh:property [ sh:path dpp-info:startTime ;
                   sh:minCount 1;
                   sh:maxCount 1;
                   sh:datatype xsd:dateTime ] ;
-    sh:property [ sh:path dpp-info:hasInvalidTime ;
+    sh:property [ sh:path dpp-info:endTime ;
                   sh:maxCount 1;
                   sh:datatype xsd:dateTime ] ;
-    sh:property [ sh:path dpp-info:responsibleActor ;
-                    sh:minCount 1; sh:maxCount 1 ;
-                    sh:class dpp-prov:Actor ] ;
-    sh:property [ sh:path dpp-info:superceededBy ;
-                    sh:maxCount 1;
-                    sh:class dpp-info:DPPInformation ] ;
-    sh:property [ sh:path dpp-info:about ;
-                    sh:maxCount 1;
-                    sh:class dpp-odp:Product ] ;
+    sh:property [ sh:path dpp-prov:responsibleActor ;
+                  sh:minCount 1; 
+                  sh:maxCount 1 ;
+                  sh:class dpp-prov:Actor ] ;
+    sh:property [ sh:path dpp-info:supersededBy ;
+                  sh:maxCount 1;
+                  sh:class dpp-info:DPPInformation ] ;
+    sh:property [ sh:path dpp-info:isAbout ;
+                  sh:maxCount 1;
+                  sh:class dpp-odp:Product ] ;
     sh:or(
-        [ sh:path dpp-info:superceededBy ;
+        [ sh:path dpp-info:supersededBy ;
           sh:maxCount 0 ]
-        [ sh:path dpp-info:hasInvalidTime ;
+        [ sh:path dpp-info:endTime ;
           sh:minCount 1 ]
     )
  .

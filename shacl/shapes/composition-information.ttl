@@ -2,18 +2,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix dpp-odp: <https://w3id.org/dppo/ontology/dpp-odp/> .
-@prefix dpp-info: <https://w3id.org/dppo/ontology/dpp-info/> .
+@prefix dpp-info:  <http://w3id.org/dppo/ontology/dpp-info/>.
+@prefix dpp-odp: <http://w3id.org/dppo/ontology/dpp-odp/> .
+@prefix dpp-prov: <http://w3id.org/dppo/ontology/dpp-prov/> .
+@prefix dpp-comp: <http://w3id.org/dppo/ontology/dpp-comp/> .
 
 # CompositionInformation
-# - (optional) dpp-info:aboutPart of type dpp-odp:Product
-# - (optional) exactly 1 dpp-info:aboutWhole of type dpp-odp:Product
+# - exactly 1 dpp-comp:aboutPart of type dpp-odp:Product
+# - exactly 1 dpp-comp:aboutWhole of type dpp-odp:Product
+
 
 <CompositionInformation-Shape>
     a sh:NodeShape ;
-    sh:targetClass dpp-info:CompositionInformation ;
-    sh:property [ sh:path dpp-info:aboutPart ;
-                  sh:class dpp-odp:Product ] ;
-    sh:property [ sh:path dpp-info:aboutWhole ;
+    sh:targetClass dpp-comp:CompositionInformation ;
+    sh:property [ sh:path dpp-comp:aboutPart ;
+                  sh:class dpp-odp:Product ;
+                  sh:minCount 1 ;
+                  sh:maxCount 1 ] ;
+    sh:property [ sh:path dpp-comp:aboutWhole ;
+                  sh:minCount 1 ;
                   sh:maxCount 1 ;
                   sh:class dpp-odp:Product ] .
