@@ -1,0 +1,960 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://w3id.org/dppo/ontology/dpp-odp", "http://www.w3.org/2000/01/rdf-schema", "http://w3id.org/dppo/ontology/dpp-info", "http://www.w3.org/2001/XMLSchema", "http://w3id.org/dppo/ontology/dpp-info/0.1", "http://w3id.org/dppo/ontology/dpp-core", "http://w3id.org/dppo/ontology/dpp-comp" ],
+    "prefixList" : {
+      "owl" : "http://www.w3.org/2002/07/owl#",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "vann" : "http://purl.org/vocab/vann/",
+      "dcterms" : "http://purl.org/dc/terms/",
+      "dpp-core" : "http://w3id.org/dppo/ontology/dpp-core/0.1/",
+      "xsd" : "http://www.w3.org/2001/XMLSchema#",
+      "" : "http://w3id.org/dppo/ontology/dpp-comp/",
+      "dc" : "http://purl.org/dc/elements/1.1/",
+      "xml" : "http://www.w3.org/XML/1998/namespace",
+      "dpp-info" : "http://w3id.org/dppo/ontology/dpp-info/0.1/",
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "title" : {
+      "undefined" : "Digital Product Passport Product Composition"
+    },
+    "iri" : "http://w3id.org/dppo/ontology/dpp-comp/",
+    "version" : "0.1",
+    "author" : [ "Maike Jansen" ],
+    "description" : {
+      "undefined" : "This is an ontology module focusing on the composition information of products."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Maike Jansen",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Huanyu Li",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Robin Keskisärkkä",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Eva Blomqvist",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2023-11-27",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "dpp-comp",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://w3id.org/dppo/ontology/dpp-comp/",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Digital Product Passport Product Composition",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://github.com/LiUSemWeb/DPPO",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "2",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "57",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "3",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "48",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "47",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "17",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "15",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "4",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "36",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-odp/DPP",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-odp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DPP"
+    },
+    "subClasses" : [ "1", "2", "3", "4" ],
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/ProductCharacteristic",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProductCharacteristic"
+    },
+    "attributes" : [ "external" ],
+    "id" : "5",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConsumerProduct"
+    },
+    "attributes" : [ "external" ],
+    "id" : "18",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-comp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SubstanceOfConcern"
+    },
+    "subClasses" : [ "22", "23" ],
+    "id" : "20",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/RepairInstruction",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RepairInstruction"
+    },
+    "attributes" : [ "external" ],
+    "id" : "14",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/Unit",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Unit"
+    },
+    "attributes" : [ "external" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/ProductQuality",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProductQuality"
+    },
+    "attributes" : [ "external" ],
+    "id" : "41",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/LegalGuarantee",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LegalGuarantee"
+    },
+    "attributes" : [ "external" ],
+    "id" : "25",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-core/Component",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Component"
+    },
+    "attributes" : [ "external" ],
+    "id" : "40",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-comp/ToxicSubstance",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-comp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ToxicSubstance"
+    },
+    "id" : "23",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-core/Substance",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Substance"
+    },
+    "subClasses" : [ "20" ],
+    "attributes" : [ "external" ],
+    "id" : "21",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "53",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/CompositionInformation",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CompositionInformation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "54",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-core/MaterialDPP",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialDPP"
+    },
+    "intersection" : [ "0" ],
+    "attributes" : [ "external", "intersection" ],
+    "id" : "2",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "57",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-core/ComponentDPP",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ComponentDPP"
+    },
+    "intersection" : [ "0" ],
+    "attributes" : [ "external", "intersection" ],
+    "id" : "3",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "59",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "48",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "5", "8", "41" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "47"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "17",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "61",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-odp/Product",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-odp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Product"
+    },
+    "subClasses" : [ "21", "40", "30", "18" ],
+    "attributes" : [ "external" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "11",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "15",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-core/ConsumerProductDPP",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConsumerProductDPP"
+    },
+    "intersection" : [ "0" ],
+    "attributes" : [ "external", "intersection" ],
+    "id" : "4",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "65",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "36",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/CertificateInformation",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CertificateInformation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "27",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-comp/SubstanceHinderingRecycling",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-comp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SubstanceHinderingRecycling"
+    },
+    "id" : "22",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-core/Material",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Material"
+    },
+    "attributes" : [ "external" ],
+    "id" : "30",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/0.1/CompositionInformation",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CompositionInformation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-core/SubstanceDPP",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SubstanceDPP"
+    },
+    "intersection" : [ "0" ],
+    "attributes" : [ "external", "intersection" ],
+    "id" : "1",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/DPPInformation",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DPPInformation"
+    },
+    "subClasses" : [ "14", "5", "27", "25", "8", "10", "41" ],
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DisassemblyInformation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "10",
+    "superClasses" : [ "6" ]
+  } ],
+  "property" : [ {
+    "id" : "7",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "66",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "6",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/dissasemblyInstructionsDocument",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "dissasemblyInstructionsDocument"
+    },
+    "superproperty" : [ "12" ],
+    "domain" : "10",
+    "attributes" : [ "external", "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/repairInstructionsDocument",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "repairInstructionsDocument"
+    },
+    "superproperty" : [ "12" ],
+    "domain" : "14",
+    "attributes" : [ "external", "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/0.1/hasCompositionInformation",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info/0.1",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "hasCompositionInformation"
+    },
+    "domain" : "17",
+    "attributes" : [ "external", "object" ],
+    "id" : "16"
+  }, {
+    "range" : "6",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "24"
+  }, {
+    "range" : "6",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "26"
+  }, {
+    "range" : "19",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "28"
+  }, {
+    "range" : "19",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/directlySupersedes",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "directlySupersedes"
+    },
+    "domain" : "17",
+    "attributes" : [ "external", "object" ],
+    "id" : "31"
+  }, {
+    "range" : "6",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "32"
+  }, {
+    "range" : "6",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "21",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/hasCompositionInformation",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "hasCompositionInformation"
+    },
+    "domain" : "19",
+    "attributes" : [ "external", "object" ],
+    "id" : "35"
+  }, {
+    "range" : "20",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "range" : "19",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
+  }, {
+    "range" : "19",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/0.1/isAbout",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info/0.1",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "isAbout"
+    },
+    "domain" : "17",
+    "subproperty" : [ "44", "45" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/unit",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "unit"
+    },
+    "domain" : "47",
+    "attributes" : [ "external", "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/containsInformation",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "containsInformation"
+    },
+    "domain" : "0",
+    "attributes" : [ "external", "object" ],
+    "id" : "49"
+  }, {
+    "range" : "0",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "50"
+  }, {
+    "range" : "0",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "range" : "20",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "52"
+  }, {
+    "range" : "0",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "55"
+  }, {
+    "range" : "0",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-comp/aboutPart",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-comp",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "aboutPart"
+    },
+    "superproperty" : [ "43" ],
+    "domain" : "58",
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/startTime",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "startTime"
+    },
+    "domain" : "17",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/directlySupersededBy",
+    "inverse" : "31",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "directlySupersededBy"
+    },
+    "superproperty" : [ "63" ],
+    "domain" : "17",
+    "attributes" : [ "external", "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-odp/hasPart",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-odp",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasPart"
+    },
+    "domain" : "19",
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/value",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "value"
+    },
+    "domain" : "17",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-odp/hasPart",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-odp",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "hasPart"
+    },
+    "domain" : "0",
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/quality",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "quality"
+    },
+    "domain" : "41",
+    "attributes" : [ "external", "object" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-odp/describes",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-odp",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "describes"
+    },
+    "superproperty" : [ "71" ],
+    "domain" : "0",
+    "attributes" : [ "external", "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/endTime",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "range" : "59",
+    "label" : {
+      "IRI-based" : "endTime"
+    },
+    "domain" : "17",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/supersededBy",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "supersededBy"
+    },
+    "domain" : "6",
+    "subproperty" : [ "62" ],
+    "attributes" : [ "transitive", "external", "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-comp/aboutWhole",
+    "inverse" : "16",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-comp",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "aboutWhole"
+    },
+    "superproperty" : [ "43" ],
+    "domain" : "58",
+    "attributes" : [ "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/externalDocument",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "externalDocument"
+    },
+    "domain" : "17",
+    "subproperty" : [ "73", "9", "13" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/certificateDocument",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "certificateDocument"
+    },
+    "superproperty" : [ "12" ],
+    "domain" : "27",
+    "attributes" : [ "external", "object" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/characteristic",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "characteristic"
+    },
+    "domain" : "5",
+    "attributes" : [ "external", "object" ],
+    "id" : "74"
+  }, {
+    "range" : "6",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "75"
+  }, {
+    "range" : "6",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "76"
+  } ]
+}

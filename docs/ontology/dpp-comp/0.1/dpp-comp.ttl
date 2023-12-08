@@ -1,0 +1,45 @@
+@prefix : <http://w3id.org/dppo/ontology/dpp-comp/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dpp-core: <http://w3id.org/dppo/ontology/dpp-core/0.1/> .
+@prefix dpp-info: <http://w3id.org/dppo/ontology/dpp-info/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+: a owl:Ontology ;
+    dcterms:contributor "Eva Blomqvist",
+        "Huanyu Li",
+        "Robin Keskisärkkä" ;
+    dcterms:created "2023-11-27" ;
+    dcterms:creator "Maike Jansen" ;
+    dcterms:description "This is an ontology module focusing on the composition information of products." ;
+    dcterms:license "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE" ;
+    dcterms:title "Digital Product Passport Product Composition" ;
+    vann:preferredNamespacePrefix "dpp-comp" ;
+    vann:preferredNamespaceUri "http://w3id.org/dppo/ontology/dpp-comp/" ;
+    rdfs:seeAlso <https://github.com/LiUSemWeb/DPPO> ;
+    owl:imports dpp-core:,
+        dpp-info: ;
+    owl:versionIRI <http://w3id.org/dppo/ontology/dpp-comp/0.1/> ;
+    owl:versionInfo "0.1" .
+
+:SubstanceHinderingRecycling a owl:Class ;
+    rdfs:subClassOf :SubstanceOfConcern .
+
+:ToxicSubstance a owl:Class ;
+    rdfs:subClassOf :SubstanceOfConcern .
+
+:aboutPart a owl:ObjectProperty ;
+    rdfs:domain dpp-info:CompositionInformation ;
+    rdfs:range <http://w3id.org/dppo/ontology/dpp-odp/Product> ;
+    rdfs:subPropertyOf dpp-info:isAbout .
+
+:aboutWhole a owl:ObjectProperty ;
+    rdfs:domain dpp-info:CompositionInformation ;
+    rdfs:range <http://w3id.org/dppo/ontology/dpp-odp/Product> ;
+    rdfs:subPropertyOf dpp-info:isAbout ;
+    owl:inverseOf dpp-info:hasCompositionInformation .
+
+:SubstanceOfConcern a owl:Class ;
+    rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-core/Substance> .
+

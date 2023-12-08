@@ -1,0 +1,64 @@
+@prefix : <http://w3id.org/dppo/ontology/dpp-core/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology ;
+    dcterms:contributor "Eva Blomqvist",
+        "Huanyu Li",
+        "Robin Keskisärkkä" ;
+    dcterms:created "2023-10-30"^^xsd:string ;
+    dcterms:creator "Maike Jansen" ;
+    dcterms:description "This is a minimal core ontology for DPPs, specialising the DPP ODP." ;
+    dcterms:license "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE"^^xsd:string ;
+    dcterms:title "Core Digital Product Passport Ontology"^^xsd:string ;
+    vann:preferredNamespacePrefix "dpp-core"^^xsd:string ;
+    vann:preferredNamespaceUri "http://w3id.org/dppo/ontology/dpp-core/"^^xsd:string ;
+    rdfs:seeAlso <https://github.com/LiUSemWeb/DPPO> ;
+    owl:imports <http://w3id.org/dppo/ontology/dpp-odp/> ;
+    owl:versionIRI <http://w3id.org/dppo/ontology/dpp-core/0.1/> ;
+    owl:versionInfo "0.1" .
+
+:ComponentDPP a owl:Class ;
+    rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( <http://w3id.org/dppo/ontology/dpp-odp/DPP> [ a owl:Restriction ;
+                        owl:onProperty <http://w3id.org/dppo/ontology/dpp-odp/describes> ;
+                        owl:someValuesFrom :Component ] ) ] .
+
+:ConsumerProductDPP a owl:Class ;
+    rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( <http://w3id.org/dppo/ontology/dpp-odp/DPP> [ a owl:Restriction ;
+                        owl:onProperty <http://w3id.org/dppo/ontology/dpp-odp/describes> ;
+                        owl:someValuesFrom :ConsumerProduct ] ) ] .
+
+:MaterialDPP a owl:Class ;
+    rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( <http://w3id.org/dppo/ontology/dpp-odp/DPP> [ a owl:Restriction ;
+                        owl:onProperty <http://w3id.org/dppo/ontology/dpp-odp/describes> ;
+                        owl:someValuesFrom :Material ] ) ] .
+
+:SubstanceDPP a owl:Class ;
+    rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( <http://w3id.org/dppo/ontology/dpp-odp/DPP> [ a owl:Restriction ;
+                        owl:onProperty <http://w3id.org/dppo/ontology/dpp-odp/describes> ;
+                        owl:someValuesFrom :Substance ] ) ] .
+
+:Component a owl:Class ;
+    rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/Product> .
+
+:ConsumerProduct a owl:Class ;
+    rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/Product> .
+
+:Material a owl:Class ;
+    rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/Product> .
+
+:Substance a owl:Class ;
+    rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/Product> .
+
