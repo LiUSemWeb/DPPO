@@ -25,5 +25,4 @@ shapes:
      shape: shapes/composition-information.ttl
      valid:
        - files/composition-information_valid1.ttl
-       - files/composition-information_valid2.ttl
      invalid: []

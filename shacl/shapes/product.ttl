@@ -2,7 +2,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dpp-info:  <http://w3id.org/dppo/ontology/dpp-info/>.
 @prefix dpp-odp: <http://w3id.org/dppo/ontology/dpp-odp/> .
+@prefix dpp-prov: <http://w3id.org/dppo/ontology/dpp-prov/> .
+@prefix dpp-comp: <http://w3id.org/dppo/ontology/dpp-comp/> .
 
 # Product
 # - (optional) dpp-odp:hasPart of type dpp-odp:Product
@@ -11,5 +14,4 @@
     a sh:NodeShape ;
     sh:targetClass dpp-odp:Product ;
     sh:property [ sh:path dpp-odp:hasPart ;
-                  sh:maxCount 1 ;
                   sh:class dpp-odp:Product ] .

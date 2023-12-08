@@ -1,0 +1,8 @@
+# CQ: Is this product still covered by the legal guarantee?
+SELECT ?product ?endTime
+WHERE {
+    ?product a/rdfs:subClassOf* dpp-odp:Product ;
+        dpp-info:containsInformation ?info .
+    ?info a/rdfs:subClassOf* dpp-info:LegalGuarantee ;
+        dpp-info:endTime ?endTime .
+}

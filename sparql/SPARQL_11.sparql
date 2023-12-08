@@ -1,0 +1,24 @@
+# CQ: What is the meaning of a specific information within a DPP?
+"# Find info, the type of the info, comments and whether the piece of information is still valid
+SELECT ?dpp ?info ?class ?comment ?valid
+WHERE {
+    ?dpp a/rdfs:subClassOf* dpp-odp:DPP ;
+        dpp-odp:contains ?info .
+    ?info a ?class 
+    ?class rdfs:subClassOf+ dpp-info:DPPInformation ;
+        rdfs:comment ?comment .
+    OPTIONAL { ?info dpp-info:hasInvalidTime ?invalidTime } 
+    BIND(IF(BOUND(?invalidTime), ""no"", ""yes"") AS ?valid)
+}
+
+# Find info, the type of the info, its equivalent classes and whether the piece of information is still valid
+SELECT ?dpp ?info ?class ?equivalentClass ?valid
+WHERE {
+    ?dpp a/rdfs:subClassOf* dpp-odp:DPP ;
+        dpp-odp:contains ?info .
+    ?info a ?class .
+    ?class rdfs:subClassOf+ dpp-info:DPPInformation ;
+        owl:equivalentClass ?equivalentClass .
+    OPTIONAL { ?info dpp-info:hasInvalidTime ?invalidTime } 
+    BIND(IF(BOUND(?invalidTime), ""no"", ""yes"") AS ?valid)
+}"´´

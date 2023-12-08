@@ -1,0 +1,8 @@
+# CQ: Who/what actor is responsible for what set of information in a DPP?
+SELECT ?actor ?info
+WHERE {
+    ?dpp a/rdfs:subClassOf* dpp-odp:DPP ;
+        dpp-odp:containsInformation ?info .
+    ?info a dpp-info:DPPInformation ;
+        dpp-prov:responsibleActor ?responsibleActor . 
+}
