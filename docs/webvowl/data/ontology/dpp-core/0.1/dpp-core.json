@@ -44,12 +44,12 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Robin Keskisärkkä",
+        "value" : "Huanyu Li",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Huanyu Li",
+        "value" : "Robin Keskisärkkä",
         "type" : "label"
       } ],
       "created" : [ {
@@ -269,7 +269,7 @@
       "IRI-based" : "describes"
     },
     "domain" : "6",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "5"
   }, {
     "range" : "0",
