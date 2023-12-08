@@ -6,6 +6,19 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/creationTimeStamp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/timeStamp"/>
+    <rdfs:domain rdf:nodeID="n848982f84cde493a9f9fa0aedd135e8eb1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/actor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n848982f84cde493a9f9fa0aedd135e8eb6">
+    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <owl:versionIRI rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/0.1/"/>
@@ -23,43 +36,46 @@
     <rdfs:seeAlso rdf:resource="https://github.com/LiUSemWeb/DPPO"/>
     <owl:versionInfo>0.1</owl:versionInfo>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n8c9f510c76294e07914bc89d89ef7335b4">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="n8c9f510c76294e07914bc89d89ef7335b5"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/Consumer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/Actor"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/responsibleActor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/actor"/>
     <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/invalidAtTimeStamp">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/timeStamp"/>
-    <rdfs:domain rdf:nodeID="n8c9f510c76294e07914bc89d89ef7335b4"/>
+  <rdf:Description rdf:nodeID="n848982f84cde493a9f9fa0aedd135e8eb4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n848982f84cde493a9f9fa0aedd135e8eb5"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/actor">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/Actor"/>
+  <rdf:Description rdf:nodeID="n848982f84cde493a9f9fa0aedd135e8eb5">
+    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
+    <rdf:rest rdf:nodeID="n848982f84cde493a9f9fa0aedd135e8eb6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n848982f84cde493a9f9fa0aedd135e8eb1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n848982f84cde493a9f9fa0aedd135e8eb2"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/Actor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n8c9f510c76294e07914bc89d89ef7335b2">
-    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
-    <rdf:rest rdf:nodeID="n8c9f510c76294e07914bc89d89ef7335b3"/>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/Consumer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/Actor"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/creationTimeStamp">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/invalidAtTimeStamp">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/timeStamp"/>
-    <rdfs:domain rdf:nodeID="n8c9f510c76294e07914bc89d89ef7335b1"/>
+    <rdfs:domain rdf:nodeID="n848982f84cde493a9f9fa0aedd135e8eb4"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n8c9f510c76294e07914bc89d89ef7335b1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="n8c9f510c76294e07914bc89d89ef7335b2"/>
+  <rdf:Description rdf:nodeID="n848982f84cde493a9f9fa0aedd135e8eb2">
+    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
+    <rdf:rest rdf:nodeID="n848982f84cde493a9f9fa0aedd135e8eb3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/dppOwner">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/actor"/>
+    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/timeStamp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/ValueChainActor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -69,24 +85,8 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/Actor"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n8c9f510c76294e07914bc89d89ef7335b3">
+  <rdf:Description rdf:nodeID="n848982f84cde493a9f9fa0aedd135e8eb3">
     <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n8c9f510c76294e07914bc89d89ef7335b5">
-    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
-    <rdf:rest rdf:nodeID="n8c9f510c76294e07914bc89d89ef7335b6"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n8c9f510c76294e07914bc89d89ef7335b6">
-    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/dppOwner">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/actor"/>
-    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/timeStamp">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
 </rdf:RDF>
