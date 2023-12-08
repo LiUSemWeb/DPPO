@@ -39,17 +39,17 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Robin Keskisärkkä",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
         "value" : "Eva Blomqvist",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "Huanyu Li",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Robin Keskisärkkä",
         "type" : "label"
       } ],
       "created" : [ {
@@ -250,7 +250,7 @@
   }, {
     "instances" : 0,
     "union" : [ "3", "24", "25" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "23"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/Unit",
@@ -483,7 +483,7 @@
     },
     "superproperty" : [ "32" ],
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "31"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/unit",
@@ -524,12 +524,12 @@
     },
     "domain" : "4",
     "subproperty" : [ "6" ],
-    "attributes" : [ "transitive", "object" ],
+    "attributes" : [ "object", "transitive" ],
     "id" : "8"
   }, {
     "range" : "4",
     "domain" : "25",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "36"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/externalDocument",
@@ -545,7 +545,7 @@
   }, {
     "range" : "4",
     "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "38"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/certificateDocument",
@@ -561,22 +561,22 @@
   }, {
     "range" : "4",
     "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "39"
   }, {
     "range" : "4",
     "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "40"
   }, {
     "range" : "4",
     "domain" : "24",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "41"
   }, {
     "range" : "4",
     "domain" : "30",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "42"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/characteristic",
@@ -591,7 +591,7 @@
   }, {
     "range" : "4",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "45"
   } ]
 }
