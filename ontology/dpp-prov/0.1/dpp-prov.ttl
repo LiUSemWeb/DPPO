@@ -12,7 +12,7 @@
 
 <http://w3id.org/dppo/ontology/dpp-prov/> rdf:type owl:Ontology ;
                                            owl:versionIRI <http://w3id.org/dppo/ontology/dpp-prov/0.1/> ;
-                                           owl:imports <http://w3id.org/dppo/ontology/dpp-info/> ;
+                                           owl:imports dpp-info: ;
                                            dcterms:contributor "Eva Blomqvist" ,
                                                                "Huanyu Li" ,
                                                                "Robin Keskisärkkä" ;
@@ -27,24 +27,66 @@
                                            owl:versionInfo "0.1" .
 
 #################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
 ###  http://w3id.org/dppo/ontology/dpp-prov/actor
 :actor rdf:type owl:ObjectProperty ;
-       rdfs:range :Actor .
+       rdfs:range :Actor ;
+       rdfs:comment "Relation to the actor responsible for a DPP or a piece of information inside it."@en ;
+       rdfs:label "actor"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-prov/dppOwner
 :dppOwner rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :actor ;
-          rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/DPP> .
+          rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
+          rdfs:comment "A relation relating the DPP with the actor owning, i.e. responsible for issuing, the DPP."@en ;
+          rdfs:label "DPP owner"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-prov/responsibleActor
 :responsibleActor rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :actor ;
-                  rdfs:domain dpp-info:DPPInformation .
+                  rdfs:domain dpp-info:DPPInformation ;
+                  rdfs:comment "A relation the indicates the actor responsible for stating a piece of information."@en ;
+                  rdfs:label "responsible actor"@en .
 
 
 #################################################################
@@ -58,7 +100,9 @@
                                  owl:unionOf ( dpp-info:DPPInformation
                                                <http://w3id.org/dppo/ontology/dpp-odp/DPP>
                                              )
-                               ] .
+                               ] ;
+                   rdfs:comment "A time stamp indicating when a piece of information, or a DPP, was created (or added), i.e. when it started to be valid."@en ;
+                   rdfs:label "creation time stamp"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-prov/invalidAtTimeStamp
@@ -68,34 +112,54 @@
                                   owl:unionOf ( dpp-info:DPPInformation
                                                 <http://w3id.org/dppo/ontology/dpp-odp/DPP>
                                               )
-                                ] .
+                                ] ;
+                    rdfs:comment "A time stamp indicating the time when a DPP or a piece of information ceased to be valid, i.e. what deprecated or replaced by another piece of information."@en ;
+                    rdfs:label "invalid at time stamp"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-prov/timeStamp
-:timeStamp rdf:type owl:DatatypeProperty .
+:timeStamp rdf:type owl:DatatypeProperty ;
+           rdfs:comment "A timstamp of some information, i.e. a DPP or a piece of information."@en ;
+           rdfs:label "time stamp"@en .
 
 
 #################################################################
 #    Classes
 #################################################################
 
+###  http://w3id.org/dppo/ontology/dpp-info/DPPInformation
+dpp-info:DPPInformation rdf:type owl:Class .
+
+
+###  http://w3id.org/dppo/ontology/dpp-odp/DPP
+<http://w3id.org/dppo/ontology/dpp-odp/DPP> rdf:type owl:Class .
+
+
 ###  http://w3id.org/dppo/ontology/dpp-prov/Actor
-:Actor rdf:type owl:Class .
+:Actor rdf:type owl:Class ;
+       rdfs:comment "Actor"@en ,
+                    "An actor responsible for some information."@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-prov/Authority
 :Authority rdf:type owl:Class ;
-           rdfs:subClassOf :Actor .
+           rdfs:subClassOf :Actor ;
+           rdfs:comment "An actor that is an authority."@en ;
+           rdfs:label "Authority"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-prov/Consumer
 :Consumer rdf:type owl:Class ;
-          rdfs:subClassOf :Actor .
+          rdfs:subClassOf :Actor ;
+          rdfs:comment "An actor that is an end-user of a product, a consumer."@en ;
+          rdfs:label "Consumer"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-prov/ValueChainActor
 :ValueChainActor rdf:type owl:Class ;
-                 rdfs:subClassOf :Actor .
+                 rdfs:subClassOf :Actor ;
+                 rdfs:comment "An actor that is an active participant of the value chain of a product, e.g. a manufacturer, recycler or other actor."@en ;
+                 rdfs:label "Value chain actor"@en .
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
