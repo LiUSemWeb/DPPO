@@ -26,71 +26,131 @@
                                            owl:versionInfo "0.1" .
 
 #################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
 ###  http://w3id.org/dppo/ontology/dpp-info/certificateDocument
 :certificateDocument rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :externalDocument ;
-                     rdfs:domain :CertificateInformation .
+                     rdfs:domain :CertificateInformation ;
+                     rdfs:comment "A relation pointing out a document representing a certificate related to the product described by the DPP."@en ;
+                     rdfs:label "certificate document"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/characteristic
 :characteristic rdf:type owl:ObjectProperty ;
-                rdfs:domain :ProductCharacteristic .
+                rdfs:domain :ProductCharacteristic ;
+                rdfs:comment "The characteristic that the piece of information is about."@en ;
+                rdfs:label "characteristic"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/containsInformation
 :containsInformation rdf:type owl:ObjectProperty ;
                      rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
-                     rdfs:range :DPPInformation .
+                     rdfs:range :DPPInformation ;
+                     rdfs:comment "Relating a DPP to the pieces of information it contains."@en ;
+                     rdfs:label "contains information"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/directlySupersededBy
 :directlySupersededBy rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :supersededBy ;
-                      owl:inverseOf :directlySupersedes .
+                      owl:inverseOf :directlySupersedes ;
+                      rdfs:comment "A relation connecting a piece of information to the piece of information directly superseding it."@en ;
+                      rdfs:label "directly superseded by"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/directlySupersedes
-:directlySupersedes rdf:type owl:ObjectProperty .
+:directlySupersedes rdf:type owl:ObjectProperty ;
+                    rdfs:comment "A relation connecting a piece of information to another piece of information that directly replaces the first one, i.e. when a DPP is updated."@en ;
+                    rdfs:label "directly supersedes"@en .
 
 
-###  http://w3id.org/dppo/ontology/dpp-info/dissasemblyInstructionsDocument
-:dissasemblyInstructionsDocument rdf:type owl:ObjectProperty ;
+###  http://w3id.org/dppo/ontology/dpp-info/disassemblyInstructionsDocument
+:disassemblyInstructionsDocument rdf:type owl:ObjectProperty ;
                                  rdfs:subPropertyOf :externalDocument ;
-                                 rdfs:domain :DisassemblyInformation .
+                                 rdfs:domain :DisassemblyInformation ;
+                                 rdfs:comment "A relation pointing out a document with disassembly instructions for the product."@en ;
+                                 rdfs:label "disassembly instructions document"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/externalDocument
-:externalDocument rdf:type owl:ObjectProperty .
+:externalDocument rdf:type owl:ObjectProperty ;
+                  rdfs:comment "A relation for pointing to external documentation, that is not explicitly represented inside the DPP but instead as a related document, e.g. documents with various kinds of instructions, certificates, or furhter information about the product."@en ;
+                  rdfs:label "external document"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/hasCompositionInformation
 :hasCompositionInformation rdf:type owl:ObjectProperty ;
-                           rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/Product> .
+                           rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/Product> ;
+                           rdfs:comment "A piece of information about the composition of a product."@en ;
+                           rdfs:label "has composition information"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/isAbout
-:isAbout rdf:type owl:ObjectProperty .
+:isAbout rdf:type owl:ObjectProperty ;
+         rdfs:comment "Relating a piece of information to the thing the information is about, i.e. describes."@en ;
+         rdfs:label "is about"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/quality
 :quality rdf:type owl:ObjectProperty ;
-         rdfs:domain :ProductQuality .
+         rdfs:domain :ProductQuality ;
+         rdfs:comment "A relation pointing at the quality that the piece of information describes."@en ;
+         rdfs:label "quality"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/repairInstructionsDocument
 :repairInstructionsDocument rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf :externalDocument ;
-                            rdfs:domain :RepairInstruction .
+                            rdfs:domain :RepairInstruction ;
+                            rdfs:comment "A relation pointing out a document containing repair instructions for the product."@en ;
+                            rdfs:label "repair instrucitons document"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/supersededBy
 :supersededBy rdf:type owl:ObjectProperty ,
                        owl:TransitiveProperty ;
               rdfs:domain :DPPInformation ;
-              rdfs:range :DPPInformation .
+              rdfs:range :DPPInformation ;
+              rdfs:comment "A transitive relation that relates a piece of information to the pieces of information that supersedes it."@en ;
+              rdfs:label "superseded by"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/unit
@@ -100,11 +160,14 @@
                                   :ProductCharacteristic
                                   :ProductQuality
                                 )
-                  ] .
+                  ] ;
+      rdfs:comment "Relation between a concept with a value, associating it to a unit of measure."@en ;
+      rdfs:label "unit"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-odp/describes
-<http://w3id.org/dppo/ontology/dpp-odp/describes> rdfs:subPropertyOf :isAbout ;
+<http://w3id.org/dppo/ontology/dpp-odp/describes> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf :isAbout ;
                                                   owl:propertyChainAxiom ( :containsInformation
                                                                            :isAbout
                                                                          ) .
@@ -115,15 +178,21 @@
 #################################################################
 
 ###  http://w3id.org/dppo/ontology/dpp-info/endTime
-:endTime rdf:type owl:DatatypeProperty .
+:endTime rdf:type owl:DatatypeProperty ;
+         rdfs:comment "The end of a time interval."@en ;
+         rdfs:label "end time"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/startTime
-:startTime rdf:type owl:DatatypeProperty .
+:startTime rdf:type owl:DatatypeProperty ;
+           rdfs:comment "The start of a time interval."@en ;
+           rdfs:label "start time"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/value
-:value rdf:type owl:DatatypeProperty .
+:value rdf:type owl:DatatypeProperty ;
+       rdfs:comment "The value of a characterisitc or a quality."@en ;
+       rdfs:label "value"@en .
 
 
 #################################################################
@@ -132,12 +201,16 @@
 
 ###  http://w3id.org/dppo/ontology/dpp-info/CertificateInformation
 :CertificateInformation rdf:type owl:Class ;
-                        rdfs:subClassOf :DPPInformation .
+                        rdfs:subClassOf :DPPInformation ;
+                        rdfs:comment "A piece of information about some certificate that concerns the product."@en ,
+                                     "Certificate information"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/CompositionInformation
 :CompositionInformation rdf:type owl:Class ;
-                        rdfs:subClassOf :DPPInformation .
+                        rdfs:subClassOf :DPPInformation ;
+                        rdfs:comment "A piece of information about the composition of a product, i.e. a relation between a product and its part, potentially with more details of the composition included."@en ;
+                        rdfs:label "Composition information"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/DPPInformation
@@ -145,12 +218,16 @@
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty :isAbout ;
                                   owl:someValuesFrom owl:Thing
-                                ] .
+                                ] ;
+                rdfs:comment "A pice of information contained in a DPP, which is about some product."@en ;
+                rdfs:label "DPP information"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation
 :DisassemblyInformation rdf:type owl:Class ;
-                        rdfs:subClassOf :DPPInformation .
+                        rdfs:subClassOf :DPPInformation ;
+                        rdfs:comment "A piece of information about how to disassemble the product, e.g. linking to some disassembly instructions."@en ;
+                        rdfs:label "Disassembly information"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/LegalGuarantee
@@ -166,7 +243,9 @@
                                                        ]
                                                      ) ;
                                   rdf:type owl:Class
-                                ] .
+                                ] ;
+                rdfs:comment "A piece of information that described the legal guarantee of the product, with its time interval of validity."@en ;
+                rdfs:label "Legal guarantee"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/ProductCharacteristic
@@ -182,7 +261,9 @@
                                                               ]
                                                             ) ;
                                          rdf:type owl:Class
-                                       ] .
+                                       ] ;
+                       rdfs:comment "A piece of information that describes a product characteristic."@en ;
+                       rdfs:label "Product characteristic"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/ProductQuality
@@ -198,16 +279,31 @@
                                                        ]
                                                      ) ;
                                   rdf:type owl:Class
-                                ] .
+                                ] ;
+                rdfs:comment "A piece of information about the quality of of a product."@en ;
+                rdfs:label "Product quality"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/RepairInstruction
 :RepairInstruction rdf:type owl:Class ;
-                   rdfs:subClassOf :DPPInformation .
+                   rdfs:subClassOf :DPPInformation ;
+                   rdfs:comment "A piece of information about how to repair a product."@en ;
+                   rdfs:label "Repair instruction"@en .
 
 
 ###  http://w3id.org/dppo/ontology/dpp-info/Unit
-:Unit rdf:type owl:Class .
+:Unit rdf:type owl:Class ;
+      rdfs:comment "A unit of measure."@en ;
+      rdfs:label "Unit"@en ;
+      rdfs:seeAlso "http://qudt.org/schema/qudt/Unit" .
+
+
+###  http://w3id.org/dppo/ontology/dpp-odp/DPP
+<http://w3id.org/dppo/ontology/dpp-odp/DPP> rdf:type owl:Class .
+
+
+###  http://w3id.org/dppo/ontology/dpp-odp/Product
+<http://w3id.org/dppo/ontology/dpp-odp/Product> rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
