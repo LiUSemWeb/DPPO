@@ -6,9 +6,7 @@
 @prefix dpp-odp: <http://w3id.org/dppo/ontology/dpp-odp/> .
 @prefix dpp-prov: <http://w3id.org/dppo/ontology/dpp-prov/> .
 @prefix dpp-comp: <http://w3id.org/dppo/ontology/dpp-comp/> .
-
-# Product
-# - (optional) dpp-odp:hasPart of type dpp-odp:Product
+@prefix dpp-core: <http://w3id.org/dppo/ontology/dpp-core/> .
 
 <Product-Shape>
     a sh:NodeShape ;

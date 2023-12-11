@@ -6,11 +6,7 @@
 @prefix dpp-odp: <http://w3id.org/dppo/ontology/dpp-odp/> .
 @prefix dpp-prov: <http://w3id.org/dppo/ontology/dpp-prov/> .
 @prefix dpp-comp: <http://w3id.org/dppo/ontology/dpp-comp/> .
-
-# DPP
-# - exactly 1 dpp-odp:describes of type dpp-odp:Product
-# - min 1 dpp-info:containsInformation of type info:DPPInformation 
-# - (optional) dpp-odp:hasPart of type dpp:DPP
+@prefix dpp-core: <http://w3id.org/dppo/ontology/dpp-core/> .
 
 <DPP-Shape>
     a sh:NodeShape ;
@@ -24,3 +20,8 @@
                   sh:class dpp-odp:Product ] ;
     sh:property [ sh:path dpp-odp:hasPart ;
                   sh:class dpp-odp:DPP ] .
+    sh:property [ sh:path dpp-prov:invalidAtTimeStamp ;
+                  sh:maxCount 1 ] .
+    sh:property [ sh:path dpp-prov:creationTimeStamp ;
+                  sh:minCount 1 ;
+                  sh:maxCount 1 ] .

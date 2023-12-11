@@ -6,24 +6,16 @@
 @prefix dpp-odp: <http://w3id.org/dppo/ontology/dpp-odp/> .
 @prefix dpp-prov: <http://w3id.org/dppo/ontology/dpp-prov/> .
 @prefix dpp-comp: <http://w3id.org/dppo/ontology/dpp-comp/> .
-
-# DPP Information
-# - exactly 1 dpp-info:startTime of type xsd:dateTime
-# - (optional) exactly 1 dpp-info:endTime of type xsd:dateTime
-# - exactly 1 dpp-info:responsibleActor of type dpp-info:Actor
-# - (optional) exactly 1 dpp-info:responsibleActor of type info:Actor 
-# - (optional) exactly 1 dpp-info:isAbout of type dpp-odp:Product 
+@prefix dpp-core: <http://w3id.org/dppo/ontology/dpp-core/> .
 
 <DPPInformation-Shape>
     a sh:NodeShape ;
     sh:targetClass dpp-info:DPPInformation ;
-    sh:property [ sh:path dpp-info:startTime ;
+    sh:property [ sh:path dpp-prov:creationTimeStamp ;
                   sh:minCount 1;
-                  sh:maxCount 1;
-                  sh:datatype xsd:dateTime ] ;
-    sh:property [ sh:path dpp-info:endTime ;
-                  sh:maxCount 1;
-                  sh:datatype xsd:dateTime ] ;
+                  sh:maxCount 1 ] ;
+    sh:property [ sh:path dpp-prov:invalidTimeStamp ;
+                  sh:maxCount 1 ] ;
     sh:property [ sh:path dpp-prov:responsibleActor ;
                   sh:minCount 1; 
                   sh:maxCount 1 ;
@@ -37,7 +29,7 @@
     sh:or(
         [ sh:path dpp-info:supersededBy ;
           sh:maxCount 0 ]
-        [ sh:path dpp-info:endTime ;
+        [ sh:path dpp-prov:invalidTimeStamp ;
           sh:minCount 1 ]
     )
  .

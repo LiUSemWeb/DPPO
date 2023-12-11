@@ -7,11 +7,6 @@
 @prefix dpp-prov: <http://w3id.org/dppo/ontology/dpp-prov/> .
 @prefix dpp-comp: <http://w3id.org/dppo/ontology/dpp-comp/> .
 
-# CompositionInformation
-# - exactly 1 dpp-comp:aboutPart of type dpp-odp:Product
-# - exactly 1 dpp-comp:aboutWhole of type dpp-odp:Product
-
-
 <CompositionInformation-Shape>
     a sh:NodeShape ;
     sh:targetClass dpp-comp:CompositionInformation ;
