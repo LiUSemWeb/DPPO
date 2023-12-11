@@ -1,0 +1,8 @@
+# CQ: What is the material composition of the product?
+SELECT ?product ?material
+WHERE {
+    ?product a/rdfs:subClassOf* dpp-odp:Product .
+    ?info a dpp-info:isAbout ?product .
+        dpp-odp:hasPart* ?material .
+    ?material a dpp-odp:Material .
+}

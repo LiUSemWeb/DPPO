@@ -1,0 +1,10 @@
+# CQ: What are the single components of this product?
+SELECT ?product ?component
+WHERE {
+    ?product a/rdfs:subClassOf* dpp-odp:Product ;
+        dpp-info:hasPart* ?component .
+    ?component a/rdfs:subClassOf* dpp-core:Component .
+
+    ?info dpp-info:isAbout ?component ;
+        a/rdfs:subClassOf* dpp-core:Component
+}

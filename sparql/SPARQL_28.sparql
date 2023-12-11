@@ -1,0 +1,7 @@
+# CQ: What is the component composition of the product?
+SELECT ?product ?component
+WHERE {
+    ?product a/rdfs:subClassOf* dpp-odp:Product ;
+        dpp-odp:hasPart+ ?component .
+    ?component a/rdfs:subClassOf* dpp-comp:Component .
+}

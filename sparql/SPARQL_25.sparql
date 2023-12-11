@@ -1,0 +1,9 @@
+# CQ: What is the material composition of the spare parts?
+SELECT ?product ?part ?material
+WHERE {
+    ?product a/rdfs:subClassOf* dpp-odp:Product ;
+        dpp-info:hasPart ?part .
+    
+    ?part dpp-info:hasPart* ?material .
+    ?material a/rdfs:subClassOf* dpp-odp:Material .
+}

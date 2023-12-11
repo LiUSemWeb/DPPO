@@ -1,14 +1,9 @@
 # CQ: What information does the seller (or another value chain actor) provide to the consumers on how to repair the product?
 SELECT ?product ?instructions
 WHERE {
-    ?product a dpp-odp:Product ;
-        ^dpp-odp:describes/dpp-info:containsInformation ?repairInfo .
-
-    ?reparInfo a/rdfs:subClassOf* dpp-info:RepairInstructions ;
+    ?product a/rdfs:subClassOf* dpp-odp:Product .
+    ?info dpp-info:isAbout ?product ;
+        a/rdfs:subClassOf* dpp-info:RepairInstructions ;
         dpp-prov:responsibleActor ?actor ;
-        dpp-info:repairInstructionsDocument ?instructions .
-    
-    ?actor a/rdfs:subClassOf* dpp-prov:ValueChainActor
-    # filter valid information
-    FILTER NOT EXISTS { ?info dpp-info:hasInvalidTime ?time } 
-}"
+        dpp-info:repairInstructionsDocument ?instructions .   
+}

@@ -1,0 +1,8 @@
+# CQ: Is there a certification of the product?
+SELECT ?product ?certificate ?document
+WHERE {
+    ?product a/rdfs:subClassOf* dpp-odp:Product .
+    ?info dpp-info:isAbout ?product ;
+        a/rdfs:subClassOf* dpp-info:CertificationInformation ;
+        dpp-info:certificateDocument ?document .
+}

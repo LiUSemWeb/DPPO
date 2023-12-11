@@ -1,0 +1,13 @@
+# CQ: What is the remaining quality of the product?
+SELECT ?product ?value ?unit
+WHERE {
+    ?product a/rdfs:subClassOf* dpp-odp:Product .
+    
+    ?info dpp-info:isAbout ?product ;
+        a/rdfs:subClassOf rdf-info:ProductQuality ;
+        dpp-info:value ?value ;
+        dpp-info:unit ?unit .
+
+    FILTER NOT EXISTS { ?info dpp-prov:supersededBy ?new_info }
+
+}

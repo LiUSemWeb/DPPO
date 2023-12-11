@@ -1,9 +1,8 @@
 # CQ: If the product contains at least one substance of concern, how many and what kind of substances of concern?
-# Kinds of substances of concern per product (exclude dpp-odp:SubstanceOfConcern)
 SELECT ?product ?substance ?kind
 WHERE {
-    ?product a dpp-odp:Product ;
-         dpp-odp:hasPart ?substance .
-    ?substance a ?kind .
-    ?kind rdfs:subClassOf+ dpp-comp:SubstanceOfConcern .
+    ?product a/rdfs:subClassOf* dpp-odp:Product .
+        dpp-odp:hasPart ?substance .
+    ?substance a/rdfs:subClassOf* dpp-comp:SubstanceOfConcern ;
+        a ?kind .
 }
