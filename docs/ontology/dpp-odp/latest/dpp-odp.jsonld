@@ -1,5 +1,45 @@
 [
   {
+    "@id": "http://purl.org/dc/terms/description",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/contributor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/creator",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-odp/hasPart",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "A relation between a whole and its parts."
+      },
+      {
+        "@language": "en",
+        "@value": "has part"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
     "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -18,12 +58,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:nfdb0a996ef0b4db5bcbaefaaa86fc3e9b1"
+        "@id": "_:nc98096de7add4b37a4e5f4e17ea9fba0b1"
       }
     ]
   },
   {
-    "@id": "_:nfdb0a996ef0b4db5bcbaefaaa86fc3e9b1",
+    "@id": "_:nc98096de7add4b37a4e5f4e17ea9fba0b1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -39,7 +79,13 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/description",
+    "@id": "http://purl.org/dc/terms/title",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/license",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
@@ -51,61 +97,9 @@
     ]
   },
   {
-    "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/creator",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
     "@id": "http://purl.org/dc/terms/created",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/contributor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/title",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-odp/describes",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between a DPP and the product it describes."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "describes"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product"
-      }
     ]
   },
   {
@@ -176,24 +170,30 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/license",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-odp/hasPart",
+    "@id": "http://w3id.org/dppo/ontology/dpp-odp/describes",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between a DPP and the product it describes."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
+      }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "A relation between a whole and its parts."
-      },
+        "@value": "describes"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@language": "en",
-        "@value": "has part"
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product"
       }
     ]
   },
@@ -216,12 +216,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:nfdb0a996ef0b4db5bcbaefaaa86fc3e9b2"
+        "@id": "_:nc98096de7add4b37a4e5f4e17ea9fba0b2"
       }
     ]
   },
   {
-    "@id": "_:nfdb0a996ef0b4db5bcbaefaaa86fc3e9b2",
+    "@id": "_:nc98096de7add4b37a4e5f4e17ea9fba0b2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

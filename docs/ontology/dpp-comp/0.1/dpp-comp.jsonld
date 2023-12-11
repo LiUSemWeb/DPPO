@@ -1,34 +1,5 @@
 [
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Substance of concern as defined in the ESPR, meaning it is a substance that is either toxic or something that hinders recycling of the product."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Substance of Concern"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-core/Substance"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/0.1/CompositionInformation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ]
-  },
-  {
     "@id": "http://w3id.org/dppo/ontology/dpp-comp/",
     "@type": [
       "http://www.w3.org/2002/07/owl#Ontology"
@@ -110,9 +81,9 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/0.1/hasCompositionInformation",
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/0.1/CompositionInformation",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#Class"
     ]
   },
   {
@@ -145,29 +116,6 @@
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
       {
         "@id": "http://w3id.org/dppo/ontology/dpp-info/0.1/isAbout"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-comp/ToxicSubstance",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A toxic substance."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Toxic substance"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern"
       }
     ]
   },
@@ -229,6 +177,58 @@
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
         "@id": "http://w3id.org/dppo/ontology/dpp-info/0.1/hasCompositionInformation"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Substance of concern as defined in the ESPR, meaning it is a substance that is either toxic or something that hinders recycling of the product."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Substance of Concern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-core/Substance"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/0.1/hasCompositionInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-comp/ToxicSubstance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A toxic substance."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Toxic substance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern"
       }
     ]
   }

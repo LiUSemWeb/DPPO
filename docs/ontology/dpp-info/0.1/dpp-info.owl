@@ -6,53 +6,24 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/supersededBy">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/quality">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
-    <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
-    <rdfs:comment xml:lang="en">A transitive relation that relates a piece of information to the pieces of information that supersedes it.</rdfs:comment>
-    <rdfs:label xml:lang="en">superseded by</rdfs:label>
+    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/ProductQuality"/>
+    <rdfs:comment xml:lang="en">A relation pointing at the quality that the piece of information describes.</rdfs:comment>
+    <rdfs:label xml:lang="en">quality</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb20">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-info/value"/>
-    <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb8">
-    <owl:intersectionOf rdf:nodeID="n4a1db6282f054533a9703e35f148652cb11"/>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/Unit">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A unit of measure.</rdfs:comment>
+    <rdfs:label xml:lang="en">Unit</rdfs:label>
+    <rdfs:seeAlso>http://qudt.org/schema/qudt/Unit</rdfs:seeAlso>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/LegalGuarantee">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
-    <rdfs:subClassOf rdf:nodeID="n4a1db6282f054533a9703e35f148652cb8"/>
+    <rdfs:subClassOf rdf:nodeID="nce7712293227495681a4da3555c358f7b8"/>
     <rdfs:comment xml:lang="en">A piece of information that described the legal guarantee of the product, with its time interval of validity.</rdfs:comment>
     <rdfs:label xml:lang="en">Legal guarantee</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/directlySupersededBy">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/supersededBy"/>
-    <owl:inverseOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/directlySupersedes"/>
-    <rdfs:comment xml:lang="en">A relation connecting a piece of information to the piece of information directly superseding it.</rdfs:comment>
-    <rdfs:label xml:lang="en">directly superseded by</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/repairInstructionsDocument">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/externalDocument"/>
-    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/RepairInstruction"/>
-    <rdfs:comment xml:lang="en">A relation pointing out a document containing repair instructions for the product.</rdfs:comment>
-    <rdfs:label xml:lang="en">repair instrucitons document</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/CertificateInformation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
-    <rdfs:comment xml:lang="en">A piece of information about some certificate that concerns the product.</rdfs:comment>
-    <rdfs:comment xml:lang="en">Certificate information</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb17">
-    <rdf:first rdf:nodeID="n4a1db6282f054533a9703e35f148652cb15"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
@@ -71,79 +42,29 @@
     <rdfs:seeAlso rdf:resource="https://github.com/LiUSemWeb/DPPO"/>
     <owl:versionInfo>0.1</owl:versionInfo>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/startTime">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">The start of a time interval.</rdfs:comment>
-    <rdfs:label xml:lang="en">start time</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/isAbout">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/hasCompositionInformation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Relating a piece of information to the thing the information is about, i.e. describes.</rdfs:comment>
-    <rdfs:label xml:lang="en">is about</rdfs:label>
+    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
+    <rdfs:comment xml:lang="en">A piece of information about the composition of a product.</rdfs:comment>
+    <rdfs:label xml:lang="en">has composition information</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb14">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-info/characteristic"/>
-    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb16">
-    <rdf:first rdf:nodeID="n4a1db6282f054533a9703e35f148652cb14"/>
-    <rdf:rest rdf:nodeID="n4a1db6282f054533a9703e35f148652cb17"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/directlySupersedes">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/directlySupersededBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">A relation connecting a piece of information to another piece of information that directly replaces the first one, i.e. when a DPP is updated.</rdfs:comment>
-    <rdfs:label xml:lang="en">directly supersedes</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/supersededBy"/>
+    <owl:inverseOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/directlySupersedes"/>
+    <rdfs:comment xml:lang="en">A relation connecting a piece of information to the piece of information directly superseding it.</rdfs:comment>
+    <rdfs:label xml:lang="en">directly superseded by</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/disassemblyInstructionsDocument">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/externalDocument"/>
-    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation"/>
-    <rdfs:comment xml:lang="en">A relation pointing out a document with disassembly instructions for the product.</rdfs:comment>
-    <rdfs:label xml:lang="en">disassembly instructions document</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/ProductQuality">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
-    <rdfs:subClassOf rdf:nodeID="n4a1db6282f054533a9703e35f148652cb18"/>
-    <rdfs:comment xml:lang="en">A piece of information about the quality of of a product.</rdfs:comment>
-    <rdfs:label xml:lang="en">Product quality</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/value">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">The value of a characterisitc or a quality.</rdfs:comment>
-    <rdfs:label xml:lang="en">value</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb22">
-    <rdf:first rdf:nodeID="n4a1db6282f054533a9703e35f148652cb20"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
-    <rdfs:comment xml:lang="en">A piece of information about how to disassemble the product, e.g. linking to some disassembly instructions.</rdfs:comment>
-    <rdfs:label xml:lang="en">Disassembly information</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb19">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-info/quality"/>
-    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/RepairInstruction">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
-    <rdfs:comment xml:lang="en">A piece of information about how to repair a product.</rdfs:comment>
-    <rdfs:label xml:lang="en">Repair instruction</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/ProductCharacteristic">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
-    <rdfs:subClassOf rdf:nodeID="n4a1db6282f054533a9703e35f148652cb13"/>
-    <rdfs:comment xml:lang="en">A piece of information that describes a product characteristic.</rdfs:comment>
-    <rdfs:label xml:lang="en">Product characteristic</rdfs:label>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/supersededBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
+    <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
+    <rdfs:comment xml:lang="en">A transitive relation that relates a piece of information to the pieces of information that supersedes it.</rdfs:comment>
+    <rdfs:label xml:lang="en">superseded by</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/characteristic">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -151,15 +72,62 @@
     <rdfs:comment xml:lang="en">The characteristic that the piece of information is about.</rdfs:comment>
     <rdfs:label xml:lang="en">characteristic</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb5">
-    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/containsInformation"/>
-    <rdf:rest rdf:nodeID="n4a1db6282f054533a9703e35f148652cb6"/>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/RepairInstruction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
+    <rdfs:comment xml:lang="en">A piece of information about how to repair a product.</rdfs:comment>
+    <rdfs:label xml:lang="en">Repair instruction</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/quality">
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b20">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-info/value"/>
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/value">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The value of a characterisitc or a quality.</rdfs:comment>
+    <rdfs:label xml:lang="en">value</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/externalDocument">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/ProductQuality"/>
-    <rdfs:comment xml:lang="en">A relation pointing at the quality that the piece of information describes.</rdfs:comment>
-    <rdfs:label xml:lang="en">quality</rdfs:label>
+    <rdfs:comment xml:lang="en">A relation for pointing to external documentation, that is not explicitly represented inside the DPP but instead as a related document, e.g. documents with various kinds of instructions, certificates, or furhter information about the product.</rdfs:comment>
+    <rdfs:label xml:lang="en">external document</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/describes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/isAbout"/>
+    <owl:propertyChainAxiom rdf:nodeID="nce7712293227495681a4da3555c358f7b5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/ProductCharacteristic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
+    <rdfs:subClassOf rdf:nodeID="nce7712293227495681a4da3555c358f7b13"/>
+    <rdfs:comment xml:lang="en">A piece of information that describes a product characteristic.</rdfs:comment>
+    <rdfs:label xml:lang="en">Product characteristic</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/ProductQuality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
+    <rdfs:subClassOf rdf:nodeID="nce7712293227495681a4da3555c358f7b18"/>
+    <rdfs:comment xml:lang="en">A piece of information about the quality of of a product.</rdfs:comment>
+    <rdfs:label xml:lang="en">Product quality</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/CertificateInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
+    <rdfs:comment xml:lang="en">A piece of information about some certificate that concerns the product.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Certificate information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b12">
+    <rdf:first rdf:nodeID="nce7712293227495681a4da3555c358f7b10"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b13">
+    <owl:intersectionOf rdf:nodeID="nce7712293227495681a4da3555c358f7b16"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/containsInformation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -168,17 +136,38 @@
     <rdfs:comment xml:lang="en">Relating a DPP to the pieces of information it contains.</rdfs:comment>
     <rdfs:label xml:lang="en">contains information</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb12">
-    <rdf:first rdf:nodeID="n4a1db6282f054533a9703e35f148652cb10"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/disassemblyInstructionsDocument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/externalDocument"/>
+    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation"/>
+    <rdfs:comment xml:lang="en">A relation pointing out a document with disassembly instructions for the product.</rdfs:comment>
+    <rdfs:label xml:lang="en">disassembly instructions document</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb4">
-    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/ProductQuality"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b21">
+    <rdf:first rdf:nodeID="nce7712293227495681a4da3555c358f7b19"/>
+    <rdf:rest rdf:nodeID="nce7712293227495681a4da3555c358f7b22"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb18">
-    <owl:intersectionOf rdf:nodeID="n4a1db6282f054533a9703e35f148652cb21"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-info/quality"/>
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/repairInstructionsDocument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/externalDocument"/>
+    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/RepairInstruction"/>
+    <rdfs:comment xml:lang="en">A relation pointing out a document containing repair instructions for the product.</rdfs:comment>
+    <rdfs:label xml:lang="en">repair instrucitons document</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="nce7712293227495681a4da3555c358f7b1"/>
+    <rdfs:comment xml:lang="en">Relation between a concept with a value, associating it to a unit of measure.</rdfs:comment>
+    <rdfs:label xml:lang="en">unit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b2">
+    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/CompositionInformation"/>
+    <rdf:rest rdf:nodeID="nce7712293227495681a4da3555c358f7b3"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/certificateDocument">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -187,64 +176,14 @@
     <rdfs:comment xml:lang="en">A relation pointing out a document representing a certificate related to the product described by the DPP.</rdfs:comment>
     <rdfs:label xml:lang="en">certificate document</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/Unit">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A unit of measure.</rdfs:comment>
-    <rdfs:label xml:lang="en">Unit</rdfs:label>
-    <rdfs:seeAlso>http://qudt.org/schema/qudt/Unit</rdfs:seeAlso>
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b5">
+    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/containsInformation"/>
+    <rdf:rest rdf:nodeID="nce7712293227495681a4da3555c358f7b6"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb6">
-    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/isAbout"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb15">
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b15">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-info/value"/>
     <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/endTime">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">The end of a time interval.</rdfs:comment>
-    <rdfs:label xml:lang="en">end time</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb21">
-    <rdf:first rdf:nodeID="n4a1db6282f054533a9703e35f148652cb19"/>
-    <rdf:rest rdf:nodeID="n4a1db6282f054533a9703e35f148652cb22"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/externalDocument">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">A relation for pointing to external documentation, that is not explicitly represented inside the DPP but instead as a related document, e.g. documents with various kinds of instructions, certificates, or furhter information about the product.</rdfs:comment>
-    <rdfs:label xml:lang="en">external document</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/DPPInformation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="n4a1db6282f054533a9703e35f148652cb7"/>
-    <rdfs:comment xml:lang="en">A pice of information contained in a DPP, which is about some product.</rdfs:comment>
-    <rdfs:label xml:lang="en">DPP information</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb9">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-info/endTime"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/Product">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb2">
-    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/CompositionInformation"/>
-    <rdf:rest rdf:nodeID="n4a1db6282f054533a9703e35f148652cb3"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/CompositionInformation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -252,51 +191,102 @@
     <rdfs:comment xml:lang="en">A piece of information about the composition of a product, i.e. a relation between a product and its part, potentially with more details of the composition included.</rdfs:comment>
     <rdfs:label xml:lang="en">Composition information</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="n4a1db6282f054533a9703e35f148652cb2"/>
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b22">
+    <rdf:first rdf:nodeID="nce7712293227495681a4da3555c358f7b20"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/hasCompositionInformation">
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b11">
+    <rdf:first rdf:nodeID="nce7712293227495681a4da3555c358f7b9"/>
+    <rdf:rest rdf:nodeID="nce7712293227495681a4da3555c358f7b12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/endTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The end of a time interval.</rdfs:comment>
+    <rdfs:label xml:lang="en">end time</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/directlySupersedes">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
-    <rdfs:comment xml:lang="en">A piece of information about the composition of a product.</rdfs:comment>
-    <rdfs:label xml:lang="en">has composition information</rdfs:label>
+    <rdfs:comment xml:lang="en">A relation connecting a piece of information to another piece of information that directly replaces the first one, i.e. when a DPP is updated.</rdfs:comment>
+    <rdfs:label xml:lang="en">directly supersedes</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/describes">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/isAbout"/>
-    <owl:propertyChainAxiom rdf:nodeID="n4a1db6282f054533a9703e35f148652cb5"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/unit">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:nodeID="n4a1db6282f054533a9703e35f148652cb1"/>
-    <rdfs:comment xml:lang="en">Relation between a concept with a value, associating it to a unit of measure.</rdfs:comment>
-    <rdfs:label xml:lang="en">unit</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb13">
-    <owl:intersectionOf rdf:nodeID="n4a1db6282f054533a9703e35f148652cb16"/>
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b8">
+    <owl:intersectionOf rdf:nodeID="nce7712293227495681a4da3555c358f7b11"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb3">
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b3">
     <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/ProductCharacteristic"/>
-    <rdf:rest rdf:nodeID="n4a1db6282f054533a9703e35f148652cb4"/>
+    <rdf:rest rdf:nodeID="nce7712293227495681a4da3555c358f7b4"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb10">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/DPPInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="nce7712293227495681a4da3555c358f7b7"/>
+    <rdfs:comment xml:lang="en">A pice of information contained in a DPP, which is about some product.</rdfs:comment>
+    <rdfs:label xml:lang="en">DPP information</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/startTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The start of a time interval.</rdfs:comment>
+    <rdfs:label xml:lang="en">start time</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b17">
+    <rdf:first rdf:nodeID="nce7712293227495681a4da3555c358f7b15"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/isAbout">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relating a piece of information to the thing the information is about, i.e. describes.</rdfs:comment>
+    <rdfs:label xml:lang="en">is about</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-info/endTime"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
+    <rdfs:comment xml:lang="en">A piece of information about how to disassemble the product, e.g. linking to some disassembly instructions.</rdfs:comment>
+    <rdfs:label xml:lang="en">Disassembly information</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b10">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-info/startTime"/>
     <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb11">
-    <rdf:first rdf:nodeID="n4a1db6282f054533a9703e35f148652cb9"/>
-    <rdf:rest rdf:nodeID="n4a1db6282f054533a9703e35f148652cb12"/>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/Product">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n4a1db6282f054533a9703e35f148652cb7">
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b6">
+    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/isAbout"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b4">
+    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/ProductQuality"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b7">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-info/isAbout"/>
     <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="nce7712293227495681a4da3555c358f7b2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b14">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-info/characteristic"/>
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b18">
+    <owl:intersectionOf rdf:nodeID="nce7712293227495681a4da3555c358f7b21"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/DPP">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -304,7 +294,17 @@
   <rdf:Description rdf:about="http://purl.org/dc/terms/created">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nce7712293227495681a4da3555c358f7b16">
+    <rdf:first rdf:nodeID="nce7712293227495681a4da3555c358f7b14"/>
+    <rdf:rest rdf:nodeID="nce7712293227495681a4da3555c358f7b17"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
 </rdf:RDF>

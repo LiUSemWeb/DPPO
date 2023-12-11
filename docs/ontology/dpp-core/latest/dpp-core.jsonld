@@ -1,176 +1,5 @@
 [
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-core/MaterialDPP",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A DPP describing a material."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Material DPP"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#equivalentClass": [
-      {
-        "@id": "_:na0c317abe8f94652af58db8d10608c9db9"
-      }
-    ]
-  },
-  {
-    "@id": "_:na0c317abe8f94652af58db8d10608c9db9",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
-          },
-          {
-            "@id": "_:na0c317abe8f94652af58db8d10608c9db10"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:na0c317abe8f94652af58db8d10608c9db10",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-odp/describes"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-core/Material"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-core/SubstanceDPP",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A DPP  describing a substance."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Substance DPP"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#equivalentClass": [
-      {
-        "@id": "_:na0c317abe8f94652af58db8d10608c9db13"
-      }
-    ]
-  },
-  {
-    "@id": "_:na0c317abe8f94652af58db8d10608c9db13",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
-          },
-          {
-            "@id": "_:na0c317abe8f94652af58db8d10608c9db14"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:na0c317abe8f94652af58db8d10608c9db14",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-odp/describes"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-core/Substance"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-core/Material",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A material, that is sold as a product by the producer."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Material"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/created",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/description",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/creator",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
     "@id": "http://w3id.org/dppo/ontology/dpp-core/ComponentDPP",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -194,12 +23,12 @@
     ],
     "http://www.w3.org/2002/07/owl#equivalentClass": [
       {
-        "@id": "_:na0c317abe8f94652af58db8d10608c9db1"
+        "@id": "_:n461c151449d7443fb73594da223b43a4b1"
       }
     ]
   },
   {
-    "@id": "_:na0c317abe8f94652af58db8d10608c9db1",
+    "@id": "_:n461c151449d7443fb73594da223b43a4b1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -210,14 +39,14 @@
             "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
           },
           {
-            "@id": "_:na0c317abe8f94652af58db8d10608c9db2"
+            "@id": "_:n461c151449d7443fb73594da223b43a4b2"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:na0c317abe8f94652af58db8d10608c9db2",
+    "@id": "_:n461c151449d7443fb73594da223b43a4b2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -230,12 +59,6 @@
       {
         "@id": "http://w3id.org/dppo/ontology/dpp-core/Component"
       }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/license",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
@@ -262,49 +85,26 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A consumer product, i.e. a product that is sold directly to end users (consumers)."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Consumer product"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product"
-      }
-    ]
-  },
-  {
     "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-core/ConsumerProductDPP",
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/SubstanceDPP",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "A DPP describing a consumer product."
+        "@value": "A DPP  describing a substance."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Comsumer Product DPP"
+        "@value": "Substance DPP"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
@@ -314,12 +114,12 @@
     ],
     "http://www.w3.org/2002/07/owl#equivalentClass": [
       {
-        "@id": "_:na0c317abe8f94652af58db8d10608c9db5"
+        "@id": "_:n461c151449d7443fb73594da223b43a4b13"
       }
     ]
   },
   {
-    "@id": "_:na0c317abe8f94652af58db8d10608c9db5",
+    "@id": "_:n461c151449d7443fb73594da223b43a4b13",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -330,14 +130,14 @@
             "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
           },
           {
-            "@id": "_:na0c317abe8f94652af58db8d10608c9db6"
+            "@id": "_:n461c151449d7443fb73594da223b43a4b14"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:na0c317abe8f94652af58db8d10608c9db6",
+    "@id": "_:n461c151449d7443fb73594da223b43a4b14",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -348,8 +148,38 @@
     ],
     "http://www.w3.org/2002/07/owl#someValuesFrom": [
       {
-        "@id": "http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct"
+        "@id": "http://w3id.org/dppo/ontology/dpp-core/Substance"
       }
+    ]
+  },
+  {
+    "@id": "http://purl.org/vocab/vann/preferredNamespaceUri",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-odp/describes",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/description",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/contributor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/creator",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
@@ -425,19 +255,131 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/title",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product",
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/ConsumerProductDPP",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A DPP describing a consumer product."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Comsumer Product DPP"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n461c151449d7443fb73594da223b43a4b5"
+      }
     ]
   },
   {
-    "@id": "http://purl.org/vocab/vann/preferredNamespaceUri",
+    "@id": "_:n461c151449d7443fb73594da223b43a4b5",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
+          },
+          {
+            "@id": "_:n461c151449d7443fb73594da223b43a4b6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n461c151449d7443fb73594da223b43a4b6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/describes"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/MaterialDPP",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A DPP describing a material."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Material DPP"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n461c151449d7443fb73594da223b43a4b9"
+      }
+    ]
+  },
+  {
+    "@id": "_:n461c151449d7443fb73594da223b43a4b9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
+          },
+          {
+            "@id": "_:n461c151449d7443fb73594da223b43a4b10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n461c151449d7443fb73594da223b43a4b10",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/describes"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-core/Material"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/title",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
@@ -466,15 +408,73 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/contributor",
+    "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A consumer product, i.e. a product that is sold directly to end users (consumers)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Consumer product"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-core/Material",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A material, that is sold as a product by the producer."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Material"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/license",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-odp/describes",
+    "@id": "http://purl.org/dc/terms/created",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   }
 ]

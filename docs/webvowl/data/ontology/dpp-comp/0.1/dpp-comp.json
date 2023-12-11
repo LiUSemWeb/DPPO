@@ -41,17 +41,17 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
+        "value" : "Huanyu Li",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
         "value" : "Robin Keskisärkkä",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "Eva Blomqvist",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Huanyu Li",
         "type" : "label"
       } ],
       "created" : [ {
@@ -66,16 +66,16 @@
         "value" : "dpp-comp",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "http://w3id.org/dppo/ontology/dpp-comp/",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "0.1",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://w3id.org/dppo/ontology/dpp-comp/",
         "type" : "label"
       } ],
       "title" : [ {
@@ -100,91 +100,94 @@
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "16",
-    "type" : "owl:Class"
-  }, {
-    "id" : "20",
-    "type" : "owl:Class"
-  }, {
-    "id" : "12",
-    "type" : "owl:Class"
-  }, {
-    "id" : "36",
-    "type" : "owl:Class"
-  }, {
-    "id" : "23",
-    "type" : "owl:Class"
-  }, {
-    "id" : "32",
-    "type" : "owl:Class"
-  }, {
-    "id" : "38",
+    "id" : "15",
     "type" : "owl:Class"
   }, {
     "id" : "19",
     "type" : "owl:Class"
   }, {
-    "id" : "17",
+    "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "30",
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
     "type" : "owl:Class"
   }, {
     "id" : "4",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "55",
+    "id" : "57",
     "type" : "owl:Thing"
   }, {
     "id" : "5",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "58",
+    "id" : "38",
     "type" : "owl:Thing"
   }, {
-    "id" : "15",
+    "id" : "59",
     "type" : "owl:Thing"
   }, {
-    "id" : "60",
+    "id" : "14",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "61",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "9",
+    "id" : "11",
     "type" : "owl:Thing"
   }, {
-    "id" : "13",
+    "id" : "46",
     "type" : "owl:Thing"
   }, {
-    "id" : "21",
+    "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "43",
-    "type" : "owl:Thing"
+    "id" : "64",
+    "type" : "rdfs:Literal"
   }, {
-    "id" : "63",
+    "id" : "65",
     "type" : "rdfs:Literal"
   }, {
     "id" : "6",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "64",
-    "type" : "rdfs:Literal"
-  }, {
     "id" : "66",
     "type" : "owl:Thing"
   }, {
-    "id" : "26",
+    "id" : "31",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "17",
     "type" : "owl:Class"
   }, {
     "id" : "42",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "18",
     "type" : "owl:Class"
   }, {
-    "id" : "34",
-    "type" : "owl:Class"
-  }, {
-    "id" : "56",
+    "id" : "58",
     "type" : "owl:Class"
   }, {
     "id" : "3",
@@ -193,7 +196,7 @@
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "8",
+    "id" : "22",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -201,7 +204,11 @@
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "ProductCharacteristic"
+      "IRI-based" : "ProductCharacteristic",
+      "en" : "Product characteristic"
+    },
+    "comment" : {
+      "en" : "A piece of information that describes a product characteristic."
     },
     "attributes" : [ "external" ],
     "id" : "0",
@@ -224,38 +231,58 @@
       "IRI-based" : "SubstanceOfConcern",
       "en" : "Substance of Concern"
     },
-    "subClasses" : [ "18", "19" ],
+    "subClasses" : [ "17", "18" ],
     "comment" : {
       "en" : "Substance of concern as defined in the ESPR, meaning it is a substance that is either toxic or something that hinders recycling of the product."
     },
-    "id" : "16",
-    "superClasses" : [ "17" ]
+    "id" : "15",
+    "superClasses" : [ "16" ]
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "ConsumerProduct"
+      "IRI-based" : "ConsumerProduct",
+      "en" : "Consumer product"
+    },
+    "comment" : {
+      "en" : "A consumer product, i.e. a product that is sold directly to end users (consumers)."
     },
     "attributes" : [ "external" ],
-    "id" : "20",
-    "superClasses" : [ "21" ]
+    "id" : "19",
+    "superClasses" : [ "20" ]
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/RepairInstruction",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "RepairInstruction"
+      "IRI-based" : "RepairInstruction",
+      "en" : "Repair instruction"
+    },
+    "comment" : {
+      "en" : "A piece of information about how to repair a product."
     },
     "attributes" : [ "external" ],
-    "id" : "12",
+    "id" : "10",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/Unit",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
     "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://qudt.org/schema/qudt/Unit",
+        "type" : "label"
+      } ]
+    },
     "label" : {
-      "IRI-based" : "Unit"
+      "IRI-based" : "Unit",
+      "en" : "Unit"
+    },
+    "comment" : {
+      "en" : "A unit of measure."
     },
     "attributes" : [ "external" ],
     "id" : "36"
@@ -264,31 +291,43 @@
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "ProductQuality"
+      "IRI-based" : "ProductQuality",
+      "en" : "Product quality"
+    },
+    "comment" : {
+      "en" : "A piece of information about the quality of of a product."
     },
     "attributes" : [ "external" ],
-    "id" : "23",
+    "id" : "8",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/LegalGuarantee",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "LegalGuarantee"
+      "IRI-based" : "LegalGuarantee",
+      "en" : "Legal guarantee"
+    },
+    "comment" : {
+      "en" : "A piece of information that described the legal guarantee of the product, with its time interval of validity."
     },
     "attributes" : [ "external" ],
-    "id" : "32",
+    "id" : "29",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-core/Component",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Component"
+      "IRI-based" : "Component",
+      "en" : "Component"
+    },
+    "comment" : {
+      "en" : "A product that is a component of some other product."
     },
     "attributes" : [ "external" ],
-    "id" : "38",
-    "superClasses" : [ "21" ]
+    "id" : "35",
+    "superClasses" : [ "20" ]
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-comp/ToxicSubstance",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-comp",
@@ -300,44 +339,56 @@
     "comment" : {
       "en" : "A toxic substance."
     },
-    "id" : "19",
-    "superClasses" : [ "16" ]
+    "id" : "18",
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-core/Substance",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Substance"
+      "IRI-based" : "Substance",
+      "en" : "Substance"
     },
-    "subClasses" : [ "16" ],
+    "subClasses" : [ "15" ],
+    "comment" : {
+      "en" : "A substance, that is sold as a product by the producer."
+    },
     "attributes" : [ "external" ],
-    "id" : "17",
-    "superClasses" : [ "21" ]
+    "id" : "16",
+    "superClasses" : [ "20" ]
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/CompositionInformation",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "CompositionInformation"
+      "IRI-based" : "CompositionInformation",
+      "en" : "Composition information"
+    },
+    "comment" : {
+      "en" : "A piece of information about the composition of a product, i.e. a relation between a product and its part, potentially with more details of the composition included."
     },
     "attributes" : [ "external" ],
-    "id" : "30",
+    "id" : "24",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-core/MaterialDPP",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "MaterialDPP"
+      "IRI-based" : "MaterialDPP",
+      "en" : "Material DPP"
     },
     "intersection" : [ "2" ],
+    "comment" : {
+      "en" : "A DPP describing a material."
+    },
     "attributes" : [ "intersection", "external" ],
     "id" : "4",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "55",
+    "id" : "57",
     "label" : {
       "undefined" : "Thing"
     }
@@ -346,29 +397,40 @@
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "ComponentDPP"
+      "IRI-based" : "ComponentDPP",
+      "en" : "Component DPP"
     },
     "intersection" : [ "2" ],
+    "comment" : {
+      "en" : "A DPP that describes a component."
+    },
     "attributes" : [ "intersection", "external" ],
     "id" : "5",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "58",
+    "id" : "38",
     "label" : {
       "undefined" : "Thing"
     }
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "15",
+    "id" : "59",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "14",
     "label" : {
       "undefined" : "Thing"
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "60",
+    "id" : "61",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -376,14 +438,14 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "9",
+    "id" : "11",
     "label" : {
       "undefined" : "Thing"
     }
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "13",
+    "id" : "46",
     "label" : {
       "undefined" : "Thing"
     }
@@ -394,19 +456,19 @@
     "label" : {
       "IRI-based" : "Product"
     },
-    "subClasses" : [ "17", "38", "34", "20" ],
+    "subClasses" : [ "16", "35", "42", "19" ],
     "attributes" : [ "external" ],
-    "id" : "21"
+    "id" : "20"
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "43",
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "64",
     "label" : {
-      "undefined" : "Thing"
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "63",
+    "id" : "65",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -416,23 +478,27 @@
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "ConsumerProductDPP"
+      "IRI-based" : "ConsumerProductDPP",
+      "en" : "Comsumer Product DPP"
     },
     "intersection" : [ "2" ],
+    "comment" : {
+      "en" : "A DPP describing a consumer product."
+    },
     "attributes" : [ "intersection", "external" ],
     "id" : "6",
     "superClasses" : [ "2" ]
   }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "64",
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "66",
     "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
+      "undefined" : "Thing"
     }
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "66",
+    "id" : "31",
     "label" : {
       "undefined" : "Thing"
     }
@@ -443,14 +509,17 @@
     "label" : {
       "IRI-based" : "CertificateInformation"
     },
+    "comment" : {
+      "en" : "Certificate information"
+    },
     "attributes" : [ "external" ],
-    "id" : "26",
+    "id" : "33",
     "superClasses" : [ "1" ]
   }, {
     "instances" : 0,
-    "union" : [ "0", "30", "23" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "42"
+    "union" : [ "0", "24", "8" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "45"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-comp/SubstanceHinderingRecycling",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-comp",
@@ -462,18 +531,22 @@
     "comment" : {
       "en" : "A substance that hinders recycling of a product."
     },
-    "id" : "18",
-    "superClasses" : [ "16" ]
+    "id" : "17",
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-core/Material",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Material"
+      "IRI-based" : "Material",
+      "en" : "Material"
+    },
+    "comment" : {
+      "en" : "A material, that is sold as a product by the producer."
     },
     "attributes" : [ "external" ],
-    "id" : "34",
-    "superClasses" : [ "21" ]
+    "id" : "42",
+    "superClasses" : [ "20" ]
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/0.1/CompositionInformation",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info/0.1",
@@ -482,15 +555,19 @@
       "IRI-based" : "CompositionInformation"
     },
     "attributes" : [ "external" ],
-    "id" : "56"
+    "id" : "58"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-core/SubstanceDPP",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "SubstanceDPP"
+      "IRI-based" : "SubstanceDPP",
+      "en" : "Substance DPP"
     },
     "intersection" : [ "2" ],
+    "comment" : {
+      "en" : "A DPP  describing a substance."
+    },
     "attributes" : [ "intersection", "external" ],
     "id" : "3",
     "superClasses" : [ "2" ]
@@ -499,9 +576,13 @@
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "DPPInformation"
+      "IRI-based" : "DPPInformation",
+      "en" : "DPP information"
     },
-    "subClasses" : [ "12", "0", "26", "32", "30", "8", "23" ],
+    "subClasses" : [ "10", "0", "33", "29", "24", "22", "8" ],
+    "comment" : {
+      "en" : "A pice of information contained in a DPP, which is about some product."
+    },
     "attributes" : [ "external" ],
     "id" : "1"
   }, {
@@ -509,51 +590,55 @@
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "DisassemblyInformation"
+      "IRI-based" : "DisassemblyInformation",
+      "en" : "Disassembly information"
+    },
+    "comment" : {
+      "en" : "A piece of information about how to disassemble the product, e.g. linking to some disassembly instructions."
     },
     "attributes" : [ "external" ],
-    "id" : "8",
+    "id" : "22",
     "superClasses" : [ "1" ]
   } ],
   "property" : [ {
     "id" : "7",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "11",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "14",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "22",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "24",
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "25",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "27",
+    "id" : "26",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "29",
+    "id" : "32",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "31",
+    "id" : "34",
     "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "33",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "35",
-    "type" : "owl:objectProperty"
   }, {
     "id" : "37",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "39",
     "type" : "rdfs:SubClassOf"
@@ -562,19 +647,16 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
     "type" : "owl:objectProperty"
   }, {
     "id" : "44",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "45",
+    "id" : "47",
     "type" : "owl:objectProperty"
-  }, {
-    "id" : "48",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "49",
-    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "50",
     "type" : "rdfs:SubClassOf"
@@ -591,354 +673,417 @@
     "id" : "54",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "47",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "57",
+    "id" : "55",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "59",
-    "type" : "owl:datatypeProperty"
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "61",
+    "id" : "49",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "65",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "68",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "69",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "71",
+    "id" : "60",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "62",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "10",
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "69",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "46",
+    "id" : "70",
     "type" : "owl:objectProperty"
   }, {
     "id" : "72",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
     "type" : "owl:objectProperty"
   }, {
     "id" : "73",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "http://w3id.org/dppo/ontology/dpp-info/dissasemblyInstructionsDocument",
-    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
-    "range" : "9",
-    "label" : {
-      "IRI-based" : "dissasemblyInstructionsDocument"
-    },
-    "superproperty" : [ "10" ],
+    "range" : "1",
     "domain" : "8",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "7"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/repairInstructionsDocument",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
-    "range" : "13",
+    "range" : "11",
     "label" : {
-      "IRI-based" : "repairInstructionsDocument"
+      "IRI-based" : "repairInstructionsDocument",
+      "en" : "repair instrucitons document"
     },
-    "superproperty" : [ "10" ],
-    "domain" : "12",
+    "superproperty" : [ "12" ],
+    "domain" : "10",
+    "comment" : {
+      "en" : "A relation pointing out a document containing repair instructions for the product."
+    },
     "attributes" : [ "object", "external" ],
-    "id" : "11"
+    "id" : "9"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/0.1/hasCompositionInformation",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info/0.1",
-    "range" : "15",
+    "range" : "14",
     "label" : {
       "IRI-based" : "hasCompositionInformation"
     },
-    "domain" : "15",
+    "domain" : "14",
     "attributes" : [ "object", "external" ],
-    "id" : "14"
+    "id" : "13"
   }, {
     "range" : "1",
-    "domain" : "23",
+    "domain" : "22",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "22"
+    "id" : "21"
   }, {
     "range" : "1",
-    "domain" : "8",
+    "domain" : "24",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "24"
-  }, {
-    "range" : "1",
-    "domain" : "26",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "25"
+    "id" : "23"
   }, {
     "range" : "1",
     "domain" : "0",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "27"
+    "id" : "25"
+  }, {
+    "range" : "1",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "26"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/directlySupersedes",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
-    "range" : "15",
+    "range" : "14",
     "label" : {
-      "IRI-based" : "directlySupersedes"
+      "IRI-based" : "directlySupersedes",
+      "en" : "directly supersedes"
     },
-    "domain" : "15",
+    "domain" : "14",
+    "comment" : {
+      "en" : "A relation connecting a piece of information to another piece of information that directly replaces the first one, i.e. when a DPP is updated."
+    },
     "attributes" : [ "object", "external" ],
+    "id" : "27"
+  }, {
+    "range" : "1",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "28"
   }, {
-    "range" : "1",
-    "domain" : "30",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "29"
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/disassemblyInstructionsDocument",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "disassemblyInstructionsDocument",
+      "en" : "disassembly instructions document"
+    },
+    "superproperty" : [ "12" ],
+    "domain" : "22",
+    "comment" : {
+      "en" : "A relation pointing out a document with disassembly instructions for the product."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "30"
   }, {
     "range" : "1",
-    "domain" : "32",
+    "domain" : "33",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "31"
+    "id" : "32"
   }, {
-    "range" : "21",
-    "domain" : "34",
+    "range" : "20",
+    "domain" : "35",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "33"
+    "id" : "34"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/hasCompositionInformation",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
-    "range" : "15",
+    "range" : "38",
     "label" : {
-      "IRI-based" : "hasCompositionInformation"
+      "IRI-based" : "hasCompositionInformation",
+      "en" : "has composition information"
     },
-    "domain" : "15",
+    "domain" : "20",
+    "comment" : {
+      "en" : "A piece of information about the composition of a product."
+    },
     "attributes" : [ "object", "external" ],
-    "id" : "35"
-  }, {
-    "range" : "21",
-    "domain" : "38",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "37"
   }, {
-    "range" : "1",
-    "domain" : "12",
+    "range" : "20",
+    "domain" : "16",
     "attributes" : [ "anonymous", "object" ],
     "id" : "39"
   }, {
-    "range" : "21",
-    "domain" : "20",
+    "range" : "20",
+    "domain" : "19",
     "attributes" : [ "anonymous", "object" ],
     "id" : "40"
   }, {
-    "iri" : "http://w3id.org/dppo/ontology/dpp-info/unit",
-    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
-    "range" : "43",
-    "label" : {
-      "IRI-based" : "unit"
-    },
+    "range" : "20",
     "domain" : "42",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "41"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/containsInformation",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
     "range" : "1",
     "label" : {
-      "IRI-based" : "containsInformation"
+      "IRI-based" : "containsInformation",
+      "en" : "contains information"
     },
     "domain" : "2",
+    "comment" : {
+      "en" : "Relating a DPP to the pieces of information it contains."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-info/unit",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "unit",
+      "en" : "unit"
+    },
+    "domain" : "45",
+    "comment" : {
+      "en" : "Relation between a concept with a value, associating it to a unit of measure."
+    },
     "attributes" : [ "object", "external" ],
     "id" : "44"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/0.1/isAbout",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info/0.1",
-    "range" : "15",
+    "range" : "14",
     "label" : {
       "IRI-based" : "isAbout"
     },
-    "domain" : "15",
-    "subproperty" : [ "46", "47" ],
+    "domain" : "14",
+    "subproperty" : [ "48", "49" ],
     "attributes" : [ "object", "external" ],
-    "id" : "45"
+    "id" : "47"
   }, {
-    "range" : "17",
-    "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "48"
-  }, {
-    "range" : "16",
-    "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "49"
-  }, {
-    "range" : "21",
-    "domain" : "17",
+    "range" : "15",
+    "domain" : "18",
     "attributes" : [ "anonymous", "object" ],
     "id" : "50"
   }, {
-    "range" : "2",
-    "domain" : "5",
+    "range" : "15",
+    "domain" : "17",
     "attributes" : [ "anonymous", "object" ],
     "id" : "51"
+  }, {
+    "range" : "16",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "52"
   }, {
     "range" : "2",
     "domain" : "4",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "52"
-  }, {
-    "range" : "16",
-    "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "53"
-  }, {
-    "range" : "2",
-    "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "54"
-  }, {
-    "iri" : "http://w3id.org/dppo/ontology/dpp-comp/aboutPart",
-    "baseIri" : "http://w3id.org/dppo/ontology/dpp-comp",
-    "range" : "21",
-    "label" : {
-      "IRI-based" : "aboutPart",
-      "en" : "about part"
-    },
-    "superproperty" : [ "45" ],
-    "domain" : "56",
-    "comment" : {
-      "en" : "Relation between the piece of information representing the composition, and the part involved in the relation."
-    },
-    "attributes" : [ "object" ],
-    "id" : "47"
   }, {
     "range" : "2",
     "domain" : "3",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "57"
+    "id" : "54"
+  }, {
+    "range" : "2",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "55"
+  }, {
+    "range" : "2",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-comp/aboutPart",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-comp",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "aboutPart",
+      "en" : "about part"
+    },
+    "superproperty" : [ "47" ],
+    "domain" : "58",
+    "comment" : {
+      "en" : "Relation between the piece of information representing the composition, and the part involved in the relation."
+    },
+    "attributes" : [ "object" ],
+    "id" : "49"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/startTime",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
-    "range" : "60",
+    "range" : "61",
     "label" : {
-      "IRI-based" : "startTime"
+      "IRI-based" : "startTime",
+      "en" : "start time"
     },
-    "domain" : "15",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "59"
+    "domain" : "14",
+    "comment" : {
+      "en" : "The start of a time interval."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "60"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/directlySupersededBy",
-    "inverse" : "28",
+    "inverse" : "27",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
-    "range" : "15",
+    "range" : "14",
     "label" : {
-      "IRI-based" : "directlySupersededBy"
+      "IRI-based" : "directlySupersededBy",
+      "en" : "directly superseded by"
     },
-    "superproperty" : [ "62" ],
-    "domain" : "15",
+    "superproperty" : [ "63" ],
+    "domain" : "14",
+    "comment" : {
+      "en" : "A relation connecting a piece of information to the piece of information directly superseding it."
+    },
     "attributes" : [ "object", "external" ],
-    "id" : "61"
+    "id" : "62"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/value",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
-    "range" : "64",
+    "range" : "65",
     "label" : {
-      "IRI-based" : "value"
+      "IRI-based" : "value",
+      "en" : "value"
     },
-    "domain" : "15",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "65"
+    "domain" : "14",
+    "comment" : {
+      "en" : "The value of a characterisitc or a quality."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "67"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/quality",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
-    "range" : "58",
+    "range" : "59",
     "label" : {
-      "IRI-based" : "quality"
+      "IRI-based" : "quality",
+      "en" : "quality"
     },
-    "domain" : "23",
-    "attributes" : [ "object", "external" ],
-    "id" : "68"
-  }, {
-    "iri" : "http://w3id.org/dppo/ontology/dpp-odp/describes",
-    "baseIri" : "http://w3id.org/dppo/ontology/dpp-odp",
-    "range" : "15",
-    "label" : {
-      "IRI-based" : "describes"
+    "domain" : "8",
+    "comment" : {
+      "en" : "A relation pointing at the quality that the piece of information describes."
     },
-    "superproperty" : [ "70" ],
-    "domain" : "15",
     "attributes" : [ "object", "external" ],
     "id" : "69"
   }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-odp/describes",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-odp",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "describes"
+    },
+    "superproperty" : [ "71" ],
+    "domain" : "14",
+    "attributes" : [ "object", "external" ],
+    "id" : "70"
+  }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/endTime",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
-    "range" : "63",
+    "range" : "64",
     "label" : {
-      "IRI-based" : "endTime"
+      "IRI-based" : "endTime",
+      "en" : "end time"
     },
-    "domain" : "15",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "71"
+    "domain" : "14",
+    "comment" : {
+      "en" : "The end of a time interval."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "72"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/supersededBy",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
     "range" : "1",
     "label" : {
-      "IRI-based" : "supersededBy"
+      "IRI-based" : "supersededBy",
+      "en" : "superseded by"
     },
     "domain" : "1",
-    "subproperty" : [ "61" ],
-    "attributes" : [ "object", "external", "transitive" ],
-    "id" : "62"
+    "subproperty" : [ "62" ],
+    "comment" : {
+      "en" : "A transitive relation that relates a piece of information to the pieces of information that supersedes it."
+    },
+    "attributes" : [ "transitive", "object", "external" ],
+    "id" : "63"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/externalDocument",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
-    "range" : "15",
+    "range" : "14",
     "label" : {
-      "IRI-based" : "externalDocument"
+      "IRI-based" : "externalDocument",
+      "en" : "external document"
     },
-    "domain" : "15",
-    "subproperty" : [ "72", "7", "11" ],
+    "domain" : "14",
+    "subproperty" : [ "73", "9", "30" ],
+    "comment" : {
+      "en" : "A relation for pointing to external documentation, that is not explicitly represented inside the DPP but instead as a related document, e.g. documents with various kinds of instructions, certificates, or furhter information about the product."
+    },
     "attributes" : [ "object", "external" ],
-    "id" : "10"
+    "id" : "12"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-comp/aboutWhole",
-    "inverse" : "14",
+    "inverse" : "13",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-comp",
-    "range" : "21",
+    "range" : "20",
     "label" : {
       "IRI-based" : "aboutWhole",
       "en" : "about whole"
     },
-    "superproperty" : [ "45" ],
-    "domain" : "56",
+    "superproperty" : [ "47" ],
+    "domain" : "58",
     "comment" : {
       "en" : "Relation between the piece of information representing the composition, and the whole involved in the relation."
     },
     "attributes" : [ "object" ],
-    "id" : "46"
+    "id" : "48"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/certificateDocument",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
     "range" : "66",
     "label" : {
-      "IRI-based" : "certificateDocument"
+      "IRI-based" : "certificateDocument",
+      "en" : "certificate document"
     },
-    "superproperty" : [ "10" ],
-    "domain" : "26",
+    "superproperty" : [ "12" ],
+    "domain" : "33",
+    "comment" : {
+      "en" : "A relation pointing out a document representing a certificate related to the product described by the DPP."
+    },
     "attributes" : [ "object", "external" ],
-    "id" : "72"
+    "id" : "73"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/characteristic",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-info",
-    "range" : "55",
+    "range" : "57",
     "label" : {
-      "IRI-based" : "characteristic"
+      "IRI-based" : "characteristic",
+      "en" : "characteristic"
     },
     "domain" : "0",
+    "comment" : {
+      "en" : "The characteristic that the piece of information is about."
+    },
     "attributes" : [ "object", "external" ],
-    "id" : "73"
+    "id" : "74"
   } ]
 }
