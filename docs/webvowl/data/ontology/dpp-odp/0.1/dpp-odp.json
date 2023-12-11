@@ -1,8 +1,8 @@
 {
   "_comment" : "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org",
   "header" : {
-    "languages" : [ "undefined" ],
-    "baseIris" : [ "http://w3id.org/dppo/ontology/dpp-odp", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://w3id.org/dppo/ontology/dpp-odp", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
     "prefixList" : {
       "owl" : "http://www.w3.org/2002/07/owl#",
       "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -39,17 +39,17 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Robin Keskisärkkä",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
         "value" : "Huanyu Li",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "Eva Blomqvist",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Robin Keskisärkkä",
         "type" : "label"
       } ],
       "created" : [ {
@@ -64,16 +64,16 @@
         "value" : "dpp-odp",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "0.1",
-        "type" : "label"
-      } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "http://w3id.org/dppo/ontology/dpp-odp/",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.1",
         "type" : "label"
       } ],
       "title" : [ {
@@ -103,7 +103,11 @@
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-odp",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "DPP"
+      "IRI-based" : "DPP",
+      "en" : "Digital Product Passport"
+    },
+    "comment" : {
+      "en" : "A Digital Product Passport, containing information about a product, and which main contain sub-DPPs as its parts."
     },
     "id" : "0"
   }, {
@@ -111,7 +115,11 @@
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-odp",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Product"
+      "IRI-based" : "Product",
+      "en" : "Product"
+    },
+    "comment" : {
+      "en" : "A product, in a broad sense, defined as anything that is sold by a value chain actor, and which can have other products as parts."
     },
     "id" : "2"
   } ],
@@ -130,9 +138,13 @@
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-odp",
     "range" : "2",
     "label" : {
-      "IRI-based" : "describes"
+      "IRI-based" : "describes",
+      "en" : "describes"
     },
     "domain" : "0",
+    "comment" : {
+      "en" : "The relation between a DPP and the product it describes."
+    },
     "attributes" : [ "object" ],
     "id" : "1"
   }, {
@@ -140,20 +152,22 @@
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-odp",
     "range" : "0",
     "label" : {
-      "IRI-based" : "hasPart"
+      "IRI-based" : "hasPart",
+      "en" : "has part"
     },
     "domain" : "0",
-    "attributes" : [ "object", "allValues" ],
+    "attributes" : [ "allValues", "object" ],
     "id" : "3"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-odp/hasPart",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-odp",
     "range" : "2",
     "label" : {
-      "IRI-based" : "hasPart"
+      "IRI-based" : "hasPart",
+      "en" : "has part"
     },
     "domain" : "2",
-    "attributes" : [ "object", "allValues" ],
+    "attributes" : [ "allValues", "object" ],
     "id" : "4"
   } ]
 }

@@ -36,18 +36,26 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
     owl:versionInfo "0.1" .
 
 :describes a owl:ObjectProperty ;
+    rdfs:label "describes"@en ;
+    rdfs:comment "The relation between a DPP and the product it describes."@en ;
     rdfs:domain :DPP ;
     rdfs:range :Product .
 
 :DPP a owl:Class ;
+    rdfs:label "Digital Product Passport"@en ;
+    rdfs:comment "A Digital Product Passport, containing information about a product, and which main contain sub-DPPs as its parts."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom :DPP ;
             owl:onProperty :hasPart ] .
 
 :Product a owl:Class ;
+    rdfs:label "Product"@en ;
+    rdfs:comment "A product, in a broad sense, defined as anything that is sold by a value chain actor, and which can have other products as parts."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom :Product ;
             owl:onProperty :hasPart ] .
 
-:hasPart a owl:ObjectProperty .
+:hasPart a owl:ObjectProperty ;
+    rdfs:label "A relation between a whole and its parts."@en,
+        "has part"@en .
 

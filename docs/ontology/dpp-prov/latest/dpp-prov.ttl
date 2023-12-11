@@ -6,6 +6,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 
+dcterms:contributor a owl:AnnotationProperty .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
 : a owl:Ontology ;
     dcterms:contributor "Eva Blomqvist",
         "Huanyu Li",
@@ -23,36 +39,60 @@
     owl:versionInfo "0.1" .
 
 :Authority a owl:Class ;
+    rdfs:label "Authority"@en ;
+    rdfs:comment "An actor that is an authority."@en ;
     rdfs:subClassOf :Actor .
 
 :Consumer a owl:Class ;
+    rdfs:label "Consumer"@en ;
+    rdfs:comment "An actor that is an end-user of a product, a consumer."@en ;
     rdfs:subClassOf :Actor .
 
 :ValueChainActor a owl:Class ;
+    rdfs:label "Value chain actor"@en ;
+    rdfs:comment "An actor that is an active participant of the value chain of a product, e.g. a manufacturer, recycler or other actor."@en ;
     rdfs:subClassOf :Actor .
 
 :creationTimeStamp a owl:DatatypeProperty ;
+    rdfs:label "creation time stamp"@en ;
+    rdfs:comment "A time stamp indicating when a piece of information, or a DPP, was created (or added), i.e. when it started to be valid."@en ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( dpp-info:DPPInformation <http://w3id.org/dppo/ontology/dpp-odp/DPP> ) ] ;
     rdfs:subPropertyOf :timeStamp .
 
 :dppOwner a owl:ObjectProperty ;
+    rdfs:label "DPP owner"@en ;
+    rdfs:comment "A relation relating the DPP with the actor owning, i.e. responsible for issuing, the DPP."@en ;
     rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
     rdfs:subPropertyOf :actor .
 
 :invalidAtTimeStamp a owl:DatatypeProperty ;
+    rdfs:label "invalid at time stamp"@en ;
+    rdfs:comment "A time stamp indicating the time when a DPP or a piece of information ceased to be valid, i.e. what deprecated or replaced by another piece of information."@en ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( dpp-info:DPPInformation <http://w3id.org/dppo/ontology/dpp-odp/DPP> ) ] ;
     rdfs:subPropertyOf :timeStamp .
 
 :responsibleActor a owl:ObjectProperty ;
+    rdfs:label "responsible actor"@en ;
+    rdfs:comment "A relation the indicates the actor responsible for stating a piece of information."@en ;
     rdfs:domain dpp-info:DPPInformation ;
     rdfs:subPropertyOf :actor .
 
 :actor a owl:ObjectProperty ;
+    rdfs:label "actor"@en ;
+    rdfs:comment "Relation to the actor responsible for a DPP or a piece of information inside it."@en ;
     rdfs:range :Actor .
 
-:timeStamp a owl:DatatypeProperty .
+:timeStamp a owl:DatatypeProperty ;
+    rdfs:label "time stamp"@en ;
+    rdfs:comment "A timstamp of some information, i.e. a DPP or a piece of information."@en .
 
-:Actor a owl:Class .
+dpp-info:DPPInformation a owl:Class .
+
+<http://w3id.org/dppo/ontology/dpp-odp/DPP> a owl:Class .
+
+:Actor a owl:Class ;
+    rdfs:comment "Actor"@en,
+        "An actor responsible for some information."@en .
 

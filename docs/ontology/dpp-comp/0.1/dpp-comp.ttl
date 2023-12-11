@@ -24,22 +24,38 @@
     owl:versionInfo "0.1" .
 
 :SubstanceHinderingRecycling a owl:Class ;
+    rdfs:label "Substance findering recycling"@en ;
+    rdfs:comment "A substance that hinders recycling of a product."@en ;
     rdfs:subClassOf :SubstanceOfConcern .
 
 :ToxicSubstance a owl:Class ;
+    rdfs:label "Toxic substance"@en ;
+    rdfs:comment "A toxic substance."@en ;
     rdfs:subClassOf :SubstanceOfConcern .
 
 :aboutPart a owl:ObjectProperty ;
+    rdfs:label "about part"@en ;
+    rdfs:comment "Relation between the piece of information representing the composition, and the part involved in the relation."@en ;
     rdfs:domain dpp-info:CompositionInformation ;
     rdfs:range <http://w3id.org/dppo/ontology/dpp-odp/Product> ;
     rdfs:subPropertyOf dpp-info:isAbout .
 
 :aboutWhole a owl:ObjectProperty ;
+    rdfs:label "about whole"@en ;
+    rdfs:comment "Relation between the piece of information representing the composition, and the whole involved in the relation."@en ;
     rdfs:domain dpp-info:CompositionInformation ;
     rdfs:range <http://w3id.org/dppo/ontology/dpp-odp/Product> ;
     rdfs:subPropertyOf dpp-info:isAbout ;
     owl:inverseOf dpp-info:hasCompositionInformation .
 
+dpp-info:hasCompositionInformation a owl:ObjectProperty .
+
 :SubstanceOfConcern a owl:Class ;
+    rdfs:label "Substance of Concern"@en ;
+    rdfs:comment "Substance of concern as defined in the ESPR, meaning it is a substance that is either toxic or something that hinders recycling of the product."@en ;
     rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-core/Substance> .
+
+dpp-info:CompositionInformation a owl:Class .
+
+dpp-info:isAbout a owl:ObjectProperty .
 

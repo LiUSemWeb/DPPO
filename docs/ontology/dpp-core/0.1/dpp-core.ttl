@@ -4,25 +4,42 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dcterms:contributor a owl:AnnotationProperty .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
 
 : a owl:Ontology ;
     dcterms:contributor "Eva Blomqvist",
         "Huanyu Li",
         "Robin Keskisärkkä" ;
-    dcterms:created "2023-10-30"^^xsd:string ;
+    dcterms:created "2023-10-30" ;
     dcterms:creator "Maike Jansen" ;
     dcterms:description "This is a minimal core ontology for DPPs, specialising the DPP ODP." ;
-    dcterms:license "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE"^^xsd:string ;
-    dcterms:title "Core Digital Product Passport Ontology"^^xsd:string ;
-    vann:preferredNamespacePrefix "dpp-core"^^xsd:string ;
-    vann:preferredNamespaceUri "http://w3id.org/dppo/ontology/dpp-core/"^^xsd:string ;
+    dcterms:license "https://github.com/LiUSemWeb/DPP/blob/master/LICENSE" ;
+    dcterms:title "Core Digital Product Passport Ontology" ;
+    vann:preferredNamespacePrefix "dpp-core" ;
+    vann:preferredNamespaceUri "http://w3id.org/dppo/ontology/dpp-core/" ;
     rdfs:seeAlso <https://github.com/LiUSemWeb/DPPO> ;
     owl:imports <http://w3id.org/dppo/ontology/dpp-odp/> ;
     owl:versionIRI <http://w3id.org/dppo/ontology/dpp-core/0.1/> ;
     owl:versionInfo "0.1" .
 
 :ComponentDPP a owl:Class ;
+    rdfs:label "Component DPP"@en ;
+    rdfs:comment "A DPP that describes a component."@en ;
     rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( <http://w3id.org/dppo/ontology/dpp-odp/DPP> [ a owl:Restriction ;
@@ -30,6 +47,8 @@
                         owl:someValuesFrom :Component ] ) ] .
 
 :ConsumerProductDPP a owl:Class ;
+    rdfs:label "Comsumer Product DPP"@en ;
+    rdfs:comment "A DPP describing a consumer product."@en ;
     rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( <http://w3id.org/dppo/ontology/dpp-odp/DPP> [ a owl:Restriction ;
@@ -37,6 +56,8 @@
                         owl:someValuesFrom :ConsumerProduct ] ) ] .
 
 :MaterialDPP a owl:Class ;
+    rdfs:label "Material DPP"@en ;
+    rdfs:comment "A DPP describing a material."@en ;
     rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( <http://w3id.org/dppo/ontology/dpp-odp/DPP> [ a owl:Restriction ;
@@ -44,6 +65,8 @@
                         owl:someValuesFrom :Material ] ) ] .
 
 :SubstanceDPP a owl:Class ;
+    rdfs:label "Substance DPP"@en ;
+    rdfs:comment "A DPP  describing a substance."@en ;
     rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( <http://w3id.org/dppo/ontology/dpp-odp/DPP> [ a owl:Restriction ;
@@ -51,14 +74,28 @@
                         owl:someValuesFrom :Substance ] ) ] .
 
 :Component a owl:Class ;
+    rdfs:label "Component"@en ;
+    rdfs:comment "A product that is a component of some other product."@en ;
     rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/Product> .
 
 :ConsumerProduct a owl:Class ;
+    rdfs:label "Consumer product"@en ;
+    rdfs:comment "A consumer product, i.e. a product that is sold directly to end users (consumers)."@en ;
     rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/Product> .
 
 :Material a owl:Class ;
+    rdfs:label "Material"@en ;
+    rdfs:comment "A material, that is sold as a product by the producer."@en ;
     rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/Product> .
 
 :Substance a owl:Class ;
+    rdfs:label "Substance"@en ;
+    rdfs:comment "A substance, that is sold as a product by the producer."@en ;
     rdfs:subClassOf <http://w3id.org/dppo/ontology/dpp-odp/Product> .
+
+<http://w3id.org/dppo/ontology/dpp-odp/Product> a owl:Class .
+
+<http://w3id.org/dppo/ontology/dpp-odp/describes> a owl:ObjectProperty .
+
+<http://w3id.org/dppo/ontology/dpp-odp/DPP> a owl:Class .
 

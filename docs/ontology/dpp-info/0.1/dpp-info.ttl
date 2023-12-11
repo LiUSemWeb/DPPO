@@ -6,6 +6,22 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+dcterms:contributor a owl:AnnotationProperty .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
 : a owl:Ontology ;
     dcterms:contributor "Eva Blomqvist",
         "Huanyu Li",
@@ -23,6 +39,8 @@
     owl:versionInfo "0.1" .
 
 :LegalGuarantee a owl:Class ;
+    rdfs:label "Legal guarantee"@en ;
+    rdfs:comment "A piece of information that described the legal guarantee of the product, with its time interval of validity."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:cardinality "1"^^xsd:nonNegativeInteger ;
@@ -31,68 +49,112 @@
                         owl:onProperty :startTime ] ) ],
         :DPPInformation .
 
-:Unit a owl:Class .
+:Unit a owl:Class ;
+    rdfs:label "Unit"@en ;
+    rdfs:comment "A unit of measure."@en ;
+    rdfs:seeAlso "http://qudt.org/schema/qudt/Unit" .
 
 :certificateDocument a owl:ObjectProperty ;
+    rdfs:label "certificate document"@en ;
+    rdfs:comment "A relation pointing out a document representing a certificate related to the product described by the DPP."@en ;
     rdfs:domain :CertificateInformation ;
     rdfs:subPropertyOf :externalDocument .
 
 :directlySupersededBy a owl:ObjectProperty ;
+    rdfs:label "directly superseded by"@en ;
+    rdfs:comment "A relation connecting a piece of information to the piece of information directly superseding it."@en ;
     rdfs:subPropertyOf :supersededBy ;
     owl:inverseOf :directlySupersedes .
 
-:dissasemblyInstructionsDocument a owl:ObjectProperty ;
+:disassemblyInstructionsDocument a owl:ObjectProperty ;
+    rdfs:label "disassembly instructions document"@en ;
+    rdfs:comment "A relation pointing out a document with disassembly instructions for the product."@en ;
     rdfs:domain :DisassemblyInformation ;
     rdfs:subPropertyOf :externalDocument .
 
 :hasCompositionInformation a owl:ObjectProperty ;
+    rdfs:label "has composition information"@en ;
+    rdfs:comment "A piece of information about the composition of a product."@en ;
     rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/Product> .
 
 :repairInstructionsDocument a owl:ObjectProperty ;
+    rdfs:label "repair instrucitons document"@en ;
+    rdfs:comment "A relation pointing out a document containing repair instructions for the product."@en ;
     rdfs:domain :RepairInstruction ;
     rdfs:subPropertyOf :externalDocument .
 
 :unit a owl:ObjectProperty ;
+    rdfs:label "unit"@en ;
+    rdfs:comment "Relation between a concept with a value, associating it to a unit of measure."@en ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( :CompositionInformation :ProductCharacteristic :ProductQuality ) ] .
 
-<http://w3id.org/dppo/ontology/dpp-odp/describes> rdfs:subPropertyOf :isAbout ;
+<http://w3id.org/dppo/ontology/dpp-odp/describes> a owl:ObjectProperty ;
+    rdfs:subPropertyOf :isAbout ;
     owl:propertyChainAxiom ( :containsInformation :isAbout ) .
 
 :CertificateInformation a owl:Class ;
+    rdfs:comment "A piece of information about some certificate that concerns the product."@en,
+        "Certificate information"@en ;
     rdfs:subClassOf :DPPInformation .
 
 :CompositionInformation a owl:Class ;
+    rdfs:label "Composition information"@en ;
+    rdfs:comment "A piece of information about the composition of a product, i.e. a relation between a product and its part, potentially with more details of the composition included."@en ;
     rdfs:subClassOf :DPPInformation .
 
 :DisassemblyInformation a owl:Class ;
+    rdfs:label "Disassembly information"@en ;
+    rdfs:comment "A piece of information about how to disassemble the product, e.g. linking to some disassembly instructions."@en ;
     rdfs:subClassOf :DPPInformation .
 
 :RepairInstruction a owl:Class ;
+    rdfs:label "Repair instruction"@en ;
+    rdfs:comment "A piece of information about how to repair a product."@en ;
     rdfs:subClassOf :DPPInformation .
 
 :characteristic a owl:ObjectProperty ;
+    rdfs:label "characteristic"@en ;
+    rdfs:comment "The characteristic that the piece of information is about."@en ;
     rdfs:domain :ProductCharacteristic .
 
 :containsInformation a owl:ObjectProperty ;
+    rdfs:label "contains information"@en ;
+    rdfs:comment "Relating a DPP to the pieces of information it contains."@en ;
     rdfs:domain <http://w3id.org/dppo/ontology/dpp-odp/DPP> ;
     rdfs:range :DPPInformation .
 
-:directlySupersedes a owl:ObjectProperty .
+:directlySupersedes a owl:ObjectProperty ;
+    rdfs:label "directly supersedes"@en ;
+    rdfs:comment "A relation connecting a piece of information to another piece of information that directly replaces the first one, i.e. when a DPP is updated."@en .
 
-:endTime a owl:DatatypeProperty .
+:endTime a owl:DatatypeProperty ;
+    rdfs:label "end time"@en ;
+    rdfs:comment "The end of a time interval."@en .
 
 :quality a owl:ObjectProperty ;
+    rdfs:label "quality"@en ;
+    rdfs:comment "A relation pointing at the quality that the piece of information describes."@en ;
     rdfs:domain :ProductQuality .
 
-:startTime a owl:DatatypeProperty .
+:startTime a owl:DatatypeProperty ;
+    rdfs:label "start time"@en ;
+    rdfs:comment "The start of a time interval."@en .
 
 :supersededBy a owl:ObjectProperty,
         owl:TransitiveProperty ;
+    rdfs:label "superseded by"@en ;
+    rdfs:comment "A transitive relation that relates a piece of information to the pieces of information that supersedes it."@en ;
     rdfs:domain :DPPInformation ;
     rdfs:range :DPPInformation .
 
+<http://w3id.org/dppo/ontology/dpp-odp/DPP> a owl:Class .
+
+<http://w3id.org/dppo/ontology/dpp-odp/Product> a owl:Class .
+
 :ProductCharacteristic a owl:Class ;
+    rdfs:label "Product characteristic"@en ;
+    rdfs:comment "A piece of information that describes a product characteristic."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty :characteristic ;
@@ -102,6 +164,8 @@
         :DPPInformation .
 
 :ProductQuality a owl:Class ;
+    rdfs:label "Product quality"@en ;
+    rdfs:comment "A piece of information about the quality of of a product."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty :quality ;
@@ -110,13 +174,21 @@
                         owl:someValuesFrom rdfs:Literal ] ) ],
         :DPPInformation .
 
-:value a owl:DatatypeProperty .
+:value a owl:DatatypeProperty ;
+    rdfs:label "value"@en ;
+    rdfs:comment "The value of a characterisitc or a quality."@en .
 
-:externalDocument a owl:ObjectProperty .
+:externalDocument a owl:ObjectProperty ;
+    rdfs:label "external document"@en ;
+    rdfs:comment "A relation for pointing to external documentation, that is not explicitly represented inside the DPP but instead as a related document, e.g. documents with various kinds of instructions, certificates, or furhter information about the product."@en .
 
-:isAbout a owl:ObjectProperty .
+:isAbout a owl:ObjectProperty ;
+    rdfs:label "is about"@en ;
+    rdfs:comment "Relating a piece of information to the thing the information is about, i.e. describes."@en .
 
 :DPPInformation a owl:Class ;
+    rdfs:label "DPP information"@en ;
+    rdfs:comment "A pice of information contained in a DPP, which is about some product."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty :isAbout ;
             owl:someValuesFrom owl:Thing ] .

@@ -515,6 +515,80 @@ ul, p {
                 <h2>
                     Classes
                 </h2>
+                <div class="property entity" id="DPPInformation">
+                    <h3>
+                        Dpp Information
+                        <sup class="sup-c" title="OWL/RDFS Class">
+                            c
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/DPPInformation
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">
+                                    In Domain Of
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#responsibleActor">
+                                        responsible actor
+                                    </a>
+                                    <sup class="sup-op" title="OWL Object Property">
+                                        op
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="DPP">
+                    <h3>
+                        Dpp
+                        <sup class="sup-c" title="OWL/RDFS Class">
+                            c
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-odp/DPP
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">
+                                    In Domain Of
+                                </a>
+                            </th>
+                            <td>
+                                <span>
+                                    <a href="#dppOwner">
+                                        DPP owner
+                                    </a>
+                                    <sup class="sup-op" title="OWL Object Property">
+                                        op
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
                 <div class="property entity" id="Actor">
                     <h3>
                         Actor
@@ -531,6 +605,27 @@ ul, p {
                                 <code>
                                     http://w3id.org/dppo/ontology/dpp-prov/Actor
                                 </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">
+                                    Description
+                                </a>
+                            </th>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <p>
+                                            Actor
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            An actor responsible for some information.
+                                        </p>
+                                    </li>
+                                </ul>
                             </td>
                         </tr>
                         <tr>
@@ -581,7 +676,7 @@ ul, p {
                                     <li>
                                         <span>
                                             <a href="#ValueChainActor">
-                                                ValueChainActor
+                                                Value chain actor
                                             </a>
                                             <sup class="sup-c" title="OWL/RDFS Class">
                                                 c
@@ -609,6 +704,18 @@ ul, p {
                                 <code>
                                     http://w3id.org/dppo/ontology/dpp-prov/Authority
                                 </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">
+                                    Description
+                                </a>
+                            </th>
+                            <td>
+                                <p>
+                                    An actor that is an authority.
+                                </p>
                             </td>
                         </tr>
                         <tr>
@@ -650,6 +757,18 @@ ul, p {
                         </tr>
                         <tr>
                             <th>
+                                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">
+                                    Description
+                                </a>
+                            </th>
+                            <td>
+                                <p>
+                                    An actor that is an end-user of a product, a consumer.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
                                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">
                                     Sub Class Of
                                 </a>
@@ -669,7 +788,7 @@ ul, p {
                 </div>
                 <div class="property entity" id="ValueChainActor">
                     <h3>
-                        Value Chain Actor
+                        Value chain actor
                         <sup class="sup-c" title="OWL/RDFS Class">
                             c
                         </sup>
@@ -683,6 +802,18 @@ ul, p {
                                 <code>
                                     http://w3id.org/dppo/ontology/dpp-prov/ValueChainActor
                                 </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">
+                                    Description
+                                </a>
+                            </th>
+                            <td>
+                                <p>
+                                    An actor that is an active participant of the value chain of a product, e.g. a manufacturer, recycler or other actor.
+                                </p>
                             </td>
                         </tr>
                         <tr>
@@ -729,6 +860,18 @@ ul, p {
                         </tr>
                         <tr>
                             <th>
+                                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">
+                                    Description
+                                </a>
+                            </th>
+                            <td>
+                                <p>
+                                    Relation to the actor responsible for a DPP or a piece of information inside it.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
                                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/superPropertyOf" title="Inverse of RDFS' subPropertyOf. Defined in Ontology Documentation Profile">
                                     Super Property Of
                                 </a>
@@ -738,7 +881,7 @@ ul, p {
                                     <li>
                                         <span>
                                             <a href="#dppOwner">
-                                                dppOwner
+                                                DPP owner
                                             </a>
                                             <sup class="sup-op" title="OWL Object Property">
                                                 op
@@ -748,7 +891,7 @@ ul, p {
                                     <li>
                                         <span>
                                             <a href="#responsibleActor">
-                                                responsibleActor
+                                                responsible actor
                                             </a>
                                             <sup class="sup-op" title="OWL Object Property">
                                                 op
@@ -779,7 +922,7 @@ ul, p {
                 </div>
                 <div class="property entity" id="dppOwner">
                     <h3>
-                        dpp owner
+                        DPP owner
                         <sup class="sup-op" title="OWL Object Property">
                             op
                         </sup>
@@ -793,6 +936,18 @@ ul, p {
                                 <code>
                                     http://w3id.org/dppo/ontology/dpp-prov/dppOwner
                                 </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">
+                                    Description
+                                </a>
+                            </th>
+                            <td>
+                                <p>
+                                    A relation relating the DPP with the actor owning, i.e. responsible for issuing, the DPP.
+                                </p>
                             </td>
                         </tr>
                         <tr>
@@ -819,9 +974,14 @@ ul, p {
                                 </a>
                             </th>
                             <td>
-                                <a href="http://w3id.org/dppo/ontology/dpp-odp/DPP">
-                                    http://w3id.org/dppo/ontology/dpp-odp/DPP
-                                </a>
+                                <span>
+                                    <a href="http://w3id.org/dppo/ontology/dpp-odp/DPP">
+                                        http://w3id.org/dppo/ontology/dpp-odp/DPP
+                                    </a>
+                                    <sup class="sup-c" title="OWL/RDFS Class">
+                                        c
+                                    </sup>
+                                </span>
                             </td>
                         </tr>
                     </table>
@@ -846,6 +1006,18 @@ ul, p {
                         </tr>
                         <tr>
                             <th>
+                                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">
+                                    Description
+                                </a>
+                            </th>
+                            <td>
+                                <p>
+                                    A relation the indicates the actor responsible for stating a piece of information.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
                                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">
                                     Sub Property Of
                                 </a>
@@ -868,9 +1040,14 @@ ul, p {
                                 </a>
                             </th>
                             <td>
-                                <a href="http://w3id.org/dppo/ontology/dpp-info/DPPInformation">
-                                    dpp-info:DPPInformation
-                                </a>
+                                <span>
+                                    <a href="http://w3id.org/dppo/ontology/dpp-info/DPPInformation">
+                                        dpp-info:DPPInformation
+                                    </a>
+                                    <sup class="sup-c" title="OWL/RDFS Class">
+                                        c
+                                    </sup>
+                                </span>
                             </td>
                         </tr>
                     </table>
@@ -880,7 +1057,7 @@ ul, p {
                 <h2>
                     Datatype Properties
                 </h2>
-                <div class="property entity" id="creationTimeStamp">
+                <div class="property entity" id="creationtimestamp">
                     <h3>
                         creation time stamp
                         <sup class="sup-dp" title="OWL Datatype Property">
@@ -900,6 +1077,18 @@ ul, p {
                         </tr>
                         <tr>
                             <th>
+                                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">
+                                    Description
+                                </a>
+                            </th>
+                            <td>
+                                <p>
+                                    A time stamp indicating when a piece of information, or a DPP, was created (or added), i.e. when it started to be valid.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
                                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">
                                     Sub Property Of
                                 </a>
@@ -907,7 +1096,7 @@ ul, p {
                             <td>
                                 <span>
                                     <a href="#timeStamp">
-                                        timeStamp
+                                        time stamp
                                     </a>
                                     <sup class="sup-dp" title="OWL Datatype Property">
                                         dp
@@ -945,7 +1134,7 @@ ul, p {
                         </tr>
                     </table>
                 </div>
-                <div class="property entity" id="invalidAtTimeStamp">
+                <div class="property entity" id="invalidattimestamp">
                     <h3>
                         invalid at time stamp
                         <sup class="sup-dp" title="OWL Datatype Property">
@@ -965,6 +1154,18 @@ ul, p {
                         </tr>
                         <tr>
                             <th>
+                                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">
+                                    Description
+                                </a>
+                            </th>
+                            <td>
+                                <p>
+                                    A time stamp indicating the time when a DPP or a piece of information ceased to be valid, i.e. what deprecated or replaced by another piece of information.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
                                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">
                                     Sub Property Of
                                 </a>
@@ -972,7 +1173,7 @@ ul, p {
                             <td>
                                 <span>
                                     <a href="#timeStamp">
-                                        timeStamp
+                                        time stamp
                                     </a>
                                     <sup class="sup-dp" title="OWL Datatype Property">
                                         dp
@@ -988,8 +1189,8 @@ ul, p {
                             </th>
                             <td>
                                 <span>
-                                    <a href="http://w3id.org/dppo/ontology/dpp-odp/DPP">
-                                        http://w3id.org/dppo/ontology/dpp-odp/DPP
+                                    <a href="http://w3id.org/dppo/ontology/dpp-info/DPPInformation">
+                                        dpp-info:DPPInformation
                                     </a>
                                     <sup class="sup-c" title="OWL/RDFS Class">
                                         c
@@ -999,8 +1200,8 @@ ul, p {
                                     or
                                 </span>
                                 <span>
-                                    <a href="http://w3id.org/dppo/ontology/dpp-info/DPPInformation">
-                                        dpp-info:DPPInformation
+                                    <a href="http://w3id.org/dppo/ontology/dpp-odp/DPP">
+                                        http://w3id.org/dppo/ontology/dpp-odp/DPP
                                     </a>
                                     <sup class="sup-c" title="OWL/RDFS Class">
                                         c
@@ -1030,6 +1231,18 @@ ul, p {
                         </tr>
                         <tr>
                             <th>
+                                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">
+                                    Description
+                                </a>
+                            </th>
+                            <td>
+                                <p>
+                                    A timstamp of some information, i.e. a DPP or a piece of information.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
                                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/superPropertyOf" title="Inverse of RDFS' subPropertyOf. Defined in Ontology Documentation Profile">
                                     Super Property Of
                                 </a>
@@ -1038,8 +1251,8 @@ ul, p {
                                 <ul>
                                     <li>
                                         <span>
-                                            <a href="#creationTimeStamp">
-                                                creationTimeStamp
+                                            <a href="#creationtimestamp">
+                                                creation time stamp
                                             </a>
                                             <sup class="sup-dp" title="OWL Datatype Property">
                                                 dp
@@ -1048,8 +1261,8 @@ ul, p {
                                     </li>
                                     <li>
                                         <span>
-                                            <a href="#invalidAtTimeStamp">
-                                                invalidAtTimeStamp
+                                            <a href="#invalidattimestamp">
+                                                invalid at time stamp
                                             </a>
                                             <sup class="sup-dp" title="OWL Datatype Property">
                                                 dp
@@ -1094,6 +1307,171 @@ ul, p {
                     c
                 </sup>
             </span>
+            <div class="section" id="annotationproperties">
+                <h2>
+                    Annotation Properties
+                </h2>
+                <div class="property entity" id="contributor">
+                    <h3>
+                        contributor
+                        <sup class="sup-ap" title="OWL Annotation Property">
+                            ap
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://purl.org/dc/terms/contributor
+                                </code>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="created">
+                    <h3>
+                        created
+                        <sup class="sup-ap" title="OWL Annotation Property">
+                            ap
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://purl.org/dc/terms/created
+                                </code>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="creator">
+                    <h3>
+                        creator
+                        <sup class="sup-ap" title="OWL Annotation Property">
+                            ap
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://purl.org/dc/terms/creator
+                                </code>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="description">
+                    <h3>
+                        description
+                        <sup class="sup-ap" title="OWL Annotation Property">
+                            ap
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://purl.org/dc/terms/description
+                                </code>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="license">
+                    <h3>
+                        license
+                        <sup class="sup-ap" title="OWL Annotation Property">
+                            ap
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://purl.org/dc/terms/license
+                                </code>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="title">
+                    <h3>
+                        title
+                        <sup class="sup-ap" title="OWL Annotation Property">
+                            ap
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://purl.org/dc/terms/title
+                                </code>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="preferredNamespacePrefix">
+                    <h3>
+                        preferred namespace prefix
+                        <sup class="sup-ap" title="OWL Annotation Property">
+                            ap
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://purl.org/vocab/vann/preferredNamespacePrefix
+                                </code>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="preferredNamespaceUri">
+                    <h3>
+                        preferred namespace uri
+                        <sup class="sup-ap" title="OWL Annotation Property">
+                            ap
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://purl.org/vocab/vann/preferredNamespaceUri
+                                </code>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
             <div id="namespaces">
                 <h2>
                     Namespaces
@@ -1200,6 +1578,16 @@ ul, p {
                             Datatype Properties
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <sup class="sup-ap" title="OWL Annotation Property">
+                                ap
+                            </sup>
+                        </td>
+                        <td>
+                            Annotation Properties
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>
@@ -1251,6 +1639,16 @@ ul, p {
                     </h4>
                     <ul class="second">
                         <li>
+                            <a href="#DPPInformation">
+                                Dpp Information
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#DPP">
+                                Dpp
+                            </a>
+                        </li>
+                        <li>
                             <a href="#Actor">
                                 Actor
                             </a>
@@ -1267,7 +1665,7 @@ ul, p {
                         </li>
                         <li>
                             <a href="#ValueChainActor">
-                                Value Chain Actor
+                                Value chain actor
                             </a>
                         </li>
                     </ul>
@@ -1286,7 +1684,7 @@ ul, p {
                         </li>
                         <li>
                             <a href="#dppOwner">
-                                dpp owner
+                                DPP owner
                             </a>
                         </li>
                         <li>
@@ -1304,18 +1702,67 @@ ul, p {
                     </h4>
                     <ul class="second">
                         <li>
-                            <a href="#creationTimeStamp">
+                            <a href="#creationtimestamp">
                                 creation time stamp
                             </a>
                         </li>
                         <li>
-                            <a href="#invalidAtTimeStamp">
+                            <a href="#invalidattimestamp">
                                 invalid at time stamp
                             </a>
                         </li>
                         <li>
                             <a href="#timeStamp">
                                 time stamp
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>
+                        <a href="#annotationproperties">
+                            Annotation Properties
+                        </a>
+                    </h4>
+                    <ul class="second">
+                        <li>
+                            <a href="#contributor">
+                                contributor
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#created">
+                                created
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#creator">
+                                creator
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#description">
+                                description
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#license">
+                                license
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#title">
+                                title
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#preferredNamespacePrefix">
+                                preferred namespace prefix
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#preferredNamespaceUri">
+                                preferred namespace uri
                             </a>
                         </li>
                     </ul>

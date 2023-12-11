@@ -515,9 +515,9 @@ ul, p {
                 <h2>
                     Classes
                 </h2>
-                <div class="property entity" id="SubstanceHinderingRecycling">
+                <div class="property entity" id="Substancefinderingrecycling">
                     <h3>
-                        Substance Hindering Recycling
+                        Substance findering recycling
                         <sup class="sup-c" title="OWL/RDFS Class">
                             c
                         </sup>
@@ -535,6 +535,18 @@ ul, p {
                         </tr>
                         <tr>
                             <th>
+                                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">
+                                    Description
+                                </a>
+                            </th>
+                            <td>
+                                <p>
+                                    A substance that hinders recycling of a product.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
                                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">
                                     Sub Class Of
                                 </a>
@@ -542,7 +554,7 @@ ul, p {
                             <td>
                                 <span>
                                     <a href="#SubstanceOfConcern">
-                                        SubstanceOfConcern
+                                        Substance of Concern
                                     </a>
                                     <sup class="sup-c" title="OWL/RDFS Class">
                                         c
@@ -554,7 +566,7 @@ ul, p {
                 </div>
                 <div class="property entity" id="SubstanceOfConcern">
                     <h3>
-                        Substance Of Concern
+                        Substance of Concern
                         <sup class="sup-c" title="OWL/RDFS Class">
                             c
                         </sup>
@@ -568,6 +580,18 @@ ul, p {
                                 <code>
                                     http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern
                                 </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">
+                                    Description
+                                </a>
+                            </th>
+                            <td>
+                                <p>
+                                    Substance of concern as defined in the ESPR, meaning it is a substance that is either toxic or something that hinders recycling of the product.
+                                </p>
                             </td>
                         </tr>
                         <tr>
@@ -592,8 +616,8 @@ ul, p {
                                 <ul>
                                     <li>
                                         <span>
-                                            <a href="#SubstanceHinderingRecycling">
-                                                SubstanceHinderingRecycling
+                                            <a href="#Substancefinderingrecycling">
+                                                Substance findering recycling
                                             </a>
                                             <sup class="sup-c" title="OWL/RDFS Class">
                                                 c
@@ -603,7 +627,7 @@ ul, p {
                                     <li>
                                         <span>
                                             <a href="#ToxicSubstance">
-                                                ToxicSubstance
+                                                Toxic substance
                                             </a>
                                             <sup class="sup-c" title="OWL/RDFS Class">
                                                 c
@@ -617,7 +641,7 @@ ul, p {
                 </div>
                 <div class="property entity" id="ToxicSubstance">
                     <h3>
-                        Toxic Substance
+                        Toxic substance
                         <sup class="sup-c" title="OWL/RDFS Class">
                             c
                         </sup>
@@ -635,6 +659,18 @@ ul, p {
                         </tr>
                         <tr>
                             <th>
+                                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">
+                                    Description
+                                </a>
+                            </th>
+                            <td>
+                                <p>
+                                    A toxic substance.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
                                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">
                                     Sub Class Of
                                 </a>
@@ -642,12 +678,63 @@ ul, p {
                             <td>
                                 <span>
                                     <a href="#SubstanceOfConcern">
-                                        SubstanceOfConcern
+                                        Substance of Concern
                                     </a>
                                     <sup class="sup-c" title="OWL/RDFS Class">
                                         c
                                     </sup>
                                 </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="CompositionInformation">
+                    <h3>
+                        Composition Information
+                        <sup class="sup-c" title="OWL/RDFS Class">
+                            c
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/0.1/CompositionInformation
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">
+                                    In Domain Of
+                                </a>
+                            </th>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <a href="#aboutPart">
+                                                about part
+                                            </a>
+                                            <sup class="sup-op" title="OWL Object Property">
+                                                op
+                                            </sup>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <a href="#aboutWhole">
+                                                about whole
+                                            </a>
+                                            <sup class="sup-op" title="OWL Object Property">
+                                                op
+                                            </sup>
+                                        </span>
+                                    </li>
+                                </ul>
                             </td>
                         </tr>
                     </table>
@@ -677,14 +764,31 @@ ul, p {
                         </tr>
                         <tr>
                             <th>
+                                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">
+                                    Description
+                                </a>
+                            </th>
+                            <td>
+                                <p>
+                                    Relation between the piece of information representing the composition, and the part involved in the relation.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
                                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">
                                     Sub Property Of
                                 </a>
                             </th>
                             <td>
-                                <a href="http://w3id.org/dppo/ontology/dpp-info/0.1/isAbout">
-                                    dpp-info:isAbout
-                                </a>
+                                <span>
+                                    <a href="http://w3id.org/dppo/ontology/dpp-info/0.1/isAbout">
+                                        dpp-info:isAbout
+                                    </a>
+                                    <sup class="sup-op" title="OWL Object Property">
+                                        op
+                                    </sup>
+                                </span>
                             </td>
                         </tr>
                         <tr>
@@ -694,9 +798,14 @@ ul, p {
                                 </a>
                             </th>
                             <td>
-                                <a href="http://w3id.org/dppo/ontology/dpp-info/0.1/CompositionInformation">
-                                    dpp-info:CompositionInformation
-                                </a>
+                                <span>
+                                    <a href="http://w3id.org/dppo/ontology/dpp-info/0.1/CompositionInformation">
+                                        dpp-info:CompositionInformation
+                                    </a>
+                                    <sup class="sup-c" title="OWL/RDFS Class">
+                                        c
+                                    </sup>
+                                </span>
                             </td>
                         </tr>
                         <tr>
@@ -733,14 +842,31 @@ ul, p {
                         </tr>
                         <tr>
                             <th>
+                                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">
+                                    Description
+                                </a>
+                            </th>
+                            <td>
+                                <p>
+                                    Relation between the piece of information representing the composition, and the whole involved in the relation.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
                                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">
                                     Sub Property Of
                                 </a>
                             </th>
                             <td>
-                                <a href="http://w3id.org/dppo/ontology/dpp-info/0.1/isAbout">
-                                    dpp-info:isAbout
-                                </a>
+                                <span>
+                                    <a href="http://w3id.org/dppo/ontology/dpp-info/0.1/isAbout">
+                                        dpp-info:isAbout
+                                    </a>
+                                    <sup class="sup-op" title="OWL Object Property">
+                                        op
+                                    </sup>
+                                </span>
                             </td>
                         </tr>
                         <tr>
@@ -750,9 +876,14 @@ ul, p {
                                 </a>
                             </th>
                             <td>
-                                <a href="http://w3id.org/dppo/ontology/dpp-info/0.1/CompositionInformation">
-                                    dpp-info:CompositionInformation
-                                </a>
+                                <span>
+                                    <a href="http://w3id.org/dppo/ontology/dpp-info/0.1/CompositionInformation">
+                                        dpp-info:CompositionInformation
+                                    </a>
+                                    <sup class="sup-c" title="OWL/RDFS Class">
+                                        c
+                                    </sup>
+                                </span>
                             </td>
                         </tr>
                         <tr>
@@ -765,6 +896,77 @@ ul, p {
                                 <a href="http://w3id.org/dppo/ontology/dpp-odp/Product">
                                     http://w3id.org/dppo/ontology/dpp-odp/Product
                                 </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="hasCompositionInformation">
+                    <h3>
+                        has composition information
+                        <sup class="sup-op" title="OWL Object Property">
+                            op
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/0.1/hasCompositionInformation
+                                </code>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="property entity" id="isAbout">
+                    <h3>
+                        is about
+                        <sup class="sup-op" title="OWL Object Property">
+                            op
+                        </sup>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>
+                                IRI
+                            </th>
+                            <td>
+                                <code>
+                                    http://w3id.org/dppo/ontology/dpp-info/0.1/isAbout
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superPropertyOf" title="Inverse of RDFS' subPropertyOf. Defined in Ontology Documentation Profile">
+                                    Super Property Of
+                                </a>
+                            </th>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <a href="#aboutPart">
+                                                about part
+                                            </a>
+                                            <sup class="sup-op" title="OWL Object Property">
+                                                op
+                                            </sup>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <a href="#aboutWhole">
+                                                about whole
+                                            </a>
+                                            <sup class="sup-op" title="OWL Object Property">
+                                                op
+                                            </sup>
+                                        </span>
+                                    </li>
+                                </ul>
                             </td>
                         </tr>
                     </table>
@@ -925,18 +1127,23 @@ ul, p {
                     </h4>
                     <ul class="second">
                         <li>
-                            <a href="#SubstanceHinderingRecycling">
-                                Substance Hindering Recycling
+                            <a href="#Substancefinderingrecycling">
+                                Substance findering recycling
                             </a>
                         </li>
                         <li>
                             <a href="#SubstanceOfConcern">
-                                Substance Of Concern
+                                Substance of Concern
                             </a>
                         </li>
                         <li>
                             <a href="#ToxicSubstance">
-                                Toxic Substance
+                                Toxic substance
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#CompositionInformation">
+                                Composition Information
                             </a>
                         </li>
                     </ul>
@@ -956,6 +1163,16 @@ ul, p {
                         <li>
                             <a href="#aboutWhole">
                                 about whole
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#hasCompositionInformation">
+                                has composition information
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#isAbout">
+                                is about
                             </a>
                         </li>
                     </ul>

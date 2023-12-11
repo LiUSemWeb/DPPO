@@ -1,8 +1,8 @@
 {
   "_comment" : "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org",
   "header" : {
-    "languages" : [ "undefined" ],
-    "baseIris" : [ "http://w3id.org/dppo/ontology/dpp-odp", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://w3id.org/dppo/ontology/dpp-core" ],
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://w3id.org/dppo/ontology/dpp-odp", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://w3id.org/dppo/ontology/dpp-core" ],
     "prefixList" : {
       "owl" : "http://www.w3.org/2002/07/owl#",
       "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -39,7 +39,7 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Eva Blomqvist",
+        "value" : "Robin Keskisärkkä",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -49,7 +49,7 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Robin Keskisärkkä",
+        "value" : "Eva Blomqvist",
         "type" : "label"
       } ],
       "created" : [ {
@@ -104,11 +104,11 @@
     "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "15",
-    "type" : "owl:Class"
-  }, {
     "id" : "4",
     "type" : "owl:intersectionOf"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
   }, {
     "id" : "13",
     "type" : "owl:Class"
@@ -140,9 +140,13 @@
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "SubstanceDPP"
+      "IRI-based" : "SubstanceDPP",
+      "en" : "Substance DPP"
     },
     "intersection" : [ "0" ],
+    "comment" : {
+      "en" : "A DPP  describing a substance."
+    },
     "attributes" : [ "intersection" ],
     "id" : "1",
     "superClasses" : [ "0" ]
@@ -151,7 +155,11 @@
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Component"
+      "IRI-based" : "Component",
+      "en" : "Component"
+    },
+    "comment" : {
+      "en" : "A product that is a component of some other product."
     },
     "id" : "9",
     "superClasses" : [ "10" ]
@@ -166,31 +174,43 @@
     "attributes" : [ "external" ],
     "id" : "10"
   }, {
-    "iri" : "http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct",
-    "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ConsumerProduct"
-    },
-    "id" : "15",
-    "superClasses" : [ "10" ]
-  }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-core/ConsumerProductDPP",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "ConsumerProductDPP"
+      "IRI-based" : "ConsumerProductDPP",
+      "en" : "Comsumer Product DPP"
     },
     "intersection" : [ "0" ],
+    "comment" : {
+      "en" : "A DPP describing a consumer product."
+    },
     "attributes" : [ "intersection" ],
     "id" : "4",
     "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct",
+    "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConsumerProduct",
+      "en" : "Consumer product"
+    },
+    "comment" : {
+      "en" : "A consumer product, i.e. a product that is sold directly to end users (consumers)."
+    },
+    "id" : "15",
+    "superClasses" : [ "10" ]
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-core/Substance",
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Substance"
+      "IRI-based" : "Substance",
+      "en" : "Substance"
+    },
+    "comment" : {
+      "en" : "A substance, that is sold as a product by the producer."
     },
     "id" : "13",
     "superClasses" : [ "10" ]
@@ -206,9 +226,13 @@
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "MaterialDPP"
+      "IRI-based" : "MaterialDPP",
+      "en" : "Material DPP"
     },
     "intersection" : [ "0" ],
+    "comment" : {
+      "en" : "A DPP describing a material."
+    },
     "attributes" : [ "intersection" ],
     "id" : "2",
     "superClasses" : [ "0" ]
@@ -217,7 +241,11 @@
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Material"
+      "IRI-based" : "Material",
+      "en" : "Material"
+    },
+    "comment" : {
+      "en" : "A material, that is sold as a product by the producer."
     },
     "id" : "14",
     "superClasses" : [ "10" ]
@@ -226,9 +254,13 @@
     "baseIri" : "http://w3id.org/dppo/ontology/dpp-core",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "ComponentDPP"
+      "IRI-based" : "ComponentDPP",
+      "en" : "Component DPP"
     },
     "intersection" : [ "0" ],
+    "comment" : {
+      "en" : "A DPP that describes a component."
+    },
     "attributes" : [ "intersection" ],
     "id" : "3",
     "superClasses" : [ "0" ]
@@ -269,7 +301,7 @@
       "IRI-based" : "describes"
     },
     "domain" : "6",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "5"
   }, {
     "range" : "0",
