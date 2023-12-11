@@ -14,7 +14,7 @@
     sh:property [ sh:path dpp-prov:creationTimeStamp ;
                   sh:minCount 1;
                   sh:maxCount 1 ] ;
-    sh:property [ sh:path dpp-prov:invalidTimeStamp ;
+    sh:property [ sh:path dpp-prov:invalidAtTimeStamp ;
                   sh:maxCount 1 ] ;
     sh:property [ sh:path dpp-prov:responsibleActor ;
                   sh:minCount 1; 
@@ -29,7 +29,7 @@
     sh:or(
         [ sh:path dpp-info:supersededBy ;
           sh:maxCount 0 ]
-        [ sh:path dpp-prov:invalidTimeStamp ;
+        [ sh:path dpp-prov:invalidAtTimeStamp ;
           sh:minCount 1 ]
     )
  .
