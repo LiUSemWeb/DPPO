@@ -7,5 +7,5 @@
 @prefix dpp-comp: <http://w3id.org/dppo/ontology/dpp-comp/> .
 
 _:b a dpp-info:DPPInformation ;
-	dpp-info:startTime "2023-11-24T11:34:00"^^xsd:dateTime ;
+	dpp-prov:creationTimeStamp "2023-11-24T11:34:00"^^xsd:dateTime ;
 	dpp-prov:responsibleActor [ a dpp-prov:Actor ] .
