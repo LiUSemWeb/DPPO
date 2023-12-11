@@ -1,5 +1,11 @@
 [
   {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
     "@id": "http://w3id.org/dppo/ontology/dpp-info/dissasemblyInstructionsDocument",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -12,35 +18,6 @@
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
       {
         "@id": "http://w3id.org/dppo/ontology/dpp-info/externalDocument"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/endTime",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/Unit",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/RepairInstruction",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
       }
     ]
   },
@@ -61,70 +38,6 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/ProductCharacteristic",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-      },
-      {
-        "@id": "_:nc02852261b494a6586df4be33ba925e2b13"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc02852261b494a6586df4be33ba925e2b13",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:nc02852261b494a6586df4be33ba925e2b14"
-          },
-          {
-            "@id": "_:nc02852261b494a6586df4be33ba925e2b15"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:nc02852261b494a6586df4be33ba925e2b14",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/characteristic"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://www.w3.org/2002/07/owl#Thing"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc02852261b494a6586df4be33ba925e2b15",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/value"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
-      }
-    ]
-  },
-  {
     "@id": "http://w3id.org/dppo/ontology/dpp-info/hasCompositionInformation",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -132,6 +45,28 @@
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
         "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/characteristic",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/ProductCharacteristic"
       }
     ]
   },
@@ -152,11 +87,105 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/CompositionInformation",
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/directlySupersedes",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/repairInstructionsDocument",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/RepairInstruction"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/externalDocument"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/LegalGuarantee",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+      },
+      {
+        "@id": "_:nfb8a2a505429410e8c5defba817201c9b8"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfb8a2a505429410e8c5defba817201c9b8",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:nfb8a2a505429410e8c5defba817201c9b9"
+          },
+          {
+            "@id": "_:nfb8a2a505429410e8c5defba817201c9b10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nfb8a2a505429410e8c5defba817201c9b9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/endTime"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfb8a2a505429410e8c5defba817201c9b10",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/startTime"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/supersededBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#TransitiveProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
       }
@@ -183,107 +212,13 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/LegalGuarantee",
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/containsInformation",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-      },
-      {
-        "@id": "_:nc02852261b494a6586df4be33ba925e2b8"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc02852261b494a6586df4be33ba925e2b8",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:nc02852261b494a6586df4be33ba925e2b9"
-          },
-          {
-            "@id": "_:nc02852261b494a6586df4be33ba925e2b10"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:nc02852261b494a6586df4be33ba925e2b9",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/endTime"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc02852261b494a6586df4be33ba925e2b10",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/startTime"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:nc02852261b494a6586df4be33ba925e2b7"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc02852261b494a6586df4be33ba925e2b7",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://www.w3.org/2002/07/owl#Thing"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/supersededBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#TransitiveProperty"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
@@ -299,93 +234,31 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/quality",
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/value",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/ProductQuality"
-      }
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/repairInstructionsDocument",
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/endTime",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/RepairInstruction"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/externalDocument"
-      }
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/ProductQuality",
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/externalDocument",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/CompositionInformation",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-      },
-      {
-        "@id": "_:nc02852261b494a6586df4be33ba925e2b18"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc02852261b494a6586df4be33ba925e2b18",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:nc02852261b494a6586df4be33ba925e2b19"
-          },
-          {
-            "@id": "_:nc02852261b494a6586df4be33ba925e2b20"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:nc02852261b494a6586df4be33ba925e2b19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/quality"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://www.w3.org/2002/07/owl#Thing"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc02852261b494a6586df4be33ba925e2b20",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/value"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
       }
     ]
   },
@@ -473,74 +346,18 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/characteristic",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/ProductCharacteristic"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/value",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/directlySupersedes",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/containsInformation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/externalDocument",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
     "@id": "http://w3id.org/dppo/ontology/dpp-info/unit",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:nc02852261b494a6586df4be33ba925e2b1"
+        "@id": "_:nfb8a2a505429410e8c5defba817201c9b1"
       }
     ]
   },
   {
-    "@id": "_:nc02852261b494a6586df4be33ba925e2b1",
+    "@id": "_:nfb8a2a505429410e8c5defba817201c9b1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -557,6 +374,189 @@
             "@id": "http://w3id.org/dppo/ontology/dpp-info/ProductQuality"
           }
         ]
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/ProductCharacteristic",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+      },
+      {
+        "@id": "_:nfb8a2a505429410e8c5defba817201c9b13"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfb8a2a505429410e8c5defba817201c9b13",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:nfb8a2a505429410e8c5defba817201c9b14"
+          },
+          {
+            "@id": "_:nfb8a2a505429410e8c5defba817201c9b15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nfb8a2a505429410e8c5defba817201c9b14",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/characteristic"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfb8a2a505429410e8c5defba817201c9b15",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/value"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/RepairInstruction",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/quality",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/ProductQuality"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/ProductQuality",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+      },
+      {
+        "@id": "_:nfb8a2a505429410e8c5defba817201c9b18"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfb8a2a505429410e8c5defba817201c9b18",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:nfb8a2a505429410e8c5defba817201c9b19"
+          },
+          {
+            "@id": "_:nfb8a2a505429410e8c5defba817201c9b20"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nfb8a2a505429410e8c5defba817201c9b19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/quality"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfb8a2a505429410e8c5defba817201c9b20",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/value"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/Unit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:nfb8a2a505429410e8c5defba817201c9b7"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfb8a2a505429410e8c5defba817201c9b7",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
       }
     ]
   }
