@@ -1,0 +1,9 @@
+# CQ: Are there any instructions on how to repair the product?
+SELECT ?product ?info ?document
+WHERE {
+    ?product a/rdfs:subClassOf* dpp-odp:Product .
+    ?info dpp-info:isAbout ?product .
+        dpp-odp:containsInformation ?info . 
+    ?info a/rdfs:subClassOf* dpp-info:RepairInstruction ;
+        dpp-info:repairInstructionsDocument ?document .
+}

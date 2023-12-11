@@ -1,0 +1,13 @@
+# CQ: When was this DPP created, updated, changed, or ceased to be valid?
+SELECT ?dpp ?creationTime ?invalidationTime (MAX(?updatedTime) AS ?updatedTime)
+WHERE {
+    ?dpp a/rdfs:subClassOf* dpp-odp:DPP ;
+        dpp-prov:creationTimeStamp ?creationTime ;
+        dpp-odp:containsInformation ?info .
+    
+    OPTIONAL { ?dpp dpp-prov:invalidationTimeStamp ?invalidationTime }
+    
+    ?info a/rdfs:subClassOf* dpp-info:DPPInformation ;
+        dpp-info:creationTimeStamp ?updatedTime .
+}
+GROUP BY ?dpp

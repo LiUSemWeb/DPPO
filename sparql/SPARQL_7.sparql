@@ -1,8 +1,8 @@
-# CQ Who added/changed the DPP information?
-SELECT ?dpp ?info ?actor
+# CQ: Who added/changed the DPP information?
+SELECT ?dpp ?responsibleActor ?info
 WHERE {
     ?dpp a/rdfs:subClassOf* dpp-odp:DPP ;
-        dpp-odp:containsInformation ?info .
+        dpp-odp:containsInformation/dpp-info:supersededBy* ?info .
     ?info a/rdfs:subClassOf* dpp-info:DPPInformation ;
-        dpp-prov:responsibleActor ?actor .
+        dpp-prov:actor ?actor . 
 }

@@ -1,0 +1,15 @@
+# CQ: Is there a proof/certificate of the claims on material composition and quality?
+SELECT ?product ?material ?value ?unit ?document
+WHERE {
+    ?product a/rdfs:subClassOf* dpp-odp:Product .
+    ?info a dpp-info:isAbout ?product .
+        dpp-odp:hasPart* ?material .
+    ?material a/rdfs:subClassOf dpp-odp:Material .
+
+    ?info a/rdfs:subClassOf* dpp-info:ProductQuality ;
+        dpp-info:value ?value ;
+        dpp-info:unit ?unit .
+
+    ?info dpp-info:CertificateInformation ;
+        dpp-info:certificateDocument ?document .
+}

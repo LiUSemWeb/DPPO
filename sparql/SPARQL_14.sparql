@@ -1,0 +1,13 @@
+# CQ: Is the information that was provided by this actor still available? If yes, where?
+SELECT ?product ?info ?actor ?document
+WHERE {
+    ?product a/rdfs:subClassOf* dpp-info:Product .
+    ?info a/rdfs:subClassOf* dpp-info:DPPInformation ;
+        dpp-info:isAbout ?product ;
+        dpp-info:actor ?actor ;
+        dpp-info:externalDocument ?document .
+    OPTIONAL {
+        ?info dpp-prov:invalidAtTimestamp ?endTime .
+        FILTER(?endTime > NOW())
+    }
+}

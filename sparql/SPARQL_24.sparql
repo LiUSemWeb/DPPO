@@ -1,0 +1,14 @@
+# CQ: What are the characteristics of the components?
+SELECT ?product ?component ?characteristic ?value ?unit
+WHERE {
+    ?product a/rdfs:subClassOf* dpp-odp:Product ;
+        dpp-info:hasPart* ?component .
+    ?component a/rdfs:subClassOf* dpp-core:Component .
+
+    ?info dpp-info:isAbout ?component ;
+        a/rdfs:subClassOf* dpp-core:ProductCharacteristic ;
+        dpp-info:value ?value ;
+        dpp-info:unit ?unit .
+
+    FILTER NOT EXISTS { ?info dpp-prov:supersededBy ?new_info }
+}

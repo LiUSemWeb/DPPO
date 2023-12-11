@@ -1,8 +1,12 @@
 # CQ: Is this product still covered by the legal guarantee?
-SELECT ?product ?endTime
+SELECT ?product ?endTime ?valid
 WHERE {
-    ?product a/rdfs:subClassOf* dpp-odp:Product ;
-        dpp-info:containsInformation ?info .
+    ?product a/rdfs:subClassOf* dpp-odp:Product .
     ?info a/rdfs:subClassOf* dpp-info:LegalGuarantee ;
-        dpp-info:endTime ?endTime .
+        dpp-prov:isAbout ?product .
+
+    OPTIONAL {
+        ?info dpp-prov:invalidAtTimeStamp ?endTime
+        BIND(?endTime > NOW() AS ?valid)
+    }
 }
