@@ -1,7 +1,8 @@
-# CQ: Information was provided by a value chain actor for a specifc product in China. Another value chain actor wants to view the provided DPP infomation, but not in Chinese but in English.
-SELECT ?info ?info_label ?info_comment ?class_label ?class_comment
+# CQ: Information was provided by a value chain actor for a specifc product in China. Another value chain actor wants to view the provided DPP information, but not in Chinese but in English.
+SELECT ?product ?info ?info_label ?info_comment ?class_label ?class_comment
 WHERE {
-    ?info a/rdfs:subClassOf* dpp-dpp-info:DPPInformation ;
+    ?info a/rdfs:subClassOf* dpp-info:DPPInformation ;
+        dpp-info:isAbout ?product ;
         a ?class .
     OPTIONAL {
         ?info rdfs:label ?info_label .

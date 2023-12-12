@@ -1,11 +1,11 @@
 # CQ: What is the composition of the product (components --> materials --> substances)?
 SELECT ?product ?component ?material ?substance
 WHERE {
-    ?product a/rdfs:subClassOf* dpp-odp:Product .
+    ?product a/rdfs:subClassOf* dpp-odp:Product ;
         dpp-odp:hasPart* ?component .
-    ?component a/rdfs:subClassOf* dpp-comp:Component .
+    ?component a/rdfs:subClassOf* dpp-comp:Component ;
         dpp-odp:hasPart* ?material .
-    ?material a/rdfs:subClassOf* dpp-comp:Material .
+    ?material a/rdfs:subClassOf* dpp-comp:Material ;
         dpp-odp:hasPart* ?substance .
     ?substance a/rdfs:subClassOf* dpp-comp:Substance .
 

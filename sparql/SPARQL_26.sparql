@@ -4,7 +4,7 @@ WHERE {
     ?product a/rdfs:subClassOf* dpp-odp:Product .
     
     ?info dpp-info:isAbout ?product ;
-        a/rdfs:subClassOf rdf-info:ProductQuality ;
+        a/rdfs:subClassOf dpp-info:ProductQuality ;
         dpp-info:value ?value ;
         dpp-info:unit ?unit .
 

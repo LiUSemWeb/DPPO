@@ -1,7 +1,10 @@
 # CQ: What is the meaning of a specific information within a DPP?
-SELECT ?info ?class ?document
+SELECT ?dpp ?info ?class ?label ?description
 WHERE {
-    ?info a/rdfs:subClassOf* dpp-info:DPPInformation .
-        a ?class .
-    ?info dpp-info:externalDocument ?document .
+    ?dpp a/rdfs:subClassOf* dpp-odp:DPP ;
+        dpp-info:containsInformation ?info .
+    ?info a/rdfs:subClassOf* ?class .
+    
+    ?class rdfs:label ?label ;
+        rdfs:comment ?description .
 }

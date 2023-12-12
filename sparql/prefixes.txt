@@ -1,0 +1,7 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dpp-info:  <http://w3id.org/dppo/ontology/dpp-info/>
+PREFIX dpp-odp: <http://w3id.org/dppo/ontology/dpp-odp/>
+PREFIX dpp-prov: <http://w3id.org/dppo/ontology/dpp-prov/>
+PREFIX dpp-comp: <http://w3id.org/dppo/ontology/dpp-comp/>
+PREFIX dpp-core: <http://w3id.org/dppo/ontology/dpp-core/>

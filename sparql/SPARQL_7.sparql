@@ -3,6 +3,5 @@ SELECT ?dpp ?responsibleActor ?info
 WHERE {
     ?dpp a/rdfs:subClassOf* dpp-odp:DPP ;
         dpp-odp:containsInformation/dpp-info:supersededBy* ?info .
-    ?info a/rdfs:subClassOf* dpp-info:DPPInformation ;
-        dpp-prov:actor ?actor . 
+    ?info dpp-prov:actor ?actor . 
 }
