@@ -1,0 +1,69 @@
+Use Case: Shoe,,
+,,
+Actor,CQs,Provided Information
+Recycler,(1) What is the material composition of the product? (2) What is the quality of the contained material? (3) How can the product be disassembled? (4) Is there a proof/certificate of the claims on material composition and quality?,"Provides information on: composition of recyled material, quality and recycling method"
+Sorter,,Quality characteristics of the material (2)
+Collector,,-
+User,,-
+Retailer,,-
+Brand,,-
+Manufacturer,,"Composition of the product including added material and components (e.g., for the assembly) (1,3) Certification of organisation and product (4)"
+Material Supplier,,"Composition of the single materials (substances) (1,2) Certification of organisation and materials (4)"
+,,
+,,
+Actor,CQs,Provided information
+Repairer,(1) Are there any instructions on how to repair the product? (2) What are the single components of this product? (3) What are the charecteristics of the components? (4) How can the product be disassembled (if needed)? (5) What are the characteristics of the components in the product in order to decide on suitable spare parts? (6) What is the material composition of the spare parts?,"Provides information on: what was broken, what part/component of the product was repaired or replaced, what new components were inserted (if any) and their composition, how was it repaired, by whom, and when"
+User,,-
+Retailer,,-
+Brand,,-
+Manufacturer,,"Manufacturer of product: Repair instructions (1,5), list of components and their characteristics (2,3), information on the assembly of the components (4). Manufacturer of the spare parts: DPP of spare parts, with their components and material composition (6)"
+Material Supplier,,Compostition of materials for original components (3) and spare parts (6)
+,,
+,,
+Actor,CQs,Provided information
+Re-user & Re-seller,(1) What is the remaining quality of the product? (2) What is the material composition of the product? (3) Is there a proof/certificate of the claims on material composition and quality?,
+User,,remaining product quality (1)
+Retailer,,-
+Brand,,-
+Manufacturer,,certificates of the product (3)
+Material Supplier,,"material composition (2), certificates of the materials (3)"
+,,
+,,
+Use Case: Smartphone,,
+,,
+Actor,CQs,Provided Information
+Recycler,"(1) What is the composition of the product (components --> materials --> substances)? (2) How can the product be disassembled? (3) Is there rare earth included in the smartphone? (4) If yes, how can it be retrieved? (5) Are there any substances of concern in this product?","Provides information on: composition of recyled material, quality and recycling method"
+Sorter,,-
+Collector,,-
+User,,-
+Retailer,,-
+Brand,,-
+Manufacturer,,"Composition of the product including substances, materials and components (1,5), information of the product assembly and its disassembly (2,4)"
+Material Supplier,,"Composition of the materials including the substances (of concern) and rare earths (1,3,5)"
+,,
+,,
+Actor,CQs,Provided information
+Refurbisher,(1) What are the single components of this product? (2) What are the characteristics of the components? (3) How can the product be disassembled (if needed)? (4) What are the characteristics of the components in the product in order to decide on suitable spare parts? (5) What is the material composition of the spare parts?,"Provides information on: what was broken, what part/component of the product was refurbished, what new components were inserted (if any) and their composition, how was it refurbished, by whom, and when"
+User,,-
+Retailer,,-
+Brand,,-
+Manufacturer,,"Composition of the product including substances, materials and components (1,2,4), information of the product assembly and its disassembly (1,3)"
+Material Supplier,,"Composition of the materials including the substances (of concern) (2,5)"
+,,
+,,
+Actor,CQs,Provided information
+Repairer,(1) Are there any instructions on how to repair the product? (2) What are the single components of this product? (3) What are the characteristics of the components? (4) How can the product be disassembled (if needed)? (5) What are the characteristics of the components in the product in order to decide on suitable spare parts? (6) What is the material composition of the spare parts?,"Provides information on: what was broken, what part/component of the product was repaired or replaced, what new components were inserted (if any) and their composition, how was it repaired, by whom, and when"
+User,,-
+Retailer,,-
+Brand,,-
+Manufacturer,,"Manufacturer of product: Repair instructions (1,5), list of components and their characteristics (2,3), information on the assembly of the components (4). Manufacturer of the spare parts: DPP of spare parts, with their components and material composition (6)"
+Material Supplier,,Compostition of materials for original components (3) and spare parts (6)
+,,
+,,
+Actor,CQs,Provided information
+Re-user & Re-seller,(1) What is the remaining quality of the product? (2) What is the component composition of the product? (3) Is there a certification of the product?,
+User,,remaining product quality (1)
+Retailer,,-
+Brand,,-
+Manufacturer,,"certificates of the product (3), component composition from the manufacturer(s) (2)"
+Material Supplier,,certificates of the materials (3)
