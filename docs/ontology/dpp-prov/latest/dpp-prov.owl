@@ -6,6 +6,15 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
+  <rdf:Description rdf:nodeID="nbd763c2d5ba54972a1083afa96f340b2b5">
+    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
+    <rdf:rest rdf:nodeID="nbd763c2d5ba54972a1083afa96f340b2b6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/timeStamp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">A timstamp of some information, i.e. a DPP or a piece of information.</rdfs:comment>
+    <rdfs:label xml:lang="en">time stamp</rdfs:label>
+  </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <owl:versionIRI rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/0.1/"/>
@@ -26,25 +35,36 @@
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/creationTimeStamp">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/timeStamp"/>
-    <rdfs:domain rdf:nodeID="nf0341e4940814114a31fcd70aa301c6bb1"/>
+    <rdfs:domain rdf:nodeID="nbd763c2d5ba54972a1083afa96f340b2b1"/>
     <rdfs:comment xml:lang="en">A time stamp indicating when a piece of information, or a DPP, was created (or added), i.e. when it started to be valid.</rdfs:comment>
     <rdfs:label xml:lang="en">creation time stamp</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/DPPInformation">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/invalidAtTimeStamp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/timeStamp"/>
+    <rdfs:domain rdf:nodeID="nbd763c2d5ba54972a1083afa96f340b2b4"/>
+    <rdfs:comment xml:lang="en">A time stamp indicating the time when a DPP or a piece of information ceased to be valid, i.e. what deprecated or replaced by another piece of information.</rdfs:comment>
+    <rdfs:label xml:lang="en">invalid at time stamp</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/ValueChainActor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/Actor"/>
+    <rdfs:comment xml:lang="en">An actor that is an active participant of the value chain of a product, e.g. a manufacturer, recycler or other actor.</rdfs:comment>
+    <rdfs:label xml:lang="en">Value chain actor</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/Actor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Actor</rdfs:comment>
+    <rdfs:comment xml:lang="en">An actor responsible for some information.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/responsibleActor">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/actor"/>
-    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
-    <rdfs:comment xml:lang="en">A relation the indicates the actor responsible for stating a piece of information.</rdfs:comment>
-    <rdfs:label xml:lang="en">responsible actor</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/Consumer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/Actor"/>
+    <rdfs:comment xml:lang="en">An actor that is an end-user of a product, a consumer.</rdfs:comment>
+    <rdfs:label xml:lang="en">Consumer</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/dppOwner">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -53,15 +73,12 @@
     <rdfs:comment xml:lang="en">A relation relating the DPP with the actor owning, i.e. responsible for issuing, the DPP.</rdfs:comment>
     <rdfs:label xml:lang="en">DPP owner</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/ValueChainActor">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/Actor"/>
-    <rdfs:comment xml:lang="en">An actor that is an active participant of the value chain of a product, e.g. a manufacturer, recycler or other actor.</rdfs:comment>
-    <rdfs:label xml:lang="en">Value chain actor</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="nf0341e4940814114a31fcd70aa301c6bb5">
-    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
-    <rdf:rest rdf:nodeID="nf0341e4940814114a31fcd70aa301c6bb6"/>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/responsibleActor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/actor"/>
+    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
+    <rdfs:comment xml:lang="en">A relation the indicates the actor responsible for stating a piece of information.</rdfs:comment>
+    <rdfs:label xml:lang="en">responsible actor</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/Authority">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -69,74 +86,57 @@
     <rdfs:comment xml:lang="en">An actor that is an authority.</rdfs:comment>
     <rdfs:label xml:lang="en">Authority</rdfs:label>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd763c2d5ba54972a1083afa96f340b2b6">
+    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd763c2d5ba54972a1083afa96f340b2b3">
+    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd763c2d5ba54972a1083afa96f340b2b4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="nbd763c2d5ba54972a1083afa96f340b2b5"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/actor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/Actor"/>
     <rdfs:comment xml:lang="en">Relation to the actor responsible for a DPP or a piece of information inside it.</rdfs:comment>
     <rdfs:label xml:lang="en">actor</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/invalidAtTimeStamp">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/timeStamp"/>
-    <rdfs:domain rdf:nodeID="nf0341e4940814114a31fcd70aa301c6bb4"/>
-    <rdfs:comment xml:lang="en">A time stamp indicating the time when a DPP or a piece of information ceased to be valid, i.e. what deprecated or replaced by another piece of information.</rdfs:comment>
-    <rdfs:label xml:lang="en">invalid at time stamp</rdfs:label>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/timeStamp">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">A timstamp of some information, i.e. a DPP or a piece of information.</rdfs:comment>
-    <rdfs:label xml:lang="en">time stamp</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="nf0341e4940814114a31fcd70aa301c6bb4">
+  <rdf:Description rdf:nodeID="nbd763c2d5ba54972a1083afa96f340b2b1">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="nf0341e4940814114a31fcd70aa301c6bb5"/>
+    <owl:unionOf rdf:nodeID="nbd763c2d5ba54972a1083afa96f340b2b2"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/DPP">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/Consumer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-prov/Actor"/>
-    <rdfs:comment xml:lang="en">An actor that is an end-user of a product, a consumer.</rdfs:comment>
-    <rdfs:label xml:lang="en">Consumer</rdfs:label>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/created">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nf0341e4940814114a31fcd70aa301c6bb2">
+  <rdf:Description rdf:nodeID="nbd763c2d5ba54972a1083afa96f340b2b2">
     <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-info/DPPInformation"/>
-    <rdf:rest rdf:nodeID="nf0341e4940814114a31fcd70aa301c6bb3"/>
+    <rdf:rest rdf:nodeID="nbd763c2d5ba54972a1083afa96f340b2b3"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-prov/Actor">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/DPPInformation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Actor</rdfs:comment>
-    <rdfs:comment xml:lang="en">An actor responsible for some information.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nf0341e4940814114a31fcd70aa301c6bb3">
-    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="nf0341e4940814114a31fcd70aa301c6bb6">
-    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="nf0341e4940814114a31fcd70aa301c6bb1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="nf0341e4940814114a31fcd70aa301c6bb2"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
 </rdf:RDF>
