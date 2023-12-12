@@ -19,9 +19,9 @@
                   sh:maxCount 1;
                   sh:class dpp-odp:Product ] ;
     sh:property [ sh:path dpp-odp:hasPart ;
-                  sh:class dpp-odp:DPP ] .
+                  sh:class dpp-odp:DPP ] ;
     sh:property [ sh:path dpp-prov:invalidAtTimeStamp ;
-                  sh:maxCount 1 ] .
+                  sh:maxCount 1 ] ;
     sh:property [ sh:path dpp-prov:creationTimeStamp ;
                   sh:minCount 1 ;
                   sh:maxCount 1 ] .
