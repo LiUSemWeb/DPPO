@@ -5,6 +5,5 @@ WHERE {
     ?dpp a/rdfs:subClassOf* dpp-odp:DPP ;
         dpp-odp:describes ?product ;
         dpp-odp:containsInformation ?info .
-    ?info a/rdfs:subClassOf* dpp-info:DPPInformation ;
-        dpp-info:externalDocument ?document .
+    ?info dpp-info:externalDocument ?document .
 }

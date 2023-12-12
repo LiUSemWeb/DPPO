@@ -3,7 +3,6 @@ SELECT ?dpp ?info ?creationTime ?invalidationTime
 WHERE {
     ?dpp a/rdfs:subClassOf* dpp-odp:DPP ;
         dpp-odp:containsInformation ?info .
-    ?info a/rdfs:subClassOf* dpp-info:DPPInformation ;
-        dpp-prov:creationTimeStamp ?creationTime .
+    ?info dpp-prov:creationTimeStamp ?creationTime .
     OPTIONAL { ?info dpp-prov:invalidationTimeStamp ?invalidationTime }
 }

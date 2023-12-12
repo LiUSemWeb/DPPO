@@ -1,7 +1,7 @@
 # CQ: If the product contains at least one substance of concern, how many and what kind of substances of concern?
 SELECT ?product (COUNT(DISTINCT ?substance) AS ?numberOfSubstancesOfConcern)
 WHERE {
-    ?product a/rdfs:subClassOf* dpp-odp:Product .
+    ?product a/rdfs:subClassOf* dpp-odp:Product ;
         dpp-odp:hasPart ?substance .
     ?substance a/rdfs:subclassOf* dpp-comp:SubstanceOfConcern . 
 }

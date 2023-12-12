@@ -2,7 +2,7 @@
 SELECT ?product ?material
 WHERE {
     ?product a/rdfs:subClassOf* dpp-odp:Product .
-    ?info a dpp-info:isAbout ?product .
+    ?info dpp-info:isAbout ?product ;
         dpp-odp:hasPart* ?material .
     ?material a dpp-odp:Material .
 }

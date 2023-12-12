@@ -2,7 +2,8 @@
 SELECT ?product ?material ?quality ?value ?unit
 WHERE {
     ?product a/rdfs:subClassOf* dpp-odp:Product .
-    ?info a dpp-info:isAbout ?product .
+    ?info a/rdfs:subClassOf* dpp-info:DPPInformation ;
+        dpp-info:isAbout ?product ;
         dpp-odp:hasPart* ?material .
     ?material a dpp-odp:Material .
 

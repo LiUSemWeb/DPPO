@@ -2,7 +2,7 @@
 SELECT ?product ?info ?document
 WHERE {
     ?product a/rdfs:subClassOf* dpp-odp:Product .
-    ?info dpp-info:isAbout ?product .
+    ?info dpp-info:isAbout ?product ;
         dpp-odp:containsInformation ?info . 
     ?info a/rdfs:subClassOf* dpp-info:DisassemblyInformation ;
         dpp-info:dissasemblyInstructionsDocument ?document .
