@@ -1,59 +1,85 @@
 [
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/disassemblyInstructionsDocument",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A relation pointing out a document with disassembly instructions for the product."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "disassembly instructions document"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/externalDocument"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
+    "@id": "http://purl.org/dc/terms/title",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "http://purl.org/vocab/vann/preferredNamespaceUri",
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/LegalGuarantee",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/directlySupersedes",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "A relation connecting a piece of information to another piece of information that directly replaces the first one, i.e. when a DPP is updated."
+        "@value": "A piece of information that described the legal guarantee of the product, with its time interval of validity."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "directly supersedes"
+        "@value": "Legal guarantee"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+      },
+      {
+        "@id": "_:nf50aa3cdc33b4971864407454268a4d8b8"
+      }
+    ]
+  },
+  {
+    "@id": "_:nf50aa3cdc33b4971864407454268a4d8b8",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:nf50aa3cdc33b4971864407454268a4d8b9"
+          },
+          {
+            "@id": "_:nf50aa3cdc33b4971864407454268a4d8b10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nf50aa3cdc33b4971864407454268a4d8b9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/endTime"
+      }
+    ]
+  },
+  {
+    "@id": "_:nf50aa3cdc33b4971864407454268a4d8b10",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/startTime"
       }
     ]
   },
@@ -86,319 +112,7 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/LegalGuarantee",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A piece of information that described the legal guarantee of the product, with its time interval of validity."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Legal guarantee"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-      },
-      {
-        "@id": "_:nb228a91eb6b149b68da40885aea093cdb8"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb228a91eb6b149b68da40885aea093cdb8",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:nb228a91eb6b149b68da40885aea093cdb9"
-          },
-          {
-            "@id": "_:nb228a91eb6b149b68da40885aea093cdb10"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:nb228a91eb6b149b68da40885aea093cdb9",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/endTime"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb228a91eb6b149b68da40885aea093cdb10",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/startTime"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/externalDocument",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A relation for pointing to external documentation, that is not explicitly represented inside the DPP but instead as a related document, e.g. documents with various kinds of instructions, certificates, or furhter information about the product."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "external document"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/value",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The value of a characterisitc or a quality."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "value"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/endTime",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The end of a time interval."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "end time"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/characteristic",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The characteristic that the piece of information is about."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/ProductCharacteristic"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "characteristic"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/ProductQuality",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A piece of information about the quality of of a product."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Product quality"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-      },
-      {
-        "@id": "_:nb228a91eb6b149b68da40885aea093cdb18"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb228a91eb6b149b68da40885aea093cdb18",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:nb228a91eb6b149b68da40885aea093cdb19"
-          },
-          {
-            "@id": "_:nb228a91eb6b149b68da40885aea093cdb20"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:nb228a91eb6b149b68da40885aea093cdb19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/quality"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://www.w3.org/2002/07/owl#Thing"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb228a91eb6b149b68da40885aea093cdb20",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/value"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/title",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/CompositionInformation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A piece of information about the composition of a product, i.e. a relation between a product and its part, potentially with more details of the composition included."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Composition information"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-odp/describes",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
-      {
-        "@list": [
-          {
-            "@id": "http://w3id.org/dppo/ontology/dpp-info/containsInformation"
-          },
-          {
-            "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A piece of information about how to disassemble the product, e.g. linking to some disassembly instructions."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Disassembly information"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/created",
+    "@id": "http://purl.org/dc/terms/license",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
@@ -427,23 +141,95 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/CertificateInformation",
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relating a piece of information to the thing the information is about, i.e. describes."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is about"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/contributor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/RepairInstruction",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "A piece of information about some certificate that concerns the product."
-      },
+        "@value": "A piece of information about how to repair a product."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Certificate information"
+        "@value": "Repair instruction"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/Unit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A unit of measure."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Unit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@value": "http://qudt.org/schema/qudt/Unit"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/characteristic",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The characteristic that the piece of information is about."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/ProductCharacteristic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "characteristic"
       }
     ]
   },
@@ -476,70 +262,118 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/Unit",
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/CompositionInformation",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "A unit of measure."
+        "@value": "A piece of information about the composition of a product, i.e. a relation between a product and its part, potentially with more details of the composition included."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Unit"
+        "@value": "Composition information"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@value": "http://qudt.org/schema/qudt/Unit"
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
       }
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/unit",
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/CertificateInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A piece of information about some certificate that concerns the product."
+      },
+      {
+        "@language": "en",
+        "@value": "Certificate information"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/startTime",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The start of a time interval."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "start time"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-odp/describes",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-info/containsInformation"
+          },
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/externalDocument",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Relation between a concept with a value, associating it to a unit of measure."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:nb228a91eb6b149b68da40885aea093cdb1"
+        "@value": "A relation for pointing to external documentation, that is not explicitly represented inside the DPP but instead as a related document, e.g. documents with various kinds of instructions, certificates, or furhter information about the product."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "unit"
+        "@value": "external document"
       }
     ]
   },
   {
-    "@id": "_:nb228a91eb6b149b68da40885aea093cdb1",
+    "@id": "http://purl.org/dc/terms/creator",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "http://w3id.org/dppo/ontology/dpp-info/CompositionInformation"
-          },
-          {
-            "@id": "http://w3id.org/dppo/ontology/dpp-info/ProductCharacteristic"
-          },
-          {
-            "@id": "http://w3id.org/dppo/ontology/dpp-info/ProductQuality"
-          }
-        ]
-      }
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
@@ -571,116 +405,6 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/supersededBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#TransitiveProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A transitive relation that relates a piece of information to the pieces of information that supersedes it."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "superseded by"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/startTime",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The start of a time interval."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "start time"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/description",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/creator",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A pice of information contained in a DPP, which is about some product."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "DPP information"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:nb228a91eb6b149b68da40885aea093cdb7"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb228a91eb6b149b68da40885aea093cdb7",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://www.w3.org/2002/07/owl#Thing"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/license",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
     "@id": "http://w3id.org/dppo/ontology/dpp-info/quality",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -701,12 +425,6 @@
         "@language": "en",
         "@value": "quality"
       }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/contributor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
@@ -738,43 +456,20 @@
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/RepairInstruction",
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/value",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "A piece of information about how to repair a product."
+        "@value": "The value of a characterisitc or a quality."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Repair instruction"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Relating a piece of information to the thing the information is about, i.e. describes."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is about"
+        "@value": "value"
       }
     ]
   },
@@ -800,12 +495,12 @@
         "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
       },
       {
-        "@id": "_:nb228a91eb6b149b68da40885aea093cdb13"
+        "@id": "_:nf50aa3cdc33b4971864407454268a4d8b13"
       }
     ]
   },
   {
-    "@id": "_:nb228a91eb6b149b68da40885aea093cdb13",
+    "@id": "_:nf50aa3cdc33b4971864407454268a4d8b13",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -813,17 +508,17 @@
       {
         "@list": [
           {
-            "@id": "_:nb228a91eb6b149b68da40885aea093cdb14"
+            "@id": "_:nf50aa3cdc33b4971864407454268a4d8b14"
           },
           {
-            "@id": "_:nb228a91eb6b149b68da40885aea093cdb15"
+            "@id": "_:nf50aa3cdc33b4971864407454268a4d8b15"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:nb228a91eb6b149b68da40885aea093cdb14",
+    "@id": "_:nf50aa3cdc33b4971864407454268a4d8b14",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -839,7 +534,7 @@
     ]
   },
   {
-    "@id": "_:nb228a91eb6b149b68da40885aea093cdb15",
+    "@id": "_:nf50aa3cdc33b4971864407454268a4d8b15",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -852,6 +547,178 @@
       {
         "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
       }
+    ]
+  },
+  {
+    "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/unit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relation between a concept with a value, associating it to a unit of measure."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nf50aa3cdc33b4971864407454268a4d8b1"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "unit"
+      }
+    ]
+  },
+  {
+    "@id": "_:nf50aa3cdc33b4971864407454268a4d8b1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-info/CompositionInformation"
+          },
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-info/ProductCharacteristic"
+          },
+          {
+            "@id": "http://w3id.org/dppo/ontology/dpp-info/ProductQuality"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/description",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/ProductQuality",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A piece of information about the quality of of a product."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Product quality"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+      },
+      {
+        "@id": "_:nf50aa3cdc33b4971864407454268a4d8b18"
+      }
+    ]
+  },
+  {
+    "@id": "_:nf50aa3cdc33b4971864407454268a4d8b18",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:nf50aa3cdc33b4971864407454268a4d8b19"
+          },
+          {
+            "@id": "_:nf50aa3cdc33b4971864407454268a4d8b20"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nf50aa3cdc33b4971864407454268a4d8b19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/quality"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ]
+  },
+  {
+    "@id": "_:nf50aa3cdc33b4971864407454268a4d8b20",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/value"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/created",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/disassemblyInstructionsDocument",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A relation pointing out a document with disassembly instructions for the product."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "disassembly instructions document"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/externalDocument"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/vocab/vann/preferredNamespaceUri",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
@@ -923,6 +790,139 @@
     "http://www.w3.org/2002/07/owl#versionInfo": [
       {
         "@value": "0.1"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/endTime",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The end of a time interval."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "end time"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/DisassemblyInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A piece of information about how to disassemble the product, e.g. linking to some disassembly instructions."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Disassembly information"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-odp/DPP",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A pice of information contained in a DPP, which is about some product."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "DPP information"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:nf50aa3cdc33b4971864407454268a4d8b7"
+      }
+    ]
+  },
+  {
+    "@id": "_:nf50aa3cdc33b4971864407454268a4d8b7",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/isAbout"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/supersededBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#TransitiveProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A transitive relation that relates a piece of information to the pieces of information that supersedes it."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "superseded by"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-info/DPPInformation"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-info/directlySupersedes",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A relation connecting a piece of information to another piece of information that directly replaces the first one, i.e. when a DPP is updated."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "directly supersedes"
       }
     ]
   }

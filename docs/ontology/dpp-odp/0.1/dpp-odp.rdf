@@ -6,6 +6,21 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/DPP">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="n037a1e9646284ea99f48c001ac007cd7b1"/>
+    <rdfs:comment xml:lang="en">A Digital Product Passport, containing information about a product, and which main contain sub-DPPs as its parts.</rdfs:comment>
+    <rdfs:label xml:lang="en">Digital Product Passport</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/Product">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="n037a1e9646284ea99f48c001ac007cd7b2"/>
+    <rdfs:comment xml:lang="en">A product, in a broad sense, defined as anything that is sold by a value chain actor, and which can have other products as parts.</rdfs:comment>
+    <rdfs:label xml:lang="en">Product</rdfs:label>
+  </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <owl:versionIRI rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/0.1/"/>
@@ -22,35 +37,8 @@
     <rdfs:seeAlso rdf:resource="https://github.com/LiUSemWeb/DPPO"/>
     <owl:versionInfo>0.1</owl:versionInfo>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/Product">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="n96b19fbd076f4faca5eb9a5739f2c01db2"/>
-    <rdfs:comment xml:lang="en">A product, in a broad sense, defined as anything that is sold by a value chain actor, and which can have other products as parts.</rdfs:comment>
-    <rdfs:label xml:lang="en">Product</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/DPP">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="n96b19fbd076f4faca5eb9a5739f2c01db1"/>
-    <rdfs:comment xml:lang="en">A Digital Product Passport, containing information about a product, and which main contain sub-DPPs as its parts.</rdfs:comment>
-    <rdfs:label xml:lang="en">Digital Product Passport</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n96b19fbd076f4faca5eb9a5739f2c01db1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/hasPart"/>
-    <owl:allValuesFrom rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/hasPart">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">A relation between a whole and its parts.</rdfs:label>
-    <rdfs:label xml:lang="en">has part</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n96b19fbd076f4faca5eb9a5739f2c01db2">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/hasPart"/>
-    <owl:allValuesFrom rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/describes">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -59,25 +47,37 @@
     <rdfs:comment xml:lang="en">The relation between a DPP and the product it describes.</rdfs:comment>
     <rdfs:label xml:lang="en">describes</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  <rdf:Description rdf:nodeID="n037a1e9646284ea99f48c001ac007cd7b2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/hasPart"/>
+    <owl:allValuesFrom rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/title">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/hasPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">A relation between a whole and its parts.</rdfs:label>
+    <rdfs:label xml:lang="en">has part</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n037a1e9646284ea99f48c001ac007cd7b1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/hasPart"/>
+    <owl:allValuesFrom rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/created">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
 </rdf:RDF>
