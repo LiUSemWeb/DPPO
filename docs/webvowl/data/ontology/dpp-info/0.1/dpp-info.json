@@ -39,17 +39,17 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Robin Keskisärkkä",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
         "value" : "Eva Blomqvist",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "Huanyu Li",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Robin Keskisärkkä",
         "type" : "label"
       } ],
       "created" : [ {
@@ -349,14 +349,14 @@
       "IRI-based" : "CertificateInformation"
     },
     "comment" : {
-      "en" : "A piece of information about some certificate that concerns the product."
+      "en" : "Certificate information"
     },
     "id" : "30",
     "superClasses" : [ "2" ]
   }, {
     "instances" : 0,
     "union" : [ "1", "24", "16" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "20"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/DPPInformation",

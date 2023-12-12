@@ -6,6 +6,21 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-core/Substance"/>
+    <rdfs:comment xml:lang="en">Substance of concern as defined in the ESPR, meaning it is a substance that is either toxic or something that hinders recycling of the product.</rdfs:comment>
+    <rdfs:label xml:lang="en">Substance of Concern</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/aboutWhole">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/0.1/isAbout"/>
+    <owl:inverseOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/0.1/hasCompositionInformation"/>
+    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/0.1/CompositionInformation"/>
+    <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
+    <rdfs:comment xml:lang="en">Relation between the piece of information representing the composition, and the whole involved in the relation.</rdfs:comment>
+    <rdfs:label xml:lang="en">about whole</rdfs:label>
+  </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <owl:versionIRI rdf:resource="http://w3id.org/dppo/ontology/dpp-comp/0.1/"/>
@@ -24,14 +39,20 @@
     <rdfs:seeAlso rdf:resource="https://github.com/LiUSemWeb/DPPO"/>
     <owl:versionInfo>0.1</owl:versionInfo>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/aboutWhole">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/0.1/isAbout"/>
-    <owl:inverseOf rdf:resource="http://w3id.org/dppo/ontology/dpp-info/0.1/hasCompositionInformation"/>
-    <rdfs:domain rdf:resource="http://w3id.org/dppo/ontology/dpp-info/0.1/CompositionInformation"/>
-    <rdfs:range rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
-    <rdfs:comment xml:lang="en">Relation between the piece of information representing the composition, and the whole involved in the relation.</rdfs:comment>
-    <rdfs:label xml:lang="en">about whole</rdfs:label>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/SubstanceHinderingRecycling">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern"/>
+    <rdfs:comment xml:lang="en">A substance that hinders recycling of a product.</rdfs:comment>
+    <rdfs:label xml:lang="en">Substance findering recycling</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/ToxicSubstance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern"/>
+    <rdfs:comment xml:lang="en">A toxic substance.</rdfs:comment>
+    <rdfs:label xml:lang="en">Toxic substance</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/0.1/CompositionInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/aboutPart">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -41,31 +62,10 @@
     <rdfs:comment xml:lang="en">Relation between the piece of information representing the composition, and the part involved in the relation.</rdfs:comment>
     <rdfs:label xml:lang="en">about part</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/ToxicSubstance">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern"/>
-    <rdfs:comment xml:lang="en">A toxic substance.</rdfs:comment>
-    <rdfs:label xml:lang="en">Toxic substance</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-core/Substance"/>
-    <rdfs:comment xml:lang="en">Substance of concern as defined in the ESPR, meaning it is a substance that is either toxic or something that hinders recycling of the product.</rdfs:comment>
-    <rdfs:label xml:lang="en">Substance of Concern</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-comp/SubstanceHinderingRecycling">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-comp/SubstanceOfConcern"/>
-    <rdfs:comment xml:lang="en">A substance that hinders recycling of a product.</rdfs:comment>
-    <rdfs:label xml:lang="en">Substance findering recycling</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/0.1/isAbout">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/0.1/hasCompositionInformation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/0.1/CompositionInformation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/0.1/hasCompositionInformation">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-info/0.1/isAbout">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
 </rdf:RDF>
