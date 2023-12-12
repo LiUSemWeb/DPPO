@@ -41,17 +41,17 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
+        "value" : "Huanyu Li",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
         "value" : "Robin Keskisärkkä",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "Eva Blomqvist",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Huanyu Li",
         "type" : "label"
       } ],
       "created" : [ {
@@ -382,7 +382,7 @@
     "comment" : {
       "en" : "A DPP describing a material."
     },
-    "attributes" : [ "external", "intersection" ],
+    "attributes" : [ "intersection", "external" ],
     "id" : "4",
     "superClasses" : [ "2" ]
   }, {
@@ -404,7 +404,7 @@
     "comment" : {
       "en" : "A DPP that describes a component."
     },
-    "attributes" : [ "external", "intersection" ],
+    "attributes" : [ "intersection", "external" ],
     "id" : "5",
     "superClasses" : [ "2" ]
   }, {
@@ -485,7 +485,7 @@
     "comment" : {
       "en" : "A DPP describing a consumer product."
     },
-    "attributes" : [ "external", "intersection" ],
+    "attributes" : [ "intersection", "external" ],
     "id" : "6",
     "superClasses" : [ "2" ]
   }, {
@@ -510,7 +510,7 @@
       "IRI-based" : "CertificateInformation"
     },
     "comment" : {
-      "en" : "A piece of information about some certificate that concerns the product."
+      "en" : "Certificate information"
     },
     "attributes" : [ "external" ],
     "id" : "33",
@@ -518,7 +518,7 @@
   }, {
     "instances" : 0,
     "union" : [ "0", "24", "8" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "45"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-comp/SubstanceHinderingRecycling",
@@ -568,7 +568,7 @@
     "comment" : {
       "en" : "A DPP  describing a substance."
     },
-    "attributes" : [ "external", "intersection" ],
+    "attributes" : [ "intersection", "external" ],
     "id" : "3",
     "superClasses" : [ "2" ]
   }, {
@@ -733,7 +733,7 @@
     "comment" : {
       "en" : "A relation pointing out a document containing repair instructions for the product."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "9"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/0.1/hasCompositionInformation",
@@ -743,7 +743,7 @@
       "IRI-based" : "hasCompositionInformation"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "13"
   }, {
     "range" : "1",
@@ -777,7 +777,7 @@
     "comment" : {
       "en" : "A relation connecting a piece of information to another piece of information that directly replaces the first one, i.e. when a DPP is updated."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "27"
   }, {
     "range" : "1",
@@ -797,7 +797,7 @@
     "comment" : {
       "en" : "A relation pointing out a document with disassembly instructions for the product."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "30"
   }, {
     "range" : "1",
@@ -821,7 +821,7 @@
     "comment" : {
       "en" : "A piece of information about the composition of a product."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "37"
   }, {
     "range" : "20",
@@ -850,7 +850,7 @@
     "comment" : {
       "en" : "Relating a DPP to the pieces of information it contains."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "43"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/unit",
@@ -864,7 +864,7 @@
     "comment" : {
       "en" : "Relation between a concept with a value, associating it to a unit of measure."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "44"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/0.1/isAbout",
@@ -875,7 +875,7 @@
     },
     "domain" : "14",
     "subproperty" : [ "48", "49" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "47"
   }, {
     "range" : "15",
@@ -939,7 +939,7 @@
     "comment" : {
       "en" : "The start of a time interval."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "60"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/directlySupersededBy",
@@ -955,7 +955,7 @@
     "comment" : {
       "en" : "A relation connecting a piece of information to the piece of information directly superseding it."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "62"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/value",
@@ -969,7 +969,7 @@
     "comment" : {
       "en" : "The value of a characterisitc or a quality."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "67"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/quality",
@@ -983,7 +983,7 @@
     "comment" : {
       "en" : "A relation pointing at the quality that the piece of information describes."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "69"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-odp/describes",
@@ -994,7 +994,7 @@
     },
     "superproperty" : [ "71" ],
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "70"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/endTime",
@@ -1008,7 +1008,7 @@
     "comment" : {
       "en" : "The end of a time interval."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "72"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/supersededBy",
@@ -1023,7 +1023,7 @@
     "comment" : {
       "en" : "A transitive relation that relates a piece of information to the pieces of information that supersedes it."
     },
-    "attributes" : [ "transitive", "external", "object" ],
+    "attributes" : [ "transitive", "object", "external" ],
     "id" : "63"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/externalDocument",
@@ -1038,7 +1038,7 @@
     "comment" : {
       "en" : "A relation for pointing to external documentation, that is not explicitly represented inside the DPP but instead as a related document, e.g. documents with various kinds of instructions, certificates, or furhter information about the product."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "12"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-comp/aboutWhole",
@@ -1069,7 +1069,7 @@
     "comment" : {
       "en" : "A relation pointing out a document representing a certificate related to the product described by the DPP."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "73"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-info/characteristic",
@@ -1083,7 +1083,7 @@
     "comment" : {
       "en" : "The characteristic that the piece of information is about."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "74"
   } ]
 }

@@ -6,8 +6,16 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
-  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-core/SubstanceDPP">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="n56c871e3161049aa9da619bbc096e259b13"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
+    <rdfs:comment xml:lang="en">A DPP  describing a substance.</rdfs:comment>
+    <rdfs:label xml:lang="en">Substance DPP</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n56c871e3161049aa9da619bbc096e259b15">
+    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
+    <rdf:rest rdf:nodeID="n56c871e3161049aa9da619bbc096e259b16"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-core/">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
@@ -26,10 +34,19 @@
     <rdfs:seeAlso rdf:resource="https://github.com/LiUSemWeb/DPPO"/>
     <owl:versionInfo>0.1</owl:versionInfo>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db14">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/describes"/>
-    <owl:someValuesFrom rdf:resource="http://w3id.org/dppo/ontology/dpp-core/Substance"/>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-core/ConsumerProductDPP">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="n56c871e3161049aa9da619bbc096e259b5"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
+    <rdfs:comment xml:lang="en">A DPP describing a consumer product.</rdfs:comment>
+    <rdfs:label xml:lang="en">Comsumer Product DPP</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-core/ComponentDPP">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="n56c871e3161049aa9da619bbc096e259b1"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
+    <rdfs:comment xml:lang="en">A DPP that describes a component.</rdfs:comment>
+    <rdfs:label xml:lang="en">Component DPP</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-core/Material">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -37,50 +54,28 @@
     <rdfs:comment xml:lang="en">A material, that is sold as a product by the producer.</rdfs:comment>
     <rdfs:label xml:lang="en">Material</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db16">
-    <rdf:first rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db14"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-core/MaterialDPP">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
-    <rdfs:comment xml:lang="en">A consumer product, i.e. a product that is sold directly to end users (consumers).</rdfs:comment>
-    <rdfs:label xml:lang="en">Consumer product</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db1">
-    <owl:intersectionOf rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db3"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-core/ConsumerProductDPP">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:equivalentClass rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db5"/>
+    <owl:equivalentClass rdf:nodeID="n56c871e3161049aa9da619bbc096e259b9"/>
     <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
-    <rdfs:comment xml:lang="en">A DPP describing a consumer product.</rdfs:comment>
-    <rdfs:label xml:lang="en">Comsumer Product DPP</rdfs:label>
+    <rdfs:comment xml:lang="en">A DPP describing a material.</rdfs:comment>
+    <rdfs:label xml:lang="en">Material DPP</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db4">
-    <rdf:first rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db2"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-core/SubstanceDPP">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/Product">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:equivalentClass rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db13"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
-    <rdfs:comment xml:lang="en">A DPP  describing a substance.</rdfs:comment>
-    <rdfs:label xml:lang="en">Substance DPP</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-core/Component">
+  <rdf:Description rdf:nodeID="n56c871e3161049aa9da619bbc096e259b13">
+    <owl:intersectionOf rdf:nodeID="n56c871e3161049aa9da619bbc096e259b15"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
-    <rdfs:comment xml:lang="en">A product that is a component of some other product.</rdfs:comment>
-    <rdfs:label xml:lang="en">Component</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  <rdf:Description rdf:nodeID="n56c871e3161049aa9da619bbc096e259b11">
+    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
+    <rdf:rest rdf:nodeID="n56c871e3161049aa9da619bbc096e259b12"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db9">
-    <owl:intersectionOf rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db11"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:nodeID="n56c871e3161049aa9da619bbc096e259b10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/describes"/>
+    <owl:someValuesFrom rdf:resource="http://w3id.org/dppo/ontology/dpp-core/Material"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-core/Substance">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -88,92 +83,97 @@
     <rdfs:comment xml:lang="en">A substance, that is sold as a product by the producer.</rdfs:comment>
     <rdfs:label xml:lang="en">Substance</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db6">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/describes"/>
-    <owl:someValuesFrom rdf:resource="http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-core/MaterialDPP">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:equivalentClass rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db9"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
-    <rdfs:comment xml:lang="en">A DPP describing a material.</rdfs:comment>
-    <rdfs:label xml:lang="en">Material DPP</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db7">
+  <rdf:Description rdf:nodeID="n56c871e3161049aa9da619bbc096e259b7">
     <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
-    <rdf:rest rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db8"/>
+    <rdf:rest rdf:nodeID="n56c871e3161049aa9da619bbc096e259b8"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db5">
-    <owl:intersectionOf rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db7"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-core/ComponentDPP">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:equivalentClass rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db1"/>
-    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
-    <rdfs:comment xml:lang="en">A DPP that describes a component.</rdfs:comment>
-    <rdfs:label xml:lang="en">Component DPP</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db2">
+  <rdf:Description rdf:nodeID="n56c871e3161049aa9da619bbc096e259b2">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/describes"/>
     <owl:someValuesFrom rdf:resource="http://w3id.org/dppo/ontology/dpp-core/Component"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db13">
-    <owl:intersectionOf rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db15"/>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-core/Component">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
+    <rdfs:comment xml:lang="en">A product that is a component of some other product.</rdfs:comment>
+    <rdfs:label xml:lang="en">Component</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db8">
-    <rdf:first rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db6"/>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n56c871e3161049aa9da619bbc096e259b4">
+    <rdf:first rdf:nodeID="n56c871e3161049aa9da619bbc096e259b2"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/DPP">
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/describes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n56c871e3161049aa9da619bbc096e259b5">
+    <owl:intersectionOf rdf:nodeID="n56c871e3161049aa9da619bbc096e259b7"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db12">
-    <rdf:first rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db10"/>
+  <rdf:Description rdf:nodeID="n56c871e3161049aa9da619bbc096e259b12">
+    <rdf:first rdf:nodeID="n56c871e3161049aa9da619bbc096e259b10"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n56c871e3161049aa9da619bbc096e259b8">
+    <rdf:first rdf:nodeID="n56c871e3161049aa9da619bbc096e259b6"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/Product">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/describes">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db3">
-    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
-    <rdf:rest rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db4"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db11">
-    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
-    <rdf:rest rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db12"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db15">
-    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
-    <rdf:rest rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db16"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="ndac5c4100bc348f1b78ba383b4ad621db10">
+  <rdf:Description rdf:nodeID="n56c871e3161049aa9da619bbc096e259b6">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/describes"/>
-    <owl:someValuesFrom rdf:resource="http://w3id.org/dppo/ontology/dpp-core/Material"/>
+    <owl:someValuesFrom rdf:resource="http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n56c871e3161049aa9da619bbc096e259b14">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/describes"/>
+    <owl:someValuesFrom rdf:resource="http://w3id.org/dppo/ontology/dpp-core/Substance"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n56c871e3161049aa9da619bbc096e259b1">
+    <owl:intersectionOf rdf:nodeID="n56c871e3161049aa9da619bbc096e259b3"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n56c871e3161049aa9da619bbc096e259b9">
+    <owl:intersectionOf rdf:nodeID="n56c871e3161049aa9da619bbc096e259b11"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-core/ConsumerProduct">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/Product"/>
+    <rdfs:comment xml:lang="en">A consumer product, i.e. a product that is sold directly to end users (consumers).</rdfs:comment>
+    <rdfs:label xml:lang="en">Consumer product</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  <rdf:Description rdf:nodeID="n56c871e3161049aa9da619bbc096e259b3">
+    <rdf:first rdf:resource="http://w3id.org/dppo/ontology/dpp-odp/DPP"/>
+    <rdf:rest rdf:nodeID="n56c871e3161049aa9da619bbc096e259b4"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/dppo/ontology/dpp-odp/DPP">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n56c871e3161049aa9da619bbc096e259b16">
+    <rdf:first rdf:nodeID="n56c871e3161049aa9da619bbc096e259b14"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
 </rdf:RDF>

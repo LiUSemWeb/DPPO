@@ -1,69 +1,20 @@
 [
   {
-    "@id": "http://purl.org/dc/terms/title",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
     "@id": "http://purl.org/dc/terms/created",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-odp/hasPart",
+    "@id": "http://purl.org/dc/terms/license",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "A relation between a whole and its parts."
-      },
-      {
-        "@language": "en",
-        "@value": "has part"
-      }
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product",
+    "@id": "http://purl.org/vocab/vann/preferredNamespaceUri",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A product, in a broad sense, defined as anything that is sold by a value chain actor, and which can have other products as parts."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Product"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:n037a1e9646284ea99f48c001ac007cd7b2"
-      }
-    ]
-  },
-  {
-    "@id": "_:n037a1e9646284ea99f48c001ac007cd7b2",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://w3id.org/dppo/ontology/dpp-odp/hasPart"
-      }
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
@@ -134,9 +85,19 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/license",
+    "@id": "http://w3id.org/dppo/ontology/dpp-odp/hasPart",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "A relation between a whole and its parts."
+      },
+      {
+        "@language": "en",
+        "@value": "has part"
+      }
     ]
   },
   {
@@ -168,7 +129,7 @@
     ]
   },
   {
-    "@id": "http://purl.org/vocab/vann/preferredNamespaceUri",
+    "@id": "http://purl.org/dc/terms/contributor",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
@@ -180,7 +141,52 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/contributor",
+    "@id": "http://purl.org/dc/terms/title",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A product, in a broad sense, defined as anything that is sold by a value chain actor, and which can have other products as parts."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Product"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:nd6c0f91919304c78bfefe4d76d5d1611b2"
+      }
+    ]
+  },
+  {
+    "@id": "_:nd6c0f91919304c78bfefe4d76d5d1611b2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/Product"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://w3id.org/dppo/ontology/dpp-odp/hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/description",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
@@ -204,12 +210,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:n037a1e9646284ea99f48c001ac007cd7b1"
+        "@id": "_:nd6c0f91919304c78bfefe4d76d5d1611b1"
       }
     ]
   },
   {
-    "@id": "_:n037a1e9646284ea99f48c001ac007cd7b1",
+    "@id": "_:nd6c0f91919304c78bfefe4d76d5d1611b1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -226,12 +232,6 @@
   },
   {
     "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/description",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]

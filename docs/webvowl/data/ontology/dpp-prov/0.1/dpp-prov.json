@@ -40,17 +40,17 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Huanyu Li",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
         "value" : "Eva Blomqvist",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "Robin Keskisärkkä",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Huanyu Li",
         "type" : "label"
       } ],
       "created" : [ {
@@ -241,7 +241,7 @@
     },
     "subClasses" : [ "1", "21", "12" ],
     "comment" : {
-      "en" : "Actor"
+      "en" : "An actor responsible for some information."
     },
     "id" : "2"
   }, {
@@ -313,7 +313,7 @@
   }, {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "14"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-prov/timeStamp",
@@ -375,7 +375,7 @@
   }, {
     "range" : "2",
     "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "22"
   }, {
     "iri" : "http://w3id.org/dppo/ontology/dpp-prov/responsibleActor",
@@ -395,7 +395,7 @@
   }, {
     "range" : "2",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "23"
   } ]
 }
