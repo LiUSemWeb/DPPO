@@ -7,11 +7,11 @@
 @prefix dpp-comp: <http://w3id.org/dppo/ontology/dpp-comp/> .
 
 _:b1 a dpp-info:DPPInformation ;
-	dpp-info:startTime "2023-11-24T11:34:00"^^xsd:dateTime ;
-	dpp-info:endTime "2023-11-25T11:34:00"^^xsd:dateTime ;
+	dpp-prov:creationTimeStamp  "2023-11-24T11:34:00"^^xsd:dateTime ;
+	dpp-prov:invalidAtTimeStamp  "2023-11-25T11:34:00"^^xsd:dateTime ;
 	dpp-prov:responsibleActor [ a dpp-prov:Actor ] ;
 	dpp-info:superceededBy _:b2 .
 
 _:b2 a dpp-info:DPPInformation ;
-	dpp-info:startTime "2023-11-24T11:34:00"^^xsd:dateTime ;
+	dpp-prov:creationTimeStamp "2023-11-24T11:34:00"^^xsd:dateTime ;
 	dpp-prov:responsibleActor [ a dpp-prov:Actor ] .

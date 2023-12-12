@@ -4,12 +4,15 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dpp-info:  <http://w3id.org/dppo/ontology/dpp-info/>.
 @prefix dpp-odp: <http://w3id.org/dppo/ontology/dpp-odp/> .
+@prefix dpp-prov: <http://w3id.org/dppo/ontology/dpp-prov/> .
 
 _:dpp1 a dpp-odp:DPP ;
 	dpp-info:containsInformation [ a dpp-info:DPPInformation ] ;
+	dpp-prov:creationTimeStamp "2023-11-01T10:00:00"^^xsd:dateTime ;
 	dpp-odp:describes [ a dpp-odp:Product ] ;
 	dpp-odp:hasPart _:dpp2 .
 
 _:dpp2 a dpp-odp:DPP ;
 	dpp-info:containsInformation [ a dpp-info:DPPInformation ] ;
+	dpp-prov:creationTimeStamp "2023-11-01T10:00:00"^^xsd:dateTime ;
 	dpp-odp:describes [ a dpp-odp:Product ] .
