@@ -1,0 +1,110 @@
+CQ Identifier,Ontology Story,CQ,Duplication / Note,SPARQL ID,Link to SPARQL Query in GitHub Repository
+1a.01,"A product contains a substance of concern, that hinders its recycling, and does not comply with the ESPR regulation. An authority that should decide on the product's compliance with respect to regulations needs to know the details of the product composition, materials and substances to determine its compliance.",Does the product contain substances of concern?,,SPARQL_1,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_1.sparql
+1a.02,,"If the product contains at least one substance of concern, how many and what kind of substances of concern?",,"SPARQL_2
+SPARQL_3",https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_2.sparql https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_3.sparql
+1a.03,,What is the detailed breakdown of chemical composition of those substances?,,,
+1c.01,"A product contains a substance of concern, that hinders its recycling, and does not comply with the ESPR regulation. A consumer wants to know if this products contains substances of concern.",Does the product contain substances of concern?,same as 1a.01,,
+1c.02,,"If the product contains at least one substance of concern, how many and what kind of substances of concern?",same as 1a.02,,
+1v.01,"A product contains a substance of concern, that hinders its recycling, and does not comply with the ESPR regulation. A value chain actor of this product wants to know if this products contains substances of concern, and if so, which kind of substances of concern.",Does the product contain substances of concern?,same as 1a.01,,
+1v.02,,"If the product contains at least one substance of concern, how many and what kind of substances of concern?",same as 1a.02,,
+2a.01,"A product enters the market. An authority wants to check if the producer/manufacturer complies with the EPR regulation, meaning that producers have to pay the full costs of dealing with the waste they produce from when it is placed onto the market, through to the end of its life. ","What are the full costs of dealing with the waste the producers produce from when their product(s) is/are placed onto the market, through to the end of its life?",left for future research,,
+2a.02,,Are the full costs of dealing with the waste already payed by the producer?,left for future research,,
+2c.01,"A product enters the market. A consumer wants to check if the producer/manufacturer complies with the EPR regulation, meaning that producers have to pay the full costs of dealing with the waste they produce from when it is placed onto the market, through to the end of its life.",Are the full costs of dealing with the waste already payed by the producer?,same as 2a.02,,
+2v.01,"A product enters the market. The producer wants to check if he complies with the EPR regulation, meaning that producers have to pay the full costs of dealing with the waste they produce from when it is placed onto the market, through to the end of its life.","What are the full costs of dealing with the waste the producers produce from when their product(s) is/are placed onto the market, through to the end of its life?",same as 2a.01,,
+2v.02,,Are the full costs of dealing with the waste already payed by the producer?,same as 2a.02,,
+3a.01,"A product needs to be repaired. An authority wants to check if the seller of this product complies with the ""Right to Repair"" regulation in order to fine the respective seller if it does not comply with it.",Is this product still covered by the legal guarantee?,,SPARQL_4,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_4.sparql
+3a.02,,What information does the seller (or another value chain actor) provide to the consumers on how to repair the product?,,SPARQL_5,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_5.sparql
+3c.01,"A product needs to be repaired. A consumer wants to check whether the product is still covered by the legal guarantee, and if not, he or she wants information on how to repair the product himself or herself.",Is this product still covered by the legal guarantee?,same as 3a.01,,
+3c.02,,What information does the seller (or another value chain actor) provide to the consumers on how to repair the product?,same as 3a.02,,
+3v.01,"A product needs to be repaired. The seller of the product wants to check whether the product is still covered by the legal guarantee, and if not, the seller wants to provide infomation on to the consumer on how to repair this product.",Is this product still covered by the legal guarantee?,same as 3a.01,,
+3v.02,,What information does the seller (or another value chain actor) provide to the consumers on how to repair the product?,same as 3a.02,,
+4a.01,"A product got repaired by a person working for a rapairing company. The DPP got updated including the information of who repaired this product. An authority wants to check if there is personal infomation included in the respective DPP and if so, if this information is protected in the sense of the GDPR.",Is there personal information included in the DPP?,left for future research,,
+4a.02,,Is the personal information added to the DPP properly protected in the sense of the GDPR or at least anonymized?,left for future research,,
+4c.01,A product got repaired by the consumer itself. The consumer updates the DPP including the information of who repaired this product. The consumer wants to ensure that this information is protected in the sense of the GDPR.,Is the personal information added to the DPP properly protected in the sense of the GDPR or at least anonymized?,same as 4a.02,,
+4v.01,A product got rapaired by a person working for a rapairing company. The company updated the DPP including the information of who repaired this product. The company wants to ensure that this information is protected in the sense of the GDPR.,Is the personal information added to the DPP properly protected in the sense of the GDPR or at least anonymized?,same as 4a.02,,
+5v.01,"One or more actors can be responsible for a certain piece of information in a DPP. Those are the only actors that can add, change or replace that information. The responsibility may depend on their role in the value chain or ownership of the product.",Who/what actor is responsible for what set of information in a DPP?,,SPARQL_6,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_6.sparql
+6v.01,"An actor that has provided some data included in a DPP can go back and change that data later on. Another actor can see who is the provider of that information, and when it was added and updated. Nothing can be deleted from a DPP, only marked as obsolete.",Who added/changed the DPP information?,,SPARQL_7,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_7.sparql
+6v.02,,When was the information added/changed?,,SPARQL_8,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_8.sparql
+7v.01,"A manufacturer wants to share additional information regarding one of his products in order to prove a specific statement (e.g., recycleability of the product).",What kind of additional information is provided (in terms of data source type)?,,SPARQL_9,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_9.sparql
+7v.02,,Where to find this additional information?,,SPARQL_10,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_10.sparql
+8a.01,"A new product has been released to the market. The product contains several components, where the DPP information is provided by several actors. An authority wants to check its publicly available information which is accessible via its DPP.",What is the complete public content of the DPP?,left for future research,,
+8c.01,"A new product has been released to the market. The product contains several components, where the DPP information is provided by several actors. A consumer wants to check its publicly available information which is accessible via its DPP.",What is the complete public content of the DPP?,same as 8a.01,,
+8v.01,"A product contains several components, where the DPP information is provided by several actors. An actor wants to check the  information which is accessible to this specific actor via the product's DPP.",What is the complete content of the DPP from the viewpoint of this value chain actor?,left for future research,,
+9a.01,An authority wants to check/verify the DPP information provided by the value chain actors for a specific product.,What part of the data has been verified?,left for future research,,
+9a.02,,What methodology was used to verify the data?,left for future research,,
+9c.01,A consumer wants to check/verify the DPP information provided by the value chain actors for a specific product they are considering to buy.,What part of the data has been verified?,same as 9a.01,,
+9v.01,A value chain actor wants to check/verify the DPP information provided by another value chain actor for a specific product.,What part of the data has been verified?,same as 9a.01,,
+9v.02,,What methodology was used to verify the data?,same as 9a.02,,
+10.v.01,"A new and very speficic product enters the market, The producer/manufacturer wants to provide the respective information for this product via its DPP. But the ontology/data model does not allow to provide a specific piece of information. So, the employee of the producer has to understand the existing ontology in order to extend it and specify it for the new product.",What is the defintion and axiomization of the ontology?,left for future research,,
+10.v.02,,What are the consequences of extending/changing the ontology?,left for future research,,
+11a.01,An authority wants to understand what the information of a product means in order to compare it with other products.,What is the meaning of a specific information within a DPP?,,SPARQL_11,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_11.sparql
+11c.01,A consumer wants to understand what the information of a product means in order to compare it with other products.,What is the meaning of a specific information within a DPP?,same as 11a.01,,
+11v.01,A value chain actor wants to understand what the information of a product means in order to compare it with other products.,What is the meaning of a specific information within a DPP?,same as 11a.01,,
+12v.01,There is already an existing ontology for a specific product that should be re-used because it is already a de-facto standard and it would be very time-consuming to model it again as an extension of the DPP ontology / ODPs. An employee of the product's producer wants to to use this de-facto standard ontology and therefore wants to integrate it into the DPP ontology.,What is the potential overlap or connection between the existing ontology and the DPP ontology?,left for future research,,
+12v.02,,What are the consequences of integrating the existing ontology into the DPP ontology?,left for future research,,
+13v.01,"A product changes over time (e.g., because it got refurbished by the manufacturer). Thus, the product attributes change. The producer wants to update the product attributes of this product. But he cannot add all the information because the ""old"" DPP ontology module does not cover all the new, additional aspects. So, the producer wants to adapt the DPP ontology module in order to cover the new specifications of the rufurbished product.",What are the consequences of changing/adapting the DPP ontology?,left for future research,,
+14v.01,"Information was provided by a value chain actor for a specifc product in China. Another value chain actor wants to view the provided DPP infomation, but not in Chinese but in English.","What is the translation of the information of the DPP into the language that is needed (e.g., English, Chinese)?",,SPARQL_12,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_12.sparql
+15a.01,An authority wants to view the DPP information of a specific product.,Which and what kind of information can the authority see?,left for future research,,
+15a.02,,"Can the authority only view the information, or also comment on it for example?",left for future research,,
+15c.01,A consumer wants to view the DPP information of a specific product.,Which and what kind of information can the consumer see?,left for future research,,
+15v.01,"A producer wants to view the DPP information of a specific product component (provided by a supplier). Also, the producer wants to change/edit/add the DPP information of this product component because it will be somehow changed.",Which and what kind of information can the producer see?,left for future research,,
+15v.02,,"Can the producer only view the information, or can he also change/edit/add the information for the component provided by the supplier?",left for future research,,
+16a.01,There is a product that was produced by a company which does not exist anymore. An authority still wants to have access to the respective DPP information of this product because the product is still on the market and consumers still own it.,"Is the actor, who provided the DPP information still active/existing?",left for future research,,
+16a.02,,Is the information that was provided by this actor still available?,,SPARQL_13,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_13.sparql
+16a.03,,"If yes, where?",,SPARQL_14,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_14.sparql
+16c.01,There is a product that was produced by a company which does not exist anymore. A consumer still wants to have access to the respective DPP information of this product because the product is still in the market and the consumer owns one of them.,"Is the actor, who provided the DPP information still active/existing?",same as 16a.01,,
+16c.02,,Is the information that was provided by this actor still available?,same as 16a.02,,
+16c.03,,"If yes, where?",same as 16a.03,,
+16v.01,"There is a product that was produced by a company which does not exist anymore. A value chain actor (e.g., repairer) wants to have access to the respective DPP information of this product because the product is still in the market and the repairer repairs one of these products and therefore wants to get the product composition information of this product from the DPP and also wants to update the respective DPP information after he repaired the product.","Is the actor, who provided the DPP information still active/existing?",same as 16a.01,,
+16v.02,,Is the information that was provided by this actor still available?,same as 16a.02,,
+16v.03,,"If yes, where?",same as 16a.03,,
+17a.01,"A piece of information inside a DPP can be associated with several timestamps, for instance when the information was observed, when it was added to the DPP and when it ceases to be valid, in order to allow for querying and reasoning with temporal information.","When was this piece of information/statement recorded/observed, added to the DPP, changed, or when does it cease to be valid?",,SPARQL_15,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_15.sparql
+17a.02,,"When was this DPP created, updated, changed, or ceased to be valid?",,SPARQL_16,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_16.sparql
+17a.03,,What is the most recent version of the information in the DPP?,,SPARQL_17,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_17.sparql
+17c.01,"A piece of information inside a DPP can be associated with several timestamps, for instance when the information was observed, when it was added to the DPP and when it ceases to be valid, in order to allof for querying and reasoning with temporal information.","When was this piece of information/statement recorded/observed, added to the DPP, changed, or when does it cease to be valid?",same as 17a.01,,
+17c.02,,"When was this DPP created, updated, changed, or ceased to be valid?",same as 17a.02,,
+17c.03,,What is the most recent version of the information in the DPP?,same as 17a.03,,
+17v.01,"A piece of information inside a DPP can be associated with several timestamps, for instance when the information was observed, when it was added to the DPP and when it ceases to be valid, in order to allof for querying and reasoning with temporal information.","When was this piece of information/statement recorded/observed, added to the DPP, changed, or when does it cease to be valid?",same as 17a.01,,
+17v.02,,"When was this DPP created, updated, changed, or ceased to be valid?",same as 17a.02,,
+17v.03,,What is the most recent version of the information in the DPP?,same as 17a.03,,
+,,,,,
+Use-case specific functional ontology requirements,,,,,
+18v.01,A recycler wants to recycle a shoe.,What is the material composition of the product?,,SPARQL_18,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_18.sparql
+18v.02,,What is the quality of the contained material?,,SPARQL_19,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_19.sparql
+18v.03,,How can the product be disassembled?,,SPARQL_20,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_20.sparql
+18v.04,,Is there a proof/certificate of the claims on material composition and quality?,,SPARQL_21,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_21.sparql
+19v.01,A repairer wants to repair a shoe.,Are there any instructions on how to repair the product?,,SPARQL_22,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_22.sparql
+19v.02,,What are the single components of this product?,,SPARQL_23,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_23.sparql
+19v.03,,What are the characteristics of the components?,,SPARQL_24,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_24.sparql
+19v.04,,How can the product be disassembled (if needed)?,same as 18v.03,,
+19v.05,,What are the characteristics of the components in the product in order to decide on suitable spare parts?,same as 19v.03,,
+19v.06,,What is the material composition of the spare parts?,,SPARQL_25,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_25.sparql
+20v.01,A re-seller wants to re-sell a secondhand shoe to a re-user.,What is the remaining quality of the product?,,SPARQL_26,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_26.sparql
+20v.02,,What is the material composition of the product?,same as 18v.01,,
+20v.03,,Is there a proof/certificate of the claims on material composition and quality?,same as 18v.04,,
+21v.01,A recycler wants to recycle a smartphone.,What is the composition of the product (components --> materials --> substances)?,,SPARQL_27,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_27.sparql
+21v.02,,How can the product be disassembled?,same as 18v.03,,
+21v.03,,Is there rare earth included in the smartphone?,,,
+21v.04,,"If yes, how can it be retrieved?",,,
+21v.05,,Are there any substances of concern in this product?,same as 1a.01,,
+22v.01,A refurbisher wants to refurbish a smartphone.,What are the single components of this product?,same as 19v.02,,
+22v.02,,What are the characteristics of the components?,same as 19v.03,,
+22v.03,,How can the product be disassembled (if needed)?,same as 18v.03,,
+22v.04,,What are the characteristics of the components in the product in order to decide on suitable spare parts?,same as 19v.03,,
+22v.05,,What is the material composition of the spare parts?,same as 19v.06,,
+23v.01,A repairer wants to repair a smartphone.,Are there any instructions on how to repair the product?,same as 19v.01,,
+23v.02,,What are the single components of this product?,same as 19v.02,,
+23v.03,,What are the characteristics of the components?,same as 19v.03,,
+23v.04,,How can the product be disassembled (if needed)?,same as 18v.03,,
+23v.05,,Which spare parts are needed for repairing the product?,same as 19v.05,,
+23v.06,,What is the material composition of the spare parts?,same as 19v.06,,
+24v.01,A re-seller wants to re-sell a secondhand smartphone to a re-user.,What is the remaining quality of the product?,same as 20v.01,,
+24v.02,,What is the component composition of the product?,,SPARQL_28,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_28.sparql
+24v.03,,Is there a certification of the product?,,SPARQL_29,https://github.com/LiUSemWeb/DPPO/blob/main/sparql/SPARQL_29.sparql
+,,,,,
+,,,,,
+Colour Legend:,Covered in our DPP ontology network,,,,
+,Partially covered in our DPP ontology network,,,,
+,Duplicate,,,,
+,Left for future work (decided during the ontology design),,,,
+,Left for future work (decided when we created the SPARQL queries),,,,
